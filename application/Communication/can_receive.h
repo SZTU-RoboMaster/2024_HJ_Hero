@@ -51,7 +51,7 @@ typedef enum {
 typedef enum {
     CAN_1,
     CAN_2,
-}CAN_TYPE;
+}CAN_TYPE;//////////////////
 
 
 union ctrl_ch{

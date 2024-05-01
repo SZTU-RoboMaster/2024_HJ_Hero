@@ -64,7 +64,7 @@ void Chassis_task(void const *pvParameters) {
                       CAN_MOTOR_0x1FF_ID,
                       0,                                //205
                       0,                                //206
-                      2000,//launcher.trigger.give_current,    //207
+                      launcher.trigger.give_current,    //207
                       0);                               //208
 
         //  底盘相关模块 对底盘进行离线处理

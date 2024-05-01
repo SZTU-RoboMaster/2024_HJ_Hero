@@ -1,0 +1,1129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="2024_Hero"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/software/CLionProjects/2024_Hero/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="2024_Hero.elf">
+				<Option output="D:/software/CLionProjects/2024_Hero/cmake-build-debug/2024_Hero.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/software/CLionProjects/2024_Hero/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DARM_MATH_CM4"/>
+					<Add option="-DARM_MATH_MATRIX_CHECK"/>
+					<Add option="-DARM_MATH_ROUNDING"/>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F407xx"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application/A_Hero"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application/Chassis"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application/Gimbal"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application/Operate"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application/Communication"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application/Referee_system"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/bsp"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/algorithm"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/communication"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/controller"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/devices"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/support"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Core/Inc"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/USB_DEVICE/App"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/USB_DEVICE/Target"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/OneMessage/src"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/comp"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/core"/>
+					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 2024_Hero.elf"/>
+					<CompileFile command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="2024_Hero.elf/fast">
+				<Option output="D:/software/CLionProjects/2024_Hero/cmake-build-debug/2024_Hero.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/software/CLionProjects/2024_Hero/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DARM_MATH_CM4"/>
+					<Add option="-DARM_MATH_MATRIX_CHECK"/>
+					<Add option="-DARM_MATH_ROUNDING"/>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F407xx"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application/A_Hero"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application/Chassis"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application/Gimbal"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application/Operate"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application/Communication"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/application/Referee_system"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/bsp"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/algorithm"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/communication"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/controller"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/devices"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/support"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Core/Inc"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/USB_DEVICE/App"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/USB_DEVICE/Target"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/OneMessage/src"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/comp"/>
+					<Add directory="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/core"/>
+					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1"/>
+					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/arm-none-eabi"/>
+					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include/c++/10.3.1/backward"/>
+					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include"/>
+					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/include-fixed"/>
+					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 2024_Hero.elf/fast"/>
+					<CompileFile command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/software/CLionProjects/2024_Hero/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/software/CLionProjects/2024_Hero/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/FreeRTOSConfig.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/adc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/can.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/crc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/dma.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/gpio.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/i2c.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/main.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/rng.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/spi.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/stm32f4xx_hal_conf.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/stm32f4xx_it.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/tim.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Inc/usart.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/.idea/.gitignore">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/.idea/Src.iml">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/.idea/modules.xml">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/adc.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/can.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/crc.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/dma.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/freertos.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/gpio.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/i2c.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/main.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/rng.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/spi.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/stm32f4xx_hal_msp.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/stm32f4xx_it.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/syscalls.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/sysmem.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/system_stm32f4xx.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/tim.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Src/usart.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Core/Startup/startup_stm32f407ighx.s">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Device/ST/STM32F4xx/LICENSE.txt">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/cmsis_armcc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/cmsis_armclang.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/cmsis_compiler.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/cmsis_gcc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/cmsis_iccarm.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/cmsis_version.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/core_armv8mbl.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/core_armv8mml.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/core_cm0.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/core_cm0plus.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/core_cm1.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/core_cm23.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/core_cm3.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/core_cm33.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/core_cm4.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/core_cm7.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/core_sc000.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/core_sc300.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/mpu_armv7.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/mpu_armv8.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/Include/tz_context.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/CMSIS/LICENSE.txt">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_bus.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_cortex.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_crc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_exti.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_gpio.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_i2c.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_pwr.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rcc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_rng.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_system.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_tim.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usart.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_utils.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/LICENSE.txt">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/ST/STM32_USB_Device_Library/LICENSE.txt">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/croutine.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/StackMacros.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/atomic.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/list.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/message_buffer.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_prototypes.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/stack_macros.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/stream_buffer.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/task.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/list.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/queue.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/tasks.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/Middlewares/Third_Party/FreeRTOS/Source/timers.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/STM32F407IGHX_FLASH.ld">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/USB_DEVICE/App/usb_device.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/USB_DEVICE/App/usb_device.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/USB_DEVICE/App/usb_task.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/USB_DEVICE/App/usb_task.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/USB_DEVICE/App/usbd_cdc_if.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/USB_DEVICE/App/usbd_cdc_if.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/USB_DEVICE/App/usbd_desc.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/USB_DEVICE/App/usbd_desc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/USB_DEVICE/Target/usbd_conf.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/USB_DEVICE/Target/usbd_conf.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/A_Hero/Cap.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/A_Hero/Cap.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/A_Hero/Hero.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/A_Hero/StartDefault.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/A_Hero/protocol_hero.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/A_Hero/struct_typedef.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Chassis/Chassis.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Chassis/Chassis.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Chassis/Chassis_behaviour.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Chassis/Chassis_send.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Chassis/Trigger_function.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Chassis/Trigger_function.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Communication/Atti.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Communication/Atti.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Communication/can_receive.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Communication/can_receive.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Gimbal/Gimbal.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Gimbal/Gimbal.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Gimbal/Gimbal_behaviour.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Gimbal/Gimbal_send.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Gimbal/launcher.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Gimbal/launcher.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Operate/key_board.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Operate/key_board.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Operate/remote.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Operate/remote.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Referee_system/Calibrate.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Referee_system/Calibrate.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Referee_system/Detection.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Referee_system/Detection.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Referee_system/Referee.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/application/Referee_system/Referee.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_adc.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_adc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_buzzer.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_buzzer.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_can.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_can.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_crc32.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_crc32.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_delay.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_delay.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_flash.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_flash.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_i2c.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_i2c.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_imu_pwm.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_imu_pwm.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_laser.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_laser.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_led.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_led.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_rc.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_rc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_rng.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_rng.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_servo_pwm.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_servo_pwm.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_spi.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_spi.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_usart.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/bsp/bsp_usart.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/.clang-format">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/.clangd">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/CMakeLists.txt">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/README.md">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/doc/config.md">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/doc/dev.md">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/doc/user.md">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/img/log.png">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/CMakeLists.txt">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app/om_afl.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app/om_afl.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app/om_com.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app/om_com.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app/om_evt.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app/om_evt.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app/om_fmt.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app/om_fmt.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app/om_log.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app/om_log.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app/om_msg.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/app/om_msg.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/comp/om_color.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/comp/om_color.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/comp/om_crc.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/comp/om_crc.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/comp/om_fifo.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/comp/om_fifo.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/comp/om_list.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/comp/om_list.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/comp/om_rbt.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/comp/om_rbt.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/core/om_core.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/core/om_core.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/core/om_def.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/core/om_lib.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/om.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/om.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/OneMessage/src/om_config.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/AHRS.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/AHRS.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/AHRS_MiddleWare.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/AHRS_MiddleWare.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/arm_common_tables.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/arm_const_structs.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/arm_math.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/core_sc000.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/core_sc300.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/filter.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/filter.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/ramp.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/ramp.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/user_lib.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/algorithm/user_lib.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/communication/decode.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/communication/decode.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/communication/packet.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/communication/packet.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/controller/PID.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/controller/PID.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/devices/BMI088Middleware.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/devices/BMI088Middleware.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/devices/BMI088driver.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/devices/BMI088driver.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/devices/BMI088reg.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/devices/ist8310driver.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/devices/ist8310driver.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/devices/ist8310driver_middleware.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/devices/ist8310driver_middleware.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/support/CRC8_CRC16.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/support/CRC8_CRC16.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/support/fifo.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/support/fifo.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/support/linux_list.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/support/macro_mutex.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/support/mem_mang.h">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/component/support/mem_mang4.c">
+			<Option target="2024_Hero.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

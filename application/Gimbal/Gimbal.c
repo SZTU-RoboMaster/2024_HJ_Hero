@@ -191,8 +191,8 @@ static void gimbal_init(){
     gimbal.pitch.give_current=0;
 
     //pitch轴和yaw轴电机的校准编码值
-//    gimbal.pitch.motor_measure->offset_ecd=3220;//2370;
-    gimbal.yaw.motor_measure->offset_ecd = 7234;
+    gimbal.pitch.motor_measure->offset_ecd=3220;//2370;
+    gimbal.yaw.motor_measure->offset_ecd = 7209;
 
     //低通滤波初始化
     first_order_filter_init(&pitch_first_order_set, 0.f, 500);

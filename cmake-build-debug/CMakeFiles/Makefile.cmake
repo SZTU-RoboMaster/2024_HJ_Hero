@@ -25,7 +25,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/software/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake"
   "D:/software/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Generic.cmake"
   "D:/software/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/ProcessorCount.cmake"
-  "D:/software/CLionProjects/2024_Hero_deer/CMakeLists.txt"
+  "D:/software/CLionProjects/2024_Hero/CMakeLists.txt"
   "CMakeFiles/3.26.4/CMakeASMCompiler.cmake"
   "CMakeFiles/3.26.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
@@ -45,5 +45,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/2024_Hero_deer.elf.dir/DependInfo.cmake"
+  "CMakeFiles/2024_Hero.elf.dir/DependInfo.cmake"
   )

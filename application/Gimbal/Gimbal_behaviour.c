@@ -153,8 +153,8 @@ void gimbal_auto_handle() {
   */
 void gimbal_ctrl_loop_cal(){
     //计算yaw轴的控制输出
-    if(abs(gimbal.yaw.absolute_angle_set-gimbal.yaw.absolute_angle_get)<0.5){
-        gimbal.yaw.gyro_set=pid_loop_calc(&gimbal.yaw.auto_angle_p,
+    if(abs(gimbal.yaw.absolute_angle_set-gimbal.yaw.absolute_angle_get)<0.3){//0.14
+        gimbal.yaw.gyro_set=pid_loop_calc(&gimbal.yaw.auto_speed_p,
                                           gimbal.yaw.absolute_angle_get,
                                           gimbal.yaw.absolute_angle_set,
                                           180,
@@ -176,40 +176,23 @@ void gimbal_ctrl_loop_cal(){
         first_order_filter_cali(&filter_yaw_gyro_in, gyro_yaw);
 
         gimbal.yaw.give_current = (int16_t)-pid_calc(&gimbal.yaw.speed_p,
-                                                    filter_yaw_gyro_in.out,//gimbal.yaw.motor_measure->speed_rpm,
+                                                     gyro_yaw,//gimbal.yaw.motor_measure->speed_rpm,
                                                      gimbal.yaw.gyro_set);
 
     }
-    if(rc_ctrl.rc.ch[3] == 0) {
-        gimbal.pitch.give_current = 0;
-    }
-    else {
-        if (gimbal.pitch.absolute_angle_get < 0 && rc_ctrl.rc.ch[3] < 0) {
-            //计算pitch轴的控制输出
-            gimbal.pitch.gyro_set = pid_calc(&gimbal.pitch.auto_angle_p,
-                                             gimbal.pitch.absolute_angle_get,
-                                             gimbal.pitch.absolute_angle_set);//Vision_info.pitch.value
-            first_order_filter_cali(&filter_pitch_gyro_in, gyro_pitch);
 
-            ///// 读取陀螺仪的角速度加在内环的期望上面
-            gimbal.pitch.give_current = (int16_t) pid_calc(&gimbal.pitch.auto_speed_p,
-                                                           filter_pitch_gyro_in.out,
-                                                           gimbal.pitch.gyro_set);//加负号为了电机反转
-        } else {
-            //计算pitch轴的控制输出
-            gimbal.pitch.gyro_set = pid_calc(&gimbal.pitch.angle_p,
-                                             gimbal.pitch.absolute_angle_get,
-                                             gimbal.pitch.absolute_angle_set);//Vision_info.pitch.value
-            first_order_filter_cali(&filter_pitch_gyro_in, gyro_pitch);
+    //计算pitch轴的控制输出
+    gimbal.pitch.gyro_set= pid_calc(&gimbal.pitch.angle_p,
+                                    gimbal.pitch.absolute_angle_get,
+                                    gimbal.pitch.absolute_angle_set);//Vision_info.pitch.value
+    first_order_filter_cali(&filter_pitch_gyro_in,gyro_pitch);
 
-            ///// 读取陀螺仪的角速度加在内环的期望上面
-            gimbal.pitch.give_current = (int16_t) pid_calc(&gimbal.pitch.speed_p,
-                    //gimbal.pitch.motor_measure->speed_rpm,
-                                                           filter_pitch_gyro_in.out,
-                                                           gimbal.pitch.gyro_set);//加负号为了电机反转
-        }
+    ///// 读取陀螺仪的角速度加在内环的期望上面
+    gimbal.pitch.give_current= (int16_t)pid_calc(&gimbal.pitch.speed_p,
+                                                 //gimbal.pitch.motor_measure->speed_rpm,
+                                                 filter_pitch_gyro_in.out,
+                                                 gimbal.pitch.gyro_set);//加负号为了电机反转
 
-    }
     //gimbal.pitch.give_current= (int16_t)Apply(&pitch_current_out,gimbal.pitch.give_current);
 }
 

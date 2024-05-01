@@ -32,7 +32,7 @@
 #define CONTINUES_SHOOT_TIMING_COMPLETE() HAL_GetTick()-continue_shoot_time>1500
 #define CONTINUES_BLOCKED_JUDGE() (HAL_GetTick()-blocked_start_time>900)
 #define TRIGGER_REVERSE_TIME_JUDGE() (HAL_GetTick()-reverse_start_time<900)
-#define FIRE_SPEED 3400  //TODO: 摩擦轮转速
+#define FIRE_SPEED 5400  //TODO: 摩擦轮转速
 
 //// 2006编码器转一圈编码值加8192  减速比1:36  编码器转36圈输出轴才转一圈  36×8192
 #define DEGREE_93_TO_ENCODER 98304.0000f    //2006单发 120：98304    95:77824    90:73728  100:81920

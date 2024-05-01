@@ -111,7 +111,7 @@
 #define CHASSIS_3508_PID_KP     7.0f
 #define CHASSIS_3508_PID_KI     0.0f
 #define CHASSIS_3508_PID_KD     0.0f
-#define CHASSIS_3508_PID_MAX_OUT 8000.0f
+#define CHASSIS_3508_PID_MAX_OUT 3000.0f
 #define CHASSIS_3508_PID_MAX_IOUT 0
 
 /******************函数声明******************/

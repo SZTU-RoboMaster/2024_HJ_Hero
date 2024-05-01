@@ -46,61 +46,47 @@
 #define RC_TO_PITCH 0.01f
 
 //云台转动速度系数
-#define GIMBAL_RC_MOVE_RATIO_PIT 0.04f
+#define GIMBAL_RC_MOVE_RATIO_PIT 0.03f
 #define GIMBAL_RC_MOVE_RATIO_YAW 0.05f
 
 //对 pitch 进行动态限位
-#define MAX_ABS_ANGLE 30
+#define MAX_ABS_ANGLE 39
 #define MIN_ABS_ANGLE (-17.5)
 
 //对 yaw 进行ecd值误差限制
 #define MAX_ECD_ERROR 1
 
 /******************PID******************/
-// pitch轴 PID
-#define GIMBAL_PITCH_ANGLE_PID_KP  55.f//35//30.0f
-#define GIMBAL_PITCH_ANGLE_PID_KI  0.f
-#define GIMBAL_PITCH_ANGLE_PID_KD  750//600.0f
-#define GIMBAL_PITCH_ANGLE_MAX_IOUT 100.f
-#define GIMBAL_PITCH_ANGLE_MAX_OUT  10000.f//20000.f
+//// pitch轴 PID
+//#define GIMBAL_PITCH_ANGLE_PID_KP  60.0f//45.f //80.f
+//#define GIMBAL_PITCH_ANGLE_PID_KI  0.1f //0.8f  //0
+//#define GIMBAL_PITCH_ANGLE_PID_KD  750.0f //50.0f  //12
+//#define GIMBAL_PITCH_ANGLE_MAX_IOUT 1000.f
+//#define GIMBAL_PITCH_ANGLE_MAX_OUT  8000.f //7500.f
+//
+//#define GIMBAL_PITCH_SPEED_PID_KP   180.0f//80.f
+//#define GIMBAL_PITCH_SPEED_PID_KI   0.1f//0.8f
+//#define GIMBAL_PITCH_SPEED_PID_KD   50.0f//1000。0f//1500.0f  //1000
+//#define GIMBAL_PITCH_SPEED_MAX_IOUT 3000.f//2000.f
+//#define GIMBAL_PITCH_SPEED_MAX_OUT  18000.f
 
-#define GIMBAL_PITCH_SPEED_PID_KP   45.f//40.0f
+// pitch轴 PID
+#define GIMBAL_PITCH_ANGLE_PID_KP  35//30.0f
+#define GIMBAL_PITCH_ANGLE_PID_KI  0.f
+#define GIMBAL_PITCH_ANGLE_PID_KD  600//600.0f
+#define GIMBAL_PITCH_ANGLE_MAX_IOUT 1000.f
+#define GIMBAL_PITCH_ANGLE_MAX_OUT  20000.f
+
+#define GIMBAL_PITCH_SPEED_PID_KP   40.0f
 #define GIMBAL_PITCH_SPEED_PID_KI   0.f
 #define GIMBAL_PITCH_SPEED_PID_KD   10.0f
-#define GIMBAL_PITCH_SPEED_MAX_IOUT 800.f
-#define GIMBAL_PITCH_SPEED_MAX_OUT  28000.f//25000.f
-
-// 自瞄pitch轴 PID
-#define GIMBAL_PITCH_AUTO_ANGLE_PID_KP     35.0f
-#define GIMBAL_PITCH_AUTO_ANGLE_PID_KI     0.f
-#define GIMBAL_PITCH_AUTO_ANGLE_PID_KD     450.0f
-#define GIMBAL_PITCH_AUTO_ANGLE_MAX_IOUT   100.f
-#define GIMBAL_PITCH_AUTO_ANGLE_MAX_OUT    10000.f
-
-#define GIMBAL_PITCH_AUTO_SPEED_PID_KP     20.0f
-#define GIMBAL_PITCH_AUTO_SPEED_PID_KI     0.f
-#define GIMBAL_PITCH_AUTO_SPEED_PID_KD     5.0f
-#define GIMBAL_PITCH_AUTO_SPEED_MAX_IOUT   8000.f
-#define GIMBAL_PITCH_AUTO_SPEED_MAX_OUT    25000.f
-
-////yaw轴角度环PID
-//#define GIMBAL_YAW_ANGLE_PID_KP     100.f//15.f//100.0f//20
-//#define GIMBAL_YAW_ANGLE_PID_KI     0.f//0.01
-//#define GIMBAL_YAW_ANGLE_PID_KD     550.0f//150 800
-//#define GIMBAL_YAW_ANGLE_MAX_IOUT   80.f//80
-//#define GIMBAL_YAW_ANGLE_MAX_OUT    3000.f//500
-//
-////yaw轴速度环PID
-//#define GIMBAL_YAW_SPEED_PID_KP     200.0f//200
-//#define GIMBAL_YAW_SPEED_PID_KI     0.f//20
-//#define GIMBAL_YAW_SPEED_PID_KD     10.0f//100
-//#define GIMBAL_YAW_SPEED_MAX_IOUT   3000.f
-//#define GIMBAL_YAW_SPEED_MAX_OUT    20000.f//15000.f
+#define GIMBAL_PITCH_SPEED_MAX_IOUT 3000.f
+#define GIMBAL_PITCH_SPEED_MAX_OUT  25000.f
 
 //yaw轴角度环PID
 #define GIMBAL_YAW_ANGLE_PID_KP     30.f//15.f//100.0f//20
 #define GIMBAL_YAW_ANGLE_PID_KI     0.f//0.01
-#define GIMBAL_YAW_ANGLE_PID_KD     750.0f//150 800
+#define GIMBAL_YAW_ANGLE_PID_KD     550.0f//150 800
 #define GIMBAL_YAW_ANGLE_MAX_OUT    3000.f//500
 #define GIMBAL_YAW_ANGLE_MAX_IOUT   80.f//80
 
@@ -111,26 +97,36 @@
 #define GIMBAL_YAW_SPEED_MAX_OUT    20000.f//15000.f
 #define GIMBAL_YAW_SPEED_MAX_IOUT   3000.f
 
+// 自瞄pitch轴 PID
+#define GIMBAL_PITCH_AUTO_ANGLE_PID_KP     25.0f
+#define GIMBAL_PITCH_AUTO_ANGLE_PID_KI     0.08f
+#define GIMBAL_PITCH_AUTO_ANGLE_PID_KD     950.0f
+#define GIMBAL_PITCH_AUTO_ANGLE_MAX_IOUT   30.f
+#define GIMBAL_PITCH_AUTO_ANGLE_MAX_OUT    15000.f
+
+#define GIMBAL_PITCH_AUTO_SPEED_PID_KP     50.0f
+#define GIMBAL_PITCH_AUTO_SPEED_PID_KI     1.5f
+#define GIMBAL_PITCH_AUTO_SPEED_PID_KD     10.0f
+#define GIMBAL_PITCH_AUTO_SPEED_MAX_IOUT   1000.f
+#define GIMBAL_PITCH_AUTO_SPEED_MAX_OUT    25000.f
+
 //小角度yaw轴角度环PID
-#define GIMBAL_YAW_AUTO_ANGLE_PID_KP     0.f
+#define GIMBAL_YAW_AUTO_ANGLE_PID_KP     7.0f
 #define GIMBAL_YAW_AUTO_ANGLE_PID_KI     0.f
-#define GIMBAL_YAW_AUTO_ANGLE_PID_KD     0.0f
-#define GIMBAL_YAW_AUTO_ANGLE_MAX_IOUT   0.f
-#define GIMBAL_YAW_AUTO_ANGLE_MAX_OUT    0.f
+#define GIMBAL_YAW_AUTO_ANGLE_PID_KD     20.0f
+#define GIMBAL_YAW_AUTO_ANGLE_MAX_IOUT   1000.f
+#define GIMBAL_YAW_AUTO_ANGLE_MAX_OUT    8.f
 
 //小角度yaw轴速度环PID
-#define GIMBAL_YAW_AUTO_SPEED_PID_KP     0.f
+#define GIMBAL_YAW_AUTO_SPEED_PID_KP     8.0f
 #define GIMBAL_YAW_AUTO_SPEED_PID_KI     0.f
-#define GIMBAL_YAW_AUTO_SPEED_PID_KD     0.f
-#define GIMBAL_YAW_AUTO_SPEED_MAX_IOUT   0.f
-#define GIMBAL_YAW_AUTO_SPEED_MAX_OUT    0.f
-
-
+#define GIMBAL_YAW_AUTO_SPEED_PID_KD     5.0f
+#define GIMBAL_YAW_AUTO_SPEED_MAX_IOUT   2000.f
+#define GIMBAL_YAW_AUTO_SPEED_MAX_OUT    3.f
 
 
 
 /******************函数声明******************/
-
 /******************上下板传输******************/
 extern void Send_Chassis_Speed(int16_t ch1, int16_t ch0, int16_t ch2,uint8_t s_l,int32_t Mouse_l);
 extern void Send_Keyboard(int32_t W, int32_t A, int32_t S, int32_t D, int16_t trigger_mode);
