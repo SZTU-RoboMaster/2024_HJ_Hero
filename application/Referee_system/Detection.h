@@ -32,14 +32,23 @@ typedef enum {
     DETECT_GIMBAL_6020_YAW,
     DETECT_LAUNCHER_3508_FIRE_L,
     DETECT_LAUNCHER_3508_FIRE_R,
-    DETECT_LAUNCHER_2006_SINGLE_SHOT,  //单发
+    DETECT_LAUNCHER_3508_FIRE_ON,  //上摩擦轮
     DETECT_LAUNCHER_3508_TRIGGER,     //拨盘电机
     DETECT_REMOTE,      //移动
     DETECT_AUTO_AIM,    //自动瞄准
     DETECT_REFEREE,     //裁判
     DETECT_CAP,
+    DETECT_VIDEO_TRANSIMITTER,  //图传
     DETECT_DEVICE_LIST_LEN, //设备列表LEN
 }detect_device_index;
+
+typedef enum
+{
+    ALL_ONLINE = 1,
+    RC_ONLINE,
+    VT_ONLINE,
+    ALL_OFFLINE,
+}control_status;
 
 extern detect_device_t detect_list[DETECT_DEVICE_LIST_LEN];
 extern void detect_task(void const*pvParameters);

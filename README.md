@@ -1,14 +1,8 @@
-# 6020yaw轴版本
-
 # 新增USB虚拟串口功能
-
 ## 发送上位机信息
-
 在protocol_hero.h中添加自己的消息结构体,在data_cmd_id中按顺序加入消息ID
 在task中调用 rm_queue_data()函数发送消息结构体
-
 ## 接收上位机信息
-
 在decode.c中的函数decode_data_solve()中的case状态机按照消息ID拷贝内存
 
 # 快捷键

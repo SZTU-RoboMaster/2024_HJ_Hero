@@ -15,7 +15,8 @@ typedef enum {
     RB=3,
     FIRE_L=4,
     FIRE_R=5,
-    TRIGGER=6
+    TRIGGER=6,
+    FIRE_ON=7
 }motor_3508;
 
 /**** 模式选择 ****/
@@ -192,7 +193,7 @@ typedef struct {
 
     motor_2006_t fire_l;
     motor_2006_t fire_r;
-    motor_2006_t single_shoot;//主动单发
+    motor_2006_t fire_on;
     motor_2006_t trigger;     //拨盘电机
 }launcher_t;
 

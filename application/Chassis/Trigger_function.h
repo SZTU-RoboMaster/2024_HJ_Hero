@@ -26,17 +26,17 @@ extern void Rotation_angle();
 extern void trigger_finish_judge();
 
 //拨盘角度环PID
-#define TRIGGER_ANGLE_PID_KP 0.7f
+#define TRIGGER_ANGLE_PID_KP 0.9f
 #define TRIGGER_ANGLE_PID_KI 0.f
 #define TRIGGER_ANGLE_PID_KD 0.f
-#define TRIGGER_ANGLE_PID_MAX_OUT    3000
+#define TRIGGER_ANGLE_PID_MAX_OUT    10000
 #define TRIGGER_ANGLE_PID_MAX_IOUT   10
 
 //拨盘速度环PID
 #define TRIGGER_SPEED_PID_KP 3//30
 #define TRIGGER_SPEED_PID_KI 0.f
 #define TRIGGER_SPEED_PID_KD 6//28.f
-#define TRIGGER_SPEED_PID_MAX_OUT    10000
+#define TRIGGER_SPEED_PID_MAX_OUT    20000
 #define TRIGGER_SPEED_PID_MAX_IOUT   10
 
 //拨盘速度环PID,一直转

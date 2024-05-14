@@ -134,7 +134,7 @@ void Rotation_angle() {
 
 
 void trigger_finish_judge() {
-    if(ABS(total_ecd_ref_tri - launcher.trigger.motor_measure->total_ecd) > 2000 && (trigger_block_flag == 0)) { //误差过大认为上一次发射还未完成
+    if(ABS(total_ecd_ref_tri - launcher.trigger.motor_measure->total_ecd) > 5000 && (trigger_block_flag == 0)) { //误差过大认为上一次发射还未完成
         // 目前问题:有多次堵转检测出现的情况,特别是最后一格有弹丸,导致堵转检测被触发,ecd值多次回退
         // 需要对堵转反转进行特殊处理
 

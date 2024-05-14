@@ -46,7 +46,7 @@
 // 键盘W A S D控制底盘最大速度增量
 #define MAX_CHASSIS_VX_SPEED 3.5f
 #define MAX_CHASSIS_VY_SPEED 3.5f
-#define MAX_CHASSIS_VW_SPEED 400.f
+#define MAX_CHASSIS_VW_SPEED 3.3f
 
 // 遥控器控制底盘移动
 #define RC_TO_VX (MAX_CHASSIS_VX_SPEED/660)

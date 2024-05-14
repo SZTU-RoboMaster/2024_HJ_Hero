@@ -49,7 +49,7 @@ void chassis_follow_gimbal_handle(){
     chassis.vy = (sin_yaw * vx_temp + cos_yaw * vy_temp);
 
     //控制底盘的角速度，使其与云台的偏航角保持稳定，使用PID控制器计算底盘的角速度
-    chassis.vw = pid_calc(&chassis.chassis_vw_pid, -gimbal.yaw.relative_angle_get, 0);
+    chassis.vw = pid_calc(&chassis.chassis_vw_pid, gimbal.yaw.relative_angle_get, 0);
 
     if(abs(chassis.vw)<0.1){
         chassis.vw=0;
@@ -132,7 +132,7 @@ void chassis_wheel_loop_cal(){
   */
 void chassis_spin_handle(){
     //获取云台偏航角的相对角度，并转换为弧度
-    fp32 yaw_relative_radian = gimbal.yaw.relative_angle_get*ANGLE_TO_RAD;
+    fp32 yaw_relative_radian = -gimbal.yaw.relative_angle_get*ANGLE_TO_RAD;
     fp32 sin_yaw, cos_yaw;
     sin_yaw = -(fp32)sin(yaw_relative_radian);
     cos_yaw = (fp32)cos(yaw_relative_radian);
@@ -145,7 +145,7 @@ void chassis_spin_handle(){
     chassis.vx = (cos_yaw * vx_temp + sin_yaw * vy_temp);
     chassis.vy = -(sin_yaw * vx_temp - cos_yaw * vy_temp);
     // 给定vw转速
-    chassis.vw = 420;//最大陀螺
+    chassis.vw = 420;//
 }
 
 

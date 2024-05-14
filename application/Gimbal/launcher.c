@@ -120,28 +120,17 @@ void launcher_control() {
         if (launcher.fire_mode == Fire_ON) {
             launcher.fire_l.speed = FIRE_SPEED;
             launcher.fire_r.speed = -FIRE_SPEED;
-            if (launcher.single_shoot_cmd == SHOOT_CLOSE) {
-                launcher.single_shoot.speed = 0;
-            }
-            else if (launcher.single_shoot_cmd == SHOOT_SINGLE) { //单发状态
+            launcher.fire_on.speed = -FIRE_SPEED;
+            if (launcher.single_shoot_cmd == SHOOT_SINGLE) { //单发状态
                 launcher.single_shoot_cmd = SHOOT_ING;//进入正在单发状态
-                total_ecd_ref = launcher.single_shoot.motor_measure->total_ecd - DEGREE_93_TO_ENCODER;
             }
-            launcher.single_shoot.speed = pid_calc(&launcher.single_shoot.angle_p,
-                                                   launcher.single_shoot.motor_measure->total_ecd,
-                                                   total_ecd_ref);
         }
+
         else {
             launcher.fire_l.speed = 0;
             launcher.fire_r.speed = 0;
-            launcher.single_shoot.speed=0;
-            total_ecd_ref=launcher.single_shoot.motor_measure->total_ecd;
+            launcher.fire_on.speed=0;
         }
-        launcher.single_shoot.give_current =
-                (int16_t)pid_calc(&launcher.single_shoot.speed_p,
-                                  launcher.single_shoot.motor_measure->speed_rpm,
-                                  launcher.single_shoot.speed);
-
         first_order_filter_cali(&filter_shoot_rpm_in, launcher.fire_l.motor_measure->speed_rpm);
         first_order_filter_cali(&filter_shoot_rpm_in, launcher.fire_r.motor_measure->speed_rpm);
 
@@ -153,28 +142,19 @@ void launcher_control() {
                 (int16_t) pid_calc(&launcher.fire_r.speed_p,
                                    launcher.fire_r.motor_measure->speed_rpm,
                                    launcher.fire_r.speed);
+        launcher.fire_on.give_current =
+                (int16_t) pid_calc(&launcher.fire_on.speed_p,
+                                   launcher.fire_on.motor_measure->speed_rpm,
+                                   launcher.fire_on.speed);
     }
-//    block_led();//卡弹指示灯
 }
 
-/*void block_led()
-{
-    if(vector_receive_msg.trigger_flag==trigger_block)//卡弹提示
-    {
-        HAL_GPIO_WritePin(LED3_PORT,LED3_PIN,GPIO_PIN_RESET);
-    }
-    else
-    {
-        HAL_GPIO_WritePin(LED3_PORT,LED3_PIN,GPIO_PIN_SET);
-    }
-}
-*/
 
 //发射机构失能
 void launcher_relax_handle(){
     launcher.fire_r.give_current=0;
     launcher.fire_l.give_current=0;
-    launcher.single_shoot.give_current=0;
+    launcher.fire_on.give_current=0;
 }
 
 void launcher_init(){
@@ -192,7 +172,7 @@ void launcher_init(){
     //获取发射机构电机数据结构体
     launcher.fire_l.motor_measure=&motor_3508_measure[FIRE_L];
     launcher.fire_r.motor_measure=&motor_3508_measure[FIRE_R];
-    launcher.single_shoot.motor_measure=&motor_2006_measure;
+    launcher.fire_on.motor_measure=&motor_3508_measure[FIRE_ON];
 
     //发射机构电机PID初始化
     pid_init(&launcher.fire_r.speed_p,
@@ -203,15 +183,11 @@ void launcher_init(){
              SHOOT_FIRE_L_PID_MAX_OUT, SHOOT_FIRE_L_PID_MAX_IOUT,
              SHOOT_FIRE_L_PID_KP, SHOOT_FIRE_L_PID_KI, SHOOT_FIRE_L_PID_KD);
 
-    pid_init(&launcher.single_shoot.speed_p,
-             SINGLE_SHOOT_SPEED_PID_MAX_OUT, SINGLE_SHOOT_SPEED_PID_MAX_IOUT,
-             SINGLE_SHOOT_SPEED_PID_KP, SINGLE_SHOOT_SPEED_PID_KI, SINGLE_SHOOT_SPEED_PID_KD);
+    pid_init(&launcher.fire_on.speed_p,
+             SINGLE_FIRE_ON_PID_MAX_OUT, SINGLE_FIRE_ON_PID_MAX_IOUT,
+             SINGLE_FIRE_ON_PID_KP, SINGLE_FIRE_ON_PID_KI, SINGLE_FIRE_ON_PID_KD);
 
-    pid_init(&launcher.single_shoot.angle_p,
-             SINGLE_SHOOT_ANGLE_PID_MAX_OUT, SINGLE_SHOOT_ANGLE_PID_MAX_IOUT,
-             SINGLE_SHOOT_ANGLE_PID_KP, SINGLE_SHOOT_ANGLE_PID_KI, SINGLE_SHOOT_ANGLE_PID_KD);
 
     //最开始的编码值作为拨轮电机的校准值
-    launcher.single_shoot.motor_measure->total_ecd=launcher.single_shoot.motor_measure->offset_ecd=launcher.single_shoot.motor_measure->ecd;
     first_order_filter_init(&filter_shoot_rpm_in,0.05f, 0.5f);
 }

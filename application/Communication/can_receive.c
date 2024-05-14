@@ -61,10 +61,9 @@ void cap_info_decode(cap_info_t *cap, const uint16_t *rx_data){
 
 /******************** variable *******************/
 
-motor_measure_t motor_3508_measure[7];//0-3 分别对应  RF,LF,LB,RB 4,5分别对应FIRE_L,FIRE_R 6对应拨盘电机
+motor_measure_t motor_3508_measure[8];//0-3 分别对应  RF,LF,LB,RB 4,5分别对应FIRE_L,FIRE_R 6对应拨盘电机  7对应上摩擦轮
 motor_measure_t motor_yaw_measure;    //yaw轴
 motor_measure_t motor_pitch_measure;  //云台pitch轴
-motor_measure_t motor_2006_measure;//SINGLE_SHOT主动单发
 
 static CAN_TxHeaderTypeDef  tx_message;
 static uint8_t              can_send_data[8];
@@ -444,10 +443,10 @@ void CAN2_RX0_IRQHandler(){
 
     // 云台电机数据
     switch (rx_header.StdId) {
-        case CAN_LAUNCHER_2006_SINGLE_SHOT:         //204
-            get_motor_measure(&motor_2006_measure, rx_data);
-            get_motor_round_cnt(motor_2006_measure);//获取转动拨轮电机转动圈数和总编码值
-            detect_handle(DETECT_LAUNCHER_2006_SINGLE_SHOT);
+        case CAN_LAUNCHER_3508_FIRE_ON:         //204
+            get_motor_measure(&motor_3508_measure[7], rx_data);
+//            get_motor_round_cnt(motor_3508_measure[7]);//获取转动拨轮电机转动圈数和总编码值
+            detect_handle(DETECT_LAUNCHER_3508_FIRE_ON);
             break;
         case CAN_GIMBAL_6020_YAW:                   //205
             get_motor_measure(&motor_yaw_measure, rx_data);

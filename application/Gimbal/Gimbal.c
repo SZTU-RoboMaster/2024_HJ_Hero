@@ -25,6 +25,7 @@ extern trigger_t trigger;       //拨盘模式
 
 extern RC_ctrl_t rc_ctrl;       //遥控器
 extern key_board_t KeyBoard;    //键盘
+extern TIM_HandleTypeDef htim1;
 
 extern fp32 INS_angle[3];
 extern fp32 INS_gyro[3];
@@ -101,9 +102,9 @@ void Gimbal_task(void const*pvParameters) {
 
         Send_Mode(chassis.mode, gimbal.mode, launcher.fire_mode, launcher.single_shoot_cmd);
 //        Send_command(robot_ctrl.fire_command);
+
         //检测电机、电源是否断线  TODO:取消注释会失能，要装裁判系统
 //        gimbal_device_offline_handle();//TODO:检测离线,装完裁判系统后可以打开
-//        gimbal_power_stop();
 
         gimbal_can_send_back_mapping(); // 接受can信号，传到UI
 
@@ -113,7 +114,7 @@ void Gimbal_task(void const*pvParameters) {
                       0,                                //201
                       0,                                //202
                       0,                                //203
-                      launcher.single_shoot.give_current//204
+                      launcher.fire_on.give_current//204
         );
 
         CAN_cmd_motor(CAN_2,
@@ -192,7 +193,7 @@ static void gimbal_init(){
 
     //pitch轴和yaw轴电机的校准编码值
     gimbal.pitch.motor_measure->offset_ecd=3220;//2370;
-    gimbal.yaw.motor_measure->offset_ecd = 7209;
+    gimbal.yaw.motor_measure->offset_ecd = 7400;
 
     //低通滤波初始化
     first_order_filter_init(&pitch_first_order_set, 0.f, 500);
@@ -362,6 +363,8 @@ static void gimbal_mode_set(){
   * @retval         返回空
   */
 uint16_t vision_mode;
+uint8_t thread_lock = 0;    // 线程锁
+uint8_t lens_flag = 0;
 static void gimbal_mode_change() {
     if (gimbal.mode == GIMBAL_ACTIVE) {   //自瞄判定
         if (rc_ctrl.rc.ch[AUTO_CHANNEL] > 50 || KeyBoard.Mouse_r.status == KEY_PRESS) {
@@ -372,7 +375,7 @@ static void gimbal_mode_change() {
         }
 
         if ((KeyBoard.Mouse_r.status == KEY_PRESS && robot_ctrl.target_lock == 0x31 && (detect_list[DETECT_AUTO_AIM].status == ONLINE))
-            ||(rc_ctrl.rc.ch[AUTO_CHANNEL]>50     && robot_ctrl.target_lock == 0x31 && (detect_list[DETECT_AUTO_AIM].status == ONLINE))) {
+            ||(rc_ctrl.rc.ch[AUTO_CHANNEL]> 50    && robot_ctrl.target_lock == 0x31 && (detect_list[DETECT_AUTO_AIM].status == ONLINE))) {
             gimbal.last_mode = GIMBAL_ACTIVE;
             gimbal.mode = GIMBAL_AUTO;
         }
@@ -384,6 +387,25 @@ static void gimbal_mode_change() {
             vision_data.mode = 0;
         }
     }
+
+    // 六倍镜开启 | 按键暂定X
+    if(rc_ctrl.rc.ch[AUTO_CHANNEL] < -300 || KeyBoard.X.click_flag == 1){
+        if(!thread_lock){
+            if(lens_flag == 0) lens_flag = 1;
+            else lens_flag = 0;
+        }
+        thread_lock = 1;    // 线程锁死
+    }
+    else if(rc_ctrl.rc.ch[AUTO_CHANNEL] == 0 || KeyBoard.X.click_flag == 0){
+        thread_lock = 0;    // 线程解锁
+    }
+    // 舵机模式判断
+    if(lens_flag == 0){
+        htim1.Instance->CCR3 = 500;
+    }else if(lens_flag == 1){
+        htim1.Instance->CCR3 = 1000;
+    }
+
     // TODO: 离线检测问题 记得开关
 //    if(detect_list[DETECT_LAUNCHER_2006_SINGLE_SHOT].status==OFFLINE)
 //    {

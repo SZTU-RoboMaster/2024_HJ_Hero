@@ -56,10 +56,10 @@ RM = "D:\software\CLion 2023.2.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\software\CLionProjects\2024_Hero
+CMAKE_SOURCE_DIR = D:\software\CLionProjects\2024_Hero_three
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\software\CLionProjects\2024_Hero\cmake-build-debug
+CMAKE_BINARY_DIR = D:\software\CLionProjects\2024_Hero_three\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\software\CLionProjects\2024_Hero\cmake-build-debug\CMakeFiles D:\software\CLionProjects\2024_Hero\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\software\CLionProjects\2024_Hero\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -116,24 +116,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named 2024_Hero.elf
+# Target rules for targets named 2024_Hero_three.elf
 
 # Build rule for target.
-2024_Hero.elf: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 2024_Hero.elf
-.PHONY : 2024_Hero.elf
+2024_Hero_three.elf: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 2024_Hero_three.elf
+.PHONY : 2024_Hero_three.elf
 
 # fast build rule for target.
-2024_Hero.elf/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/build
-.PHONY : 2024_Hero.elf/fast
+2024_Hero_three.elf/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/build
+.PHONY : 2024_Hero_three.elf/fast
 
 Core/Src/adc.obj: Core/Src/adc.c.obj
 .PHONY : Core/Src/adc.obj
 
 # target to build an object file
 Core/Src/adc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/adc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/adc.c.obj
 .PHONY : Core/Src/adc.c.obj
 
 Core/Src/adc.i: Core/Src/adc.c.i
@@ -141,7 +141,7 @@ Core/Src/adc.i: Core/Src/adc.c.i
 
 # target to preprocess a source file
 Core/Src/adc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/adc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/adc.c.i
 .PHONY : Core/Src/adc.c.i
 
 Core/Src/adc.s: Core/Src/adc.c.s
@@ -149,7 +149,7 @@ Core/Src/adc.s: Core/Src/adc.c.s
 
 # target to generate assembly for a file
 Core/Src/adc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/adc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/adc.c.s
 .PHONY : Core/Src/adc.c.s
 
 Core/Src/can.obj: Core/Src/can.c.obj
@@ -157,7 +157,7 @@ Core/Src/can.obj: Core/Src/can.c.obj
 
 # target to build an object file
 Core/Src/can.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/can.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/can.c.obj
 .PHONY : Core/Src/can.c.obj
 
 Core/Src/can.i: Core/Src/can.c.i
@@ -165,7 +165,7 @@ Core/Src/can.i: Core/Src/can.c.i
 
 # target to preprocess a source file
 Core/Src/can.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/can.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/can.c.i
 .PHONY : Core/Src/can.c.i
 
 Core/Src/can.s: Core/Src/can.c.s
@@ -173,7 +173,7 @@ Core/Src/can.s: Core/Src/can.c.s
 
 # target to generate assembly for a file
 Core/Src/can.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/can.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/can.c.s
 .PHONY : Core/Src/can.c.s
 
 Core/Src/crc.obj: Core/Src/crc.c.obj
@@ -181,7 +181,7 @@ Core/Src/crc.obj: Core/Src/crc.c.obj
 
 # target to build an object file
 Core/Src/crc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/crc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/crc.c.obj
 .PHONY : Core/Src/crc.c.obj
 
 Core/Src/crc.i: Core/Src/crc.c.i
@@ -189,7 +189,7 @@ Core/Src/crc.i: Core/Src/crc.c.i
 
 # target to preprocess a source file
 Core/Src/crc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/crc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/crc.c.i
 .PHONY : Core/Src/crc.c.i
 
 Core/Src/crc.s: Core/Src/crc.c.s
@@ -197,7 +197,7 @@ Core/Src/crc.s: Core/Src/crc.c.s
 
 # target to generate assembly for a file
 Core/Src/crc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/crc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/crc.c.s
 .PHONY : Core/Src/crc.c.s
 
 Core/Src/dma.obj: Core/Src/dma.c.obj
@@ -205,7 +205,7 @@ Core/Src/dma.obj: Core/Src/dma.c.obj
 
 # target to build an object file
 Core/Src/dma.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/dma.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/dma.c.obj
 .PHONY : Core/Src/dma.c.obj
 
 Core/Src/dma.i: Core/Src/dma.c.i
@@ -213,7 +213,7 @@ Core/Src/dma.i: Core/Src/dma.c.i
 
 # target to preprocess a source file
 Core/Src/dma.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/dma.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/dma.c.i
 .PHONY : Core/Src/dma.c.i
 
 Core/Src/dma.s: Core/Src/dma.c.s
@@ -221,7 +221,7 @@ Core/Src/dma.s: Core/Src/dma.c.s
 
 # target to generate assembly for a file
 Core/Src/dma.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/dma.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/dma.c.s
 .PHONY : Core/Src/dma.c.s
 
 Core/Src/freertos.obj: Core/Src/freertos.c.obj
@@ -229,7 +229,7 @@ Core/Src/freertos.obj: Core/Src/freertos.c.obj
 
 # target to build an object file
 Core/Src/freertos.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/freertos.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/freertos.c.obj
 .PHONY : Core/Src/freertos.c.obj
 
 Core/Src/freertos.i: Core/Src/freertos.c.i
@@ -237,7 +237,7 @@ Core/Src/freertos.i: Core/Src/freertos.c.i
 
 # target to preprocess a source file
 Core/Src/freertos.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/freertos.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/freertos.c.i
 .PHONY : Core/Src/freertos.c.i
 
 Core/Src/freertos.s: Core/Src/freertos.c.s
@@ -245,7 +245,7 @@ Core/Src/freertos.s: Core/Src/freertos.c.s
 
 # target to generate assembly for a file
 Core/Src/freertos.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/freertos.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/freertos.c.s
 .PHONY : Core/Src/freertos.c.s
 
 Core/Src/gpio.obj: Core/Src/gpio.c.obj
@@ -253,7 +253,7 @@ Core/Src/gpio.obj: Core/Src/gpio.c.obj
 
 # target to build an object file
 Core/Src/gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/gpio.c.obj
 .PHONY : Core/Src/gpio.c.obj
 
 Core/Src/gpio.i: Core/Src/gpio.c.i
@@ -261,7 +261,7 @@ Core/Src/gpio.i: Core/Src/gpio.c.i
 
 # target to preprocess a source file
 Core/Src/gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/gpio.c.i
 .PHONY : Core/Src/gpio.c.i
 
 Core/Src/gpio.s: Core/Src/gpio.c.s
@@ -269,7 +269,7 @@ Core/Src/gpio.s: Core/Src/gpio.c.s
 
 # target to generate assembly for a file
 Core/Src/gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/gpio.c.s
 .PHONY : Core/Src/gpio.c.s
 
 Core/Src/i2c.obj: Core/Src/i2c.c.obj
@@ -277,7 +277,7 @@ Core/Src/i2c.obj: Core/Src/i2c.c.obj
 
 # target to build an object file
 Core/Src/i2c.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/i2c.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/i2c.c.obj
 .PHONY : Core/Src/i2c.c.obj
 
 Core/Src/i2c.i: Core/Src/i2c.c.i
@@ -285,7 +285,7 @@ Core/Src/i2c.i: Core/Src/i2c.c.i
 
 # target to preprocess a source file
 Core/Src/i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/i2c.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/i2c.c.i
 .PHONY : Core/Src/i2c.c.i
 
 Core/Src/i2c.s: Core/Src/i2c.c.s
@@ -293,7 +293,7 @@ Core/Src/i2c.s: Core/Src/i2c.c.s
 
 # target to generate assembly for a file
 Core/Src/i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/i2c.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/i2c.c.s
 .PHONY : Core/Src/i2c.c.s
 
 Core/Src/main.obj: Core/Src/main.c.obj
@@ -301,7 +301,7 @@ Core/Src/main.obj: Core/Src/main.c.obj
 
 # target to build an object file
 Core/Src/main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/main.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/main.c.obj
 .PHONY : Core/Src/main.c.obj
 
 Core/Src/main.i: Core/Src/main.c.i
@@ -309,7 +309,7 @@ Core/Src/main.i: Core/Src/main.c.i
 
 # target to preprocess a source file
 Core/Src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/main.c.i
 .PHONY : Core/Src/main.c.i
 
 Core/Src/main.s: Core/Src/main.c.s
@@ -317,7 +317,7 @@ Core/Src/main.s: Core/Src/main.c.s
 
 # target to generate assembly for a file
 Core/Src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/main.c.s
 .PHONY : Core/Src/main.c.s
 
 Core/Src/rng.obj: Core/Src/rng.c.obj
@@ -325,7 +325,7 @@ Core/Src/rng.obj: Core/Src/rng.c.obj
 
 # target to build an object file
 Core/Src/rng.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/rng.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/rng.c.obj
 .PHONY : Core/Src/rng.c.obj
 
 Core/Src/rng.i: Core/Src/rng.c.i
@@ -333,7 +333,7 @@ Core/Src/rng.i: Core/Src/rng.c.i
 
 # target to preprocess a source file
 Core/Src/rng.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/rng.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/rng.c.i
 .PHONY : Core/Src/rng.c.i
 
 Core/Src/rng.s: Core/Src/rng.c.s
@@ -341,7 +341,7 @@ Core/Src/rng.s: Core/Src/rng.c.s
 
 # target to generate assembly for a file
 Core/Src/rng.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/rng.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/rng.c.s
 .PHONY : Core/Src/rng.c.s
 
 Core/Src/spi.obj: Core/Src/spi.c.obj
@@ -349,7 +349,7 @@ Core/Src/spi.obj: Core/Src/spi.c.obj
 
 # target to build an object file
 Core/Src/spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/spi.c.obj
 .PHONY : Core/Src/spi.c.obj
 
 Core/Src/spi.i: Core/Src/spi.c.i
@@ -357,7 +357,7 @@ Core/Src/spi.i: Core/Src/spi.c.i
 
 # target to preprocess a source file
 Core/Src/spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/spi.c.i
 .PHONY : Core/Src/spi.c.i
 
 Core/Src/spi.s: Core/Src/spi.c.s
@@ -365,7 +365,7 @@ Core/Src/spi.s: Core/Src/spi.c.s
 
 # target to generate assembly for a file
 Core/Src/spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/spi.c.s
 .PHONY : Core/Src/spi.c.s
 
 Core/Src/stm32f4xx_hal_msp.obj: Core/Src/stm32f4xx_hal_msp.c.obj
@@ -373,7 +373,7 @@ Core/Src/stm32f4xx_hal_msp.obj: Core/Src/stm32f4xx_hal_msp.c.obj
 
 # target to build an object file
 Core/Src/stm32f4xx_hal_msp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/stm32f4xx_hal_msp.c.obj
 .PHONY : Core/Src/stm32f4xx_hal_msp.c.obj
 
 Core/Src/stm32f4xx_hal_msp.i: Core/Src/stm32f4xx_hal_msp.c.i
@@ -381,7 +381,7 @@ Core/Src/stm32f4xx_hal_msp.i: Core/Src/stm32f4xx_hal_msp.c.i
 
 # target to preprocess a source file
 Core/Src/stm32f4xx_hal_msp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/stm32f4xx_hal_msp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/stm32f4xx_hal_msp.c.i
 .PHONY : Core/Src/stm32f4xx_hal_msp.c.i
 
 Core/Src/stm32f4xx_hal_msp.s: Core/Src/stm32f4xx_hal_msp.c.s
@@ -389,7 +389,7 @@ Core/Src/stm32f4xx_hal_msp.s: Core/Src/stm32f4xx_hal_msp.c.s
 
 # target to generate assembly for a file
 Core/Src/stm32f4xx_hal_msp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/stm32f4xx_hal_msp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/stm32f4xx_hal_msp.c.s
 .PHONY : Core/Src/stm32f4xx_hal_msp.c.s
 
 Core/Src/stm32f4xx_it.obj: Core/Src/stm32f4xx_it.c.obj
@@ -397,7 +397,7 @@ Core/Src/stm32f4xx_it.obj: Core/Src/stm32f4xx_it.c.obj
 
 # target to build an object file
 Core/Src/stm32f4xx_it.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/stm32f4xx_it.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/stm32f4xx_it.c.obj
 .PHONY : Core/Src/stm32f4xx_it.c.obj
 
 Core/Src/stm32f4xx_it.i: Core/Src/stm32f4xx_it.c.i
@@ -405,7 +405,7 @@ Core/Src/stm32f4xx_it.i: Core/Src/stm32f4xx_it.c.i
 
 # target to preprocess a source file
 Core/Src/stm32f4xx_it.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/stm32f4xx_it.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/stm32f4xx_it.c.i
 .PHONY : Core/Src/stm32f4xx_it.c.i
 
 Core/Src/stm32f4xx_it.s: Core/Src/stm32f4xx_it.c.s
@@ -413,7 +413,7 @@ Core/Src/stm32f4xx_it.s: Core/Src/stm32f4xx_it.c.s
 
 # target to generate assembly for a file
 Core/Src/stm32f4xx_it.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/stm32f4xx_it.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/stm32f4xx_it.c.s
 .PHONY : Core/Src/stm32f4xx_it.c.s
 
 Core/Src/syscalls.obj: Core/Src/syscalls.c.obj
@@ -421,7 +421,7 @@ Core/Src/syscalls.obj: Core/Src/syscalls.c.obj
 
 # target to build an object file
 Core/Src/syscalls.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/syscalls.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/syscalls.c.obj
 .PHONY : Core/Src/syscalls.c.obj
 
 Core/Src/syscalls.i: Core/Src/syscalls.c.i
@@ -429,7 +429,7 @@ Core/Src/syscalls.i: Core/Src/syscalls.c.i
 
 # target to preprocess a source file
 Core/Src/syscalls.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/syscalls.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/syscalls.c.i
 .PHONY : Core/Src/syscalls.c.i
 
 Core/Src/syscalls.s: Core/Src/syscalls.c.s
@@ -437,7 +437,7 @@ Core/Src/syscalls.s: Core/Src/syscalls.c.s
 
 # target to generate assembly for a file
 Core/Src/syscalls.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/syscalls.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/syscalls.c.s
 .PHONY : Core/Src/syscalls.c.s
 
 Core/Src/sysmem.obj: Core/Src/sysmem.c.obj
@@ -445,7 +445,7 @@ Core/Src/sysmem.obj: Core/Src/sysmem.c.obj
 
 # target to build an object file
 Core/Src/sysmem.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/sysmem.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/sysmem.c.obj
 .PHONY : Core/Src/sysmem.c.obj
 
 Core/Src/sysmem.i: Core/Src/sysmem.c.i
@@ -453,7 +453,7 @@ Core/Src/sysmem.i: Core/Src/sysmem.c.i
 
 # target to preprocess a source file
 Core/Src/sysmem.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/sysmem.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/sysmem.c.i
 .PHONY : Core/Src/sysmem.c.i
 
 Core/Src/sysmem.s: Core/Src/sysmem.c.s
@@ -461,7 +461,7 @@ Core/Src/sysmem.s: Core/Src/sysmem.c.s
 
 # target to generate assembly for a file
 Core/Src/sysmem.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/sysmem.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/sysmem.c.s
 .PHONY : Core/Src/sysmem.c.s
 
 Core/Src/system_stm32f4xx.obj: Core/Src/system_stm32f4xx.c.obj
@@ -469,7 +469,7 @@ Core/Src/system_stm32f4xx.obj: Core/Src/system_stm32f4xx.c.obj
 
 # target to build an object file
 Core/Src/system_stm32f4xx.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/system_stm32f4xx.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/system_stm32f4xx.c.obj
 .PHONY : Core/Src/system_stm32f4xx.c.obj
 
 Core/Src/system_stm32f4xx.i: Core/Src/system_stm32f4xx.c.i
@@ -477,7 +477,7 @@ Core/Src/system_stm32f4xx.i: Core/Src/system_stm32f4xx.c.i
 
 # target to preprocess a source file
 Core/Src/system_stm32f4xx.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/system_stm32f4xx.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/system_stm32f4xx.c.i
 .PHONY : Core/Src/system_stm32f4xx.c.i
 
 Core/Src/system_stm32f4xx.s: Core/Src/system_stm32f4xx.c.s
@@ -485,7 +485,7 @@ Core/Src/system_stm32f4xx.s: Core/Src/system_stm32f4xx.c.s
 
 # target to generate assembly for a file
 Core/Src/system_stm32f4xx.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/system_stm32f4xx.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/system_stm32f4xx.c.s
 .PHONY : Core/Src/system_stm32f4xx.c.s
 
 Core/Src/tim.obj: Core/Src/tim.c.obj
@@ -493,7 +493,7 @@ Core/Src/tim.obj: Core/Src/tim.c.obj
 
 # target to build an object file
 Core/Src/tim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/tim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/tim.c.obj
 .PHONY : Core/Src/tim.c.obj
 
 Core/Src/tim.i: Core/Src/tim.c.i
@@ -501,7 +501,7 @@ Core/Src/tim.i: Core/Src/tim.c.i
 
 # target to preprocess a source file
 Core/Src/tim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/tim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/tim.c.i
 .PHONY : Core/Src/tim.c.i
 
 Core/Src/tim.s: Core/Src/tim.c.s
@@ -509,7 +509,7 @@ Core/Src/tim.s: Core/Src/tim.c.s
 
 # target to generate assembly for a file
 Core/Src/tim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/tim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/tim.c.s
 .PHONY : Core/Src/tim.c.s
 
 Core/Src/usart.obj: Core/Src/usart.c.obj
@@ -517,7 +517,7 @@ Core/Src/usart.obj: Core/Src/usart.c.obj
 
 # target to build an object file
 Core/Src/usart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/usart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/usart.c.obj
 .PHONY : Core/Src/usart.c.obj
 
 Core/Src/usart.i: Core/Src/usart.c.i
@@ -525,7 +525,7 @@ Core/Src/usart.i: Core/Src/usart.c.i
 
 # target to preprocess a source file
 Core/Src/usart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/usart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/usart.c.i
 .PHONY : Core/Src/usart.c.i
 
 Core/Src/usart.s: Core/Src/usart.c.s
@@ -533,7 +533,7 @@ Core/Src/usart.s: Core/Src/usart.c.s
 
 # target to generate assembly for a file
 Core/Src/usart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Src/usart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Src/usart.c.s
 .PHONY : Core/Src/usart.c.s
 
 Core/Startup/startup_stm32f407ighx.obj: Core/Startup/startup_stm32f407ighx.s.obj
@@ -541,7 +541,7 @@ Core/Startup/startup_stm32f407ighx.obj: Core/Startup/startup_stm32f407ighx.s.obj
 
 # target to build an object file
 Core/Startup/startup_stm32f407ighx.s.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Core/Startup/startup_stm32f407ighx.s.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Core/Startup/startup_stm32f407ighx.s.obj
 .PHONY : Core/Startup/startup_stm32f407ighx.s.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
@@ -549,7 +549,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.obj: Drivers/STM32F4xx_HAL_Driver
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i
@@ -557,7 +557,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.i: Drivers/STM32F4xx_HAL_Driver/S
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s
@@ -565,7 +565,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.s: Drivers/STM32F4xx_HAL_Driver/S
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
@@ -573,7 +573,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.i
@@ -581,7 +581,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.s
@@ -589,7 +589,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
@@ -597,7 +597,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.i
@@ -605,7 +605,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.s
@@ -613,7 +613,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_adc_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
@@ -621,7 +621,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.i
@@ -629,7 +629,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.s
@@ -637,7 +637,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_can.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
@@ -645,7 +645,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i
@@ -653,7 +653,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.s
@@ -661,7 +661,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.obj
@@ -669,7 +669,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.i
@@ -677,7 +677,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.s
@@ -685,7 +685,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_crc.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
@@ -693,7 +693,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i
@@ -701,7 +701,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.s
@@ -709,7 +709,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
@@ -717,7 +717,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i
@@ -725,7 +725,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.s
@@ -733,7 +733,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
@@ -741,7 +741,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.obj: Drivers/STM32F4xx_HAL_D
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.i
@@ -749,7 +749,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.i: Drivers/STM32F4xx_HAL_Dri
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.s
@@ -757,7 +757,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.s: Drivers/STM32F4xx_HAL_Dri
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
@@ -765,7 +765,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.obj: Drivers/STM32F4xx_HAL_
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i
@@ -773,7 +773,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.i: Drivers/STM32F4xx_HAL_Dr
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.s
@@ -781,7 +781,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.s: Drivers/STM32F4xx_HAL_Dr
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
@@ -789,7 +789,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.obj: Drivers/STM32F4xx_H
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i
@@ -797,7 +797,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.i: Drivers/STM32F4xx_HAL
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.s
@@ -805,7 +805,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.s: Drivers/STM32F4xx_HAL
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
@@ -813,7 +813,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.obj: Drivers/STM32F
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i
@@ -821,7 +821,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.i: Drivers/STM32F4x
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.s
@@ -829,7 +829,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.s: Drivers/STM32F4x
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
@@ -837,7 +837,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.obj: Drivers/STM32F4xx_HAL_D
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i
@@ -845,7 +845,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.i: Drivers/STM32F4xx_HAL_Dri
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.s
@@ -853,7 +853,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.s: Drivers/STM32F4xx_HAL_Dri
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
@@ -861,7 +861,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.i
@@ -869,7 +869,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.s
@@ -877,7 +877,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj
@@ -885,7 +885,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.i
@@ -893,7 +893,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.s
@@ -901,7 +901,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.obj
@@ -909,7 +909,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.i
@@ -917,7 +917,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.s
@@ -925,7 +925,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.obj
@@ -933,7 +933,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.i
@@ -941,7 +941,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.s
@@ -949,7 +949,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
@@ -957,7 +957,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i
@@ -965,7 +965,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.s
@@ -973,7 +973,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
@@ -981,7 +981,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i
@@ -989,7 +989,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.s
@@ -997,7 +997,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
@@ -1005,7 +1005,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i
@@ -1013,7 +1013,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.s
@@ -1021,7 +1021,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
@@ -1029,7 +1029,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i
@@ -1037,7 +1037,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.s
@@ -1045,7 +1045,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.obj
@@ -1053,7 +1053,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.i
@@ -1061,7 +1061,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.s
@@ -1069,7 +1069,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rng.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
@@ -1077,7 +1077,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.i
@@ -1085,7 +1085,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.s
@@ -1093,7 +1093,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
@@ -1101,7 +1101,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.obj: Drivers/STM32F4xx_HAL_Dr
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i
@@ -1109,7 +1109,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.i: Drivers/STM32F4xx_HAL_Driv
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.s
@@ -1117,7 +1117,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.s: Drivers/STM32F4xx_HAL_Driv
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
@@ -1125,7 +1125,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.obj: Drivers/STM32F4xx_HAL
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i
@@ -1133,7 +1133,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.i: Drivers/STM32F4xx_HAL_D
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.s
@@ -1141,7 +1141,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.s: Drivers/STM32F4xx_HAL_D
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
@@ -1149,7 +1149,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.obj: Drivers/STM32F4xx_HAL_D
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.i
@@ -1157,7 +1157,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.i: Drivers/STM32F4xx_HAL_Dri
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.s
@@ -1165,7 +1165,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.s: Drivers/STM32F4xx_HAL_Dri
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj
@@ -1173,7 +1173,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.obj: Drivers/STM32F4xx_HAL_Dri
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.i
@@ -1181,7 +1181,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.i: Drivers/STM32F4xx_HAL_Drive
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.s
@@ -1189,7 +1189,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.s: Drivers/STM32F4xx_HAL_Drive
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_adc.c.s
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.obj: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.obj
@@ -1197,7 +1197,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.obj: Drivers/STM32F4xx_HAL_Dri
 
 # target to build an object file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.obj
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.obj
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.i: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.i
@@ -1205,7 +1205,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.i: Drivers/STM32F4xx_HAL_Drive
 
 # target to preprocess a source file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.i
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.i
 
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.s: Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.s
@@ -1213,7 +1213,7 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.s: Drivers/STM32F4xx_HAL_Drive
 
 # target to generate assembly for a file
 Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.s
 .PHONY : Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c.s
 
 Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.obj: Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.obj
@@ -1221,7 +1221,7 @@ Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.obj: Middlewares/
 
 # target to build an object file
 Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.obj
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.obj
 
 Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.i: Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.i
@@ -1229,7 +1229,7 @@ Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.i: Middlewares/ST
 
 # target to preprocess a source file
 Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.i
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.i
 
 Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.s: Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.s
@@ -1237,7 +1237,7 @@ Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.s: Middlewares/ST
 
 # target to generate assembly for a file
 Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.s
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c.s
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.obj: Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj
@@ -1245,7 +1245,7 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.obj: Middlewares/ST/S
 
 # target to build an object file
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.obj
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.i: Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.i
@@ -1253,7 +1253,7 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.i: Middlewares/ST/STM
 
 # target to preprocess a source file
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.i
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.i
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.s: Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.s
@@ -1261,7 +1261,7 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.s: Middlewares/ST/STM
 
 # target to generate assembly for a file
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.s
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c.s
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.obj: Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
@@ -1269,7 +1269,7 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.obj: Middlewares/ST
 
 # target to build an object file
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.obj
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.i: Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.i
@@ -1277,7 +1277,7 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.i: Middlewares/ST/S
 
 # target to preprocess a source file
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.i
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.i
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.s: Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.s
@@ -1285,7 +1285,7 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.s: Middlewares/ST/S
 
 # target to generate assembly for a file
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.s
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c.s
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.obj: Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj
@@ -1293,7 +1293,7 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.obj: Middlewares/ST/
 
 # target to build an object file
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.obj
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.i: Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.i
@@ -1301,7 +1301,7 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.i: Middlewares/ST/ST
 
 # target to preprocess a source file
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.i
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.i
 
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.s: Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.s
@@ -1309,7 +1309,7 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.s: Middlewares/ST/ST
 
 # target to generate assembly for a file
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.s
 .PHONY : Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.obj: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
@@ -1317,7 +1317,7 @@ Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.obj: Middlewares/Thi
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.i: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i
@@ -1325,7 +1325,7 @@ Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.i: Middlewares/Third
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.s: Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s
@@ -1333,7 +1333,7 @@ Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.s: Middlewares/Third
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/croutine.obj: Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
@@ -1341,7 +1341,7 @@ Middlewares/Third_Party/FreeRTOS/Source/croutine.obj: Middlewares/Third_Party/Fr
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/croutine.i: Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
@@ -1349,7 +1349,7 @@ Middlewares/Third_Party/FreeRTOS/Source/croutine.i: Middlewares/Third_Party/Free
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/croutine.s: Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
@@ -1357,7 +1357,7 @@ Middlewares/Third_Party/FreeRTOS/Source/croutine.s: Middlewares/Third_Party/Free
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/croutine.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.obj: Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
@@ -1365,7 +1365,7 @@ Middlewares/Third_Party/FreeRTOS/Source/event_groups.obj: Middlewares/Third_Part
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.i: Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
@@ -1373,7 +1373,7 @@ Middlewares/Third_Party/FreeRTOS/Source/event_groups.i: Middlewares/Third_Party/
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.s: Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
@@ -1381,7 +1381,7 @@ Middlewares/Third_Party/FreeRTOS/Source/event_groups.s: Middlewares/Third_Party/
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/event_groups.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/list.obj: Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
@@ -1389,7 +1389,7 @@ Middlewares/Third_Party/FreeRTOS/Source/list.obj: Middlewares/Third_Party/FreeRT
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/list.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/list.i: Middlewares/Third_Party/FreeRTOS/Source/list.c.i
@@ -1397,7 +1397,7 @@ Middlewares/Third_Party/FreeRTOS/Source/list.i: Middlewares/Third_Party/FreeRTOS
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/list.s: Middlewares/Third_Party/FreeRTOS/Source/list.c.s
@@ -1405,7 +1405,7 @@ Middlewares/Third_Party/FreeRTOS/Source/list.s: Middlewares/Third_Party/FreeRTOS
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/list.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/list.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.obj: Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
@@ -1413,7 +1413,7 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.obj: Middlewa
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.i: Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i
@@ -1421,7 +1421,7 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.i: Middleware
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.s: Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s
@@ -1429,7 +1429,7 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.s: Middleware
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/port.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.obj: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
@@ -1437,7 +1437,7 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.obj: Middlewares
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.i: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
@@ -1445,7 +1445,7 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.i: Middlewares/T
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.s: Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
@@ -1453,7 +1453,7 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.s: Middlewares/T
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/queue.obj: Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
@@ -1461,7 +1461,7 @@ Middlewares/Third_Party/FreeRTOS/Source/queue.obj: Middlewares/Third_Party/FreeR
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/queue.i: Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
@@ -1469,7 +1469,7 @@ Middlewares/Third_Party/FreeRTOS/Source/queue.i: Middlewares/Third_Party/FreeRTO
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/queue.s: Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
@@ -1477,7 +1477,7 @@ Middlewares/Third_Party/FreeRTOS/Source/queue.s: Middlewares/Third_Party/FreeRTO
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/queue.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.obj: Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
@@ -1485,7 +1485,7 @@ Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.obj: Middlewares/Third_Par
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.i: Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
@@ -1493,7 +1493,7 @@ Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.i: Middlewares/Third_Party
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.s: Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
@@ -1501,7 +1501,7 @@ Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.s: Middlewares/Third_Party
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/stream_buffer.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/tasks.obj: Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
@@ -1509,7 +1509,7 @@ Middlewares/Third_Party/FreeRTOS/Source/tasks.obj: Middlewares/Third_Party/FreeR
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/tasks.i: Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
@@ -1517,7 +1517,7 @@ Middlewares/Third_Party/FreeRTOS/Source/tasks.i: Middlewares/Third_Party/FreeRTO
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/tasks.s: Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
@@ -1525,7 +1525,7 @@ Middlewares/Third_Party/FreeRTOS/Source/tasks.s: Middlewares/Third_Party/FreeRTO
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/tasks.c.s
 
 Middlewares/Third_Party/FreeRTOS/Source/timers.obj: Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
@@ -1533,7 +1533,7 @@ Middlewares/Third_Party/FreeRTOS/Source/timers.obj: Middlewares/Third_Party/Free
 
 # target to build an object file
 Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.c.obj
 
 Middlewares/Third_Party/FreeRTOS/Source/timers.i: Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
@@ -1541,7 +1541,7 @@ Middlewares/Third_Party/FreeRTOS/Source/timers.i: Middlewares/Third_Party/FreeRT
 
 # target to preprocess a source file
 Middlewares/Third_Party/FreeRTOS/Source/timers.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.c.i
 
 Middlewares/Third_Party/FreeRTOS/Source/timers.s: Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
@@ -1549,7 +1549,7 @@ Middlewares/Third_Party/FreeRTOS/Source/timers.s: Middlewares/Third_Party/FreeRT
 
 # target to generate assembly for a file
 Middlewares/Third_Party/FreeRTOS/Source/timers.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
 .PHONY : Middlewares/Third_Party/FreeRTOS/Source/timers.c.s
 
 USB_DEVICE/App/usb_device.obj: USB_DEVICE/App/usb_device.c.obj
@@ -1557,7 +1557,7 @@ USB_DEVICE/App/usb_device.obj: USB_DEVICE/App/usb_device.c.obj
 
 # target to build an object file
 USB_DEVICE/App/usb_device.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/App/usb_device.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usb_device.c.obj
 .PHONY : USB_DEVICE/App/usb_device.c.obj
 
 USB_DEVICE/App/usb_device.i: USB_DEVICE/App/usb_device.c.i
@@ -1565,7 +1565,7 @@ USB_DEVICE/App/usb_device.i: USB_DEVICE/App/usb_device.c.i
 
 # target to preprocess a source file
 USB_DEVICE/App/usb_device.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/App/usb_device.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usb_device.c.i
 .PHONY : USB_DEVICE/App/usb_device.c.i
 
 USB_DEVICE/App/usb_device.s: USB_DEVICE/App/usb_device.c.s
@@ -1573,7 +1573,7 @@ USB_DEVICE/App/usb_device.s: USB_DEVICE/App/usb_device.c.s
 
 # target to generate assembly for a file
 USB_DEVICE/App/usb_device.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/App/usb_device.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usb_device.c.s
 .PHONY : USB_DEVICE/App/usb_device.c.s
 
 USB_DEVICE/App/usb_task.obj: USB_DEVICE/App/usb_task.c.obj
@@ -1581,7 +1581,7 @@ USB_DEVICE/App/usb_task.obj: USB_DEVICE/App/usb_task.c.obj
 
 # target to build an object file
 USB_DEVICE/App/usb_task.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/App/usb_task.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usb_task.c.obj
 .PHONY : USB_DEVICE/App/usb_task.c.obj
 
 USB_DEVICE/App/usb_task.i: USB_DEVICE/App/usb_task.c.i
@@ -1589,7 +1589,7 @@ USB_DEVICE/App/usb_task.i: USB_DEVICE/App/usb_task.c.i
 
 # target to preprocess a source file
 USB_DEVICE/App/usb_task.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/App/usb_task.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usb_task.c.i
 .PHONY : USB_DEVICE/App/usb_task.c.i
 
 USB_DEVICE/App/usb_task.s: USB_DEVICE/App/usb_task.c.s
@@ -1597,7 +1597,7 @@ USB_DEVICE/App/usb_task.s: USB_DEVICE/App/usb_task.c.s
 
 # target to generate assembly for a file
 USB_DEVICE/App/usb_task.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/App/usb_task.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usb_task.c.s
 .PHONY : USB_DEVICE/App/usb_task.c.s
 
 USB_DEVICE/App/usbd_cdc_if.obj: USB_DEVICE/App/usbd_cdc_if.c.obj
@@ -1605,7 +1605,7 @@ USB_DEVICE/App/usbd_cdc_if.obj: USB_DEVICE/App/usbd_cdc_if.c.obj
 
 # target to build an object file
 USB_DEVICE/App/usbd_cdc_if.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
 .PHONY : USB_DEVICE/App/usbd_cdc_if.c.obj
 
 USB_DEVICE/App/usbd_cdc_if.i: USB_DEVICE/App/usbd_cdc_if.c.i
@@ -1613,7 +1613,7 @@ USB_DEVICE/App/usbd_cdc_if.i: USB_DEVICE/App/usbd_cdc_if.c.i
 
 # target to preprocess a source file
 USB_DEVICE/App/usbd_cdc_if.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.i
 .PHONY : USB_DEVICE/App/usbd_cdc_if.c.i
 
 USB_DEVICE/App/usbd_cdc_if.s: USB_DEVICE/App/usbd_cdc_if.c.s
@@ -1621,7 +1621,7 @@ USB_DEVICE/App/usbd_cdc_if.s: USB_DEVICE/App/usbd_cdc_if.c.s
 
 # target to generate assembly for a file
 USB_DEVICE/App/usbd_cdc_if.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.s
 .PHONY : USB_DEVICE/App/usbd_cdc_if.c.s
 
 USB_DEVICE/App/usbd_desc.obj: USB_DEVICE/App/usbd_desc.c.obj
@@ -1629,7 +1629,7 @@ USB_DEVICE/App/usbd_desc.obj: USB_DEVICE/App/usbd_desc.c.obj
 
 # target to build an object file
 USB_DEVICE/App/usbd_desc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
 .PHONY : USB_DEVICE/App/usbd_desc.c.obj
 
 USB_DEVICE/App/usbd_desc.i: USB_DEVICE/App/usbd_desc.c.i
@@ -1637,7 +1637,7 @@ USB_DEVICE/App/usbd_desc.i: USB_DEVICE/App/usbd_desc.c.i
 
 # target to preprocess a source file
 USB_DEVICE/App/usbd_desc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/App/usbd_desc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usbd_desc.c.i
 .PHONY : USB_DEVICE/App/usbd_desc.c.i
 
 USB_DEVICE/App/usbd_desc.s: USB_DEVICE/App/usbd_desc.c.s
@@ -1645,7 +1645,7 @@ USB_DEVICE/App/usbd_desc.s: USB_DEVICE/App/usbd_desc.c.s
 
 # target to generate assembly for a file
 USB_DEVICE/App/usbd_desc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/App/usbd_desc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usbd_desc.c.s
 .PHONY : USB_DEVICE/App/usbd_desc.c.s
 
 USB_DEVICE/Target/usbd_conf.obj: USB_DEVICE/Target/usbd_conf.c.obj
@@ -1653,7 +1653,7 @@ USB_DEVICE/Target/usbd_conf.obj: USB_DEVICE/Target/usbd_conf.c.obj
 
 # target to build an object file
 USB_DEVICE/Target/usbd_conf.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
 .PHONY : USB_DEVICE/Target/usbd_conf.c.obj
 
 USB_DEVICE/Target/usbd_conf.i: USB_DEVICE/Target/usbd_conf.c.i
@@ -1661,7 +1661,7 @@ USB_DEVICE/Target/usbd_conf.i: USB_DEVICE/Target/usbd_conf.c.i
 
 # target to preprocess a source file
 USB_DEVICE/Target/usbd_conf.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/Target/usbd_conf.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/Target/usbd_conf.c.i
 .PHONY : USB_DEVICE/Target/usbd_conf.c.i
 
 USB_DEVICE/Target/usbd_conf.s: USB_DEVICE/Target/usbd_conf.c.s
@@ -1669,7 +1669,7 @@ USB_DEVICE/Target/usbd_conf.s: USB_DEVICE/Target/usbd_conf.c.s
 
 # target to generate assembly for a file
 USB_DEVICE/Target/usbd_conf.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/USB_DEVICE/Target/usbd_conf.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/Target/usbd_conf.c.s
 .PHONY : USB_DEVICE/Target/usbd_conf.c.s
 
 application/A_Hero/Cap.obj: application/A_Hero/Cap.c.obj
@@ -1677,7 +1677,7 @@ application/A_Hero/Cap.obj: application/A_Hero/Cap.c.obj
 
 # target to build an object file
 application/A_Hero/Cap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/A_Hero/Cap.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.obj
 .PHONY : application/A_Hero/Cap.c.obj
 
 application/A_Hero/Cap.i: application/A_Hero/Cap.c.i
@@ -1685,7 +1685,7 @@ application/A_Hero/Cap.i: application/A_Hero/Cap.c.i
 
 # target to preprocess a source file
 application/A_Hero/Cap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/A_Hero/Cap.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.i
 .PHONY : application/A_Hero/Cap.c.i
 
 application/A_Hero/Cap.s: application/A_Hero/Cap.c.s
@@ -1693,7 +1693,7 @@ application/A_Hero/Cap.s: application/A_Hero/Cap.c.s
 
 # target to generate assembly for a file
 application/A_Hero/Cap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/A_Hero/Cap.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.s
 .PHONY : application/A_Hero/Cap.c.s
 
 application/A_Hero/StartDefault.obj: application/A_Hero/StartDefault.c.obj
@@ -1701,7 +1701,7 @@ application/A_Hero/StartDefault.obj: application/A_Hero/StartDefault.c.obj
 
 # target to build an object file
 application/A_Hero/StartDefault.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/A_Hero/StartDefault.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.obj
 .PHONY : application/A_Hero/StartDefault.c.obj
 
 application/A_Hero/StartDefault.i: application/A_Hero/StartDefault.c.i
@@ -1709,7 +1709,7 @@ application/A_Hero/StartDefault.i: application/A_Hero/StartDefault.c.i
 
 # target to preprocess a source file
 application/A_Hero/StartDefault.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/A_Hero/StartDefault.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.i
 .PHONY : application/A_Hero/StartDefault.c.i
 
 application/A_Hero/StartDefault.s: application/A_Hero/StartDefault.c.s
@@ -1717,7 +1717,7 @@ application/A_Hero/StartDefault.s: application/A_Hero/StartDefault.c.s
 
 # target to generate assembly for a file
 application/A_Hero/StartDefault.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/A_Hero/StartDefault.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.s
 .PHONY : application/A_Hero/StartDefault.c.s
 
 application/Chassis/Chassis.obj: application/Chassis/Chassis.c.obj
@@ -1725,7 +1725,7 @@ application/Chassis/Chassis.obj: application/Chassis/Chassis.c.obj
 
 # target to build an object file
 application/Chassis/Chassis.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Chassis/Chassis.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis.c.obj
 .PHONY : application/Chassis/Chassis.c.obj
 
 application/Chassis/Chassis.i: application/Chassis/Chassis.c.i
@@ -1733,7 +1733,7 @@ application/Chassis/Chassis.i: application/Chassis/Chassis.c.i
 
 # target to preprocess a source file
 application/Chassis/Chassis.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Chassis/Chassis.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis.c.i
 .PHONY : application/Chassis/Chassis.c.i
 
 application/Chassis/Chassis.s: application/Chassis/Chassis.c.s
@@ -1741,7 +1741,7 @@ application/Chassis/Chassis.s: application/Chassis/Chassis.c.s
 
 # target to generate assembly for a file
 application/Chassis/Chassis.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Chassis/Chassis.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis.c.s
 .PHONY : application/Chassis/Chassis.c.s
 
 application/Chassis/Chassis_behaviour.obj: application/Chassis/Chassis_behaviour.c.obj
@@ -1749,7 +1749,7 @@ application/Chassis/Chassis_behaviour.obj: application/Chassis/Chassis_behaviour
 
 # target to build an object file
 application/Chassis/Chassis_behaviour.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Chassis/Chassis_behaviour.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_behaviour.c.obj
 .PHONY : application/Chassis/Chassis_behaviour.c.obj
 
 application/Chassis/Chassis_behaviour.i: application/Chassis/Chassis_behaviour.c.i
@@ -1757,7 +1757,7 @@ application/Chassis/Chassis_behaviour.i: application/Chassis/Chassis_behaviour.c
 
 # target to preprocess a source file
 application/Chassis/Chassis_behaviour.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Chassis/Chassis_behaviour.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_behaviour.c.i
 .PHONY : application/Chassis/Chassis_behaviour.c.i
 
 application/Chassis/Chassis_behaviour.s: application/Chassis/Chassis_behaviour.c.s
@@ -1765,7 +1765,7 @@ application/Chassis/Chassis_behaviour.s: application/Chassis/Chassis_behaviour.c
 
 # target to generate assembly for a file
 application/Chassis/Chassis_behaviour.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Chassis/Chassis_behaviour.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_behaviour.c.s
 .PHONY : application/Chassis/Chassis_behaviour.c.s
 
 application/Chassis/Chassis_send.obj: application/Chassis/Chassis_send.c.obj
@@ -1773,7 +1773,7 @@ application/Chassis/Chassis_send.obj: application/Chassis/Chassis_send.c.obj
 
 # target to build an object file
 application/Chassis/Chassis_send.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Chassis/Chassis_send.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_send.c.obj
 .PHONY : application/Chassis/Chassis_send.c.obj
 
 application/Chassis/Chassis_send.i: application/Chassis/Chassis_send.c.i
@@ -1781,7 +1781,7 @@ application/Chassis/Chassis_send.i: application/Chassis/Chassis_send.c.i
 
 # target to preprocess a source file
 application/Chassis/Chassis_send.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Chassis/Chassis_send.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_send.c.i
 .PHONY : application/Chassis/Chassis_send.c.i
 
 application/Chassis/Chassis_send.s: application/Chassis/Chassis_send.c.s
@@ -1789,7 +1789,7 @@ application/Chassis/Chassis_send.s: application/Chassis/Chassis_send.c.s
 
 # target to generate assembly for a file
 application/Chassis/Chassis_send.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Chassis/Chassis_send.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_send.c.s
 .PHONY : application/Chassis/Chassis_send.c.s
 
 application/Chassis/Trigger_function.obj: application/Chassis/Trigger_function.c.obj
@@ -1797,7 +1797,7 @@ application/Chassis/Trigger_function.obj: application/Chassis/Trigger_function.c
 
 # target to build an object file
 application/Chassis/Trigger_function.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Chassis/Trigger_function.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Trigger_function.c.obj
 .PHONY : application/Chassis/Trigger_function.c.obj
 
 application/Chassis/Trigger_function.i: application/Chassis/Trigger_function.c.i
@@ -1805,7 +1805,7 @@ application/Chassis/Trigger_function.i: application/Chassis/Trigger_function.c.i
 
 # target to preprocess a source file
 application/Chassis/Trigger_function.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Chassis/Trigger_function.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Trigger_function.c.i
 .PHONY : application/Chassis/Trigger_function.c.i
 
 application/Chassis/Trigger_function.s: application/Chassis/Trigger_function.c.s
@@ -1813,7 +1813,7 @@ application/Chassis/Trigger_function.s: application/Chassis/Trigger_function.c.s
 
 # target to generate assembly for a file
 application/Chassis/Trigger_function.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Chassis/Trigger_function.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Trigger_function.c.s
 .PHONY : application/Chassis/Trigger_function.c.s
 
 application/Communication/Atti.obj: application/Communication/Atti.c.obj
@@ -1821,7 +1821,7 @@ application/Communication/Atti.obj: application/Communication/Atti.c.obj
 
 # target to build an object file
 application/Communication/Atti.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Communication/Atti.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Communication/Atti.c.obj
 .PHONY : application/Communication/Atti.c.obj
 
 application/Communication/Atti.i: application/Communication/Atti.c.i
@@ -1829,7 +1829,7 @@ application/Communication/Atti.i: application/Communication/Atti.c.i
 
 # target to preprocess a source file
 application/Communication/Atti.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Communication/Atti.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Communication/Atti.c.i
 .PHONY : application/Communication/Atti.c.i
 
 application/Communication/Atti.s: application/Communication/Atti.c.s
@@ -1837,7 +1837,7 @@ application/Communication/Atti.s: application/Communication/Atti.c.s
 
 # target to generate assembly for a file
 application/Communication/Atti.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Communication/Atti.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Communication/Atti.c.s
 .PHONY : application/Communication/Atti.c.s
 
 application/Communication/can_receive.obj: application/Communication/can_receive.c.obj
@@ -1845,7 +1845,7 @@ application/Communication/can_receive.obj: application/Communication/can_receive
 
 # target to build an object file
 application/Communication/can_receive.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Communication/can_receive.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Communication/can_receive.c.obj
 .PHONY : application/Communication/can_receive.c.obj
 
 application/Communication/can_receive.i: application/Communication/can_receive.c.i
@@ -1853,7 +1853,7 @@ application/Communication/can_receive.i: application/Communication/can_receive.c
 
 # target to preprocess a source file
 application/Communication/can_receive.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Communication/can_receive.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Communication/can_receive.c.i
 .PHONY : application/Communication/can_receive.c.i
 
 application/Communication/can_receive.s: application/Communication/can_receive.c.s
@@ -1861,7 +1861,7 @@ application/Communication/can_receive.s: application/Communication/can_receive.c
 
 # target to generate assembly for a file
 application/Communication/can_receive.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Communication/can_receive.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Communication/can_receive.c.s
 .PHONY : application/Communication/can_receive.c.s
 
 application/Gimbal/Gimbal.obj: application/Gimbal/Gimbal.c.obj
@@ -1869,7 +1869,7 @@ application/Gimbal/Gimbal.obj: application/Gimbal/Gimbal.c.obj
 
 # target to build an object file
 application/Gimbal/Gimbal.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Gimbal/Gimbal.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal.c.obj
 .PHONY : application/Gimbal/Gimbal.c.obj
 
 application/Gimbal/Gimbal.i: application/Gimbal/Gimbal.c.i
@@ -1877,7 +1877,7 @@ application/Gimbal/Gimbal.i: application/Gimbal/Gimbal.c.i
 
 # target to preprocess a source file
 application/Gimbal/Gimbal.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Gimbal/Gimbal.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal.c.i
 .PHONY : application/Gimbal/Gimbal.c.i
 
 application/Gimbal/Gimbal.s: application/Gimbal/Gimbal.c.s
@@ -1885,7 +1885,7 @@ application/Gimbal/Gimbal.s: application/Gimbal/Gimbal.c.s
 
 # target to generate assembly for a file
 application/Gimbal/Gimbal.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Gimbal/Gimbal.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal.c.s
 .PHONY : application/Gimbal/Gimbal.c.s
 
 application/Gimbal/Gimbal_behaviour.obj: application/Gimbal/Gimbal_behaviour.c.obj
@@ -1893,7 +1893,7 @@ application/Gimbal/Gimbal_behaviour.obj: application/Gimbal/Gimbal_behaviour.c.o
 
 # target to build an object file
 application/Gimbal/Gimbal_behaviour.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Gimbal/Gimbal_behaviour.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal_behaviour.c.obj
 .PHONY : application/Gimbal/Gimbal_behaviour.c.obj
 
 application/Gimbal/Gimbal_behaviour.i: application/Gimbal/Gimbal_behaviour.c.i
@@ -1901,7 +1901,7 @@ application/Gimbal/Gimbal_behaviour.i: application/Gimbal/Gimbal_behaviour.c.i
 
 # target to preprocess a source file
 application/Gimbal/Gimbal_behaviour.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Gimbal/Gimbal_behaviour.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal_behaviour.c.i
 .PHONY : application/Gimbal/Gimbal_behaviour.c.i
 
 application/Gimbal/Gimbal_behaviour.s: application/Gimbal/Gimbal_behaviour.c.s
@@ -1909,7 +1909,7 @@ application/Gimbal/Gimbal_behaviour.s: application/Gimbal/Gimbal_behaviour.c.s
 
 # target to generate assembly for a file
 application/Gimbal/Gimbal_behaviour.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Gimbal/Gimbal_behaviour.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal_behaviour.c.s
 .PHONY : application/Gimbal/Gimbal_behaviour.c.s
 
 application/Gimbal/Gimbal_send.obj: application/Gimbal/Gimbal_send.c.obj
@@ -1917,7 +1917,7 @@ application/Gimbal/Gimbal_send.obj: application/Gimbal/Gimbal_send.c.obj
 
 # target to build an object file
 application/Gimbal/Gimbal_send.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Gimbal/Gimbal_send.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal_send.c.obj
 .PHONY : application/Gimbal/Gimbal_send.c.obj
 
 application/Gimbal/Gimbal_send.i: application/Gimbal/Gimbal_send.c.i
@@ -1925,7 +1925,7 @@ application/Gimbal/Gimbal_send.i: application/Gimbal/Gimbal_send.c.i
 
 # target to preprocess a source file
 application/Gimbal/Gimbal_send.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Gimbal/Gimbal_send.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal_send.c.i
 .PHONY : application/Gimbal/Gimbal_send.c.i
 
 application/Gimbal/Gimbal_send.s: application/Gimbal/Gimbal_send.c.s
@@ -1933,7 +1933,7 @@ application/Gimbal/Gimbal_send.s: application/Gimbal/Gimbal_send.c.s
 
 # target to generate assembly for a file
 application/Gimbal/Gimbal_send.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Gimbal/Gimbal_send.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal_send.c.s
 .PHONY : application/Gimbal/Gimbal_send.c.s
 
 application/Gimbal/launcher.obj: application/Gimbal/launcher.c.obj
@@ -1941,7 +1941,7 @@ application/Gimbal/launcher.obj: application/Gimbal/launcher.c.obj
 
 # target to build an object file
 application/Gimbal/launcher.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Gimbal/launcher.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/launcher.c.obj
 .PHONY : application/Gimbal/launcher.c.obj
 
 application/Gimbal/launcher.i: application/Gimbal/launcher.c.i
@@ -1949,7 +1949,7 @@ application/Gimbal/launcher.i: application/Gimbal/launcher.c.i
 
 # target to preprocess a source file
 application/Gimbal/launcher.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Gimbal/launcher.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/launcher.c.i
 .PHONY : application/Gimbal/launcher.c.i
 
 application/Gimbal/launcher.s: application/Gimbal/launcher.c.s
@@ -1957,7 +1957,7 @@ application/Gimbal/launcher.s: application/Gimbal/launcher.c.s
 
 # target to generate assembly for a file
 application/Gimbal/launcher.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Gimbal/launcher.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/launcher.c.s
 .PHONY : application/Gimbal/launcher.c.s
 
 application/Operate/key_board.obj: application/Operate/key_board.c.obj
@@ -1965,7 +1965,7 @@ application/Operate/key_board.obj: application/Operate/key_board.c.obj
 
 # target to build an object file
 application/Operate/key_board.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Operate/key_board.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Operate/key_board.c.obj
 .PHONY : application/Operate/key_board.c.obj
 
 application/Operate/key_board.i: application/Operate/key_board.c.i
@@ -1973,7 +1973,7 @@ application/Operate/key_board.i: application/Operate/key_board.c.i
 
 # target to preprocess a source file
 application/Operate/key_board.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Operate/key_board.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Operate/key_board.c.i
 .PHONY : application/Operate/key_board.c.i
 
 application/Operate/key_board.s: application/Operate/key_board.c.s
@@ -1981,7 +1981,7 @@ application/Operate/key_board.s: application/Operate/key_board.c.s
 
 # target to generate assembly for a file
 application/Operate/key_board.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Operate/key_board.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Operate/key_board.c.s
 .PHONY : application/Operate/key_board.c.s
 
 application/Operate/remote.obj: application/Operate/remote.c.obj
@@ -1989,7 +1989,7 @@ application/Operate/remote.obj: application/Operate/remote.c.obj
 
 # target to build an object file
 application/Operate/remote.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Operate/remote.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Operate/remote.c.obj
 .PHONY : application/Operate/remote.c.obj
 
 application/Operate/remote.i: application/Operate/remote.c.i
@@ -1997,7 +1997,7 @@ application/Operate/remote.i: application/Operate/remote.c.i
 
 # target to preprocess a source file
 application/Operate/remote.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Operate/remote.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Operate/remote.c.i
 .PHONY : application/Operate/remote.c.i
 
 application/Operate/remote.s: application/Operate/remote.c.s
@@ -2005,7 +2005,7 @@ application/Operate/remote.s: application/Operate/remote.c.s
 
 # target to generate assembly for a file
 application/Operate/remote.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Operate/remote.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Operate/remote.c.s
 .PHONY : application/Operate/remote.c.s
 
 application/Referee_system/Calibrate.obj: application/Referee_system/Calibrate.c.obj
@@ -2013,7 +2013,7 @@ application/Referee_system/Calibrate.obj: application/Referee_system/Calibrate.c
 
 # target to build an object file
 application/Referee_system/Calibrate.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Referee_system/Calibrate.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Referee_system/Calibrate.c.obj
 .PHONY : application/Referee_system/Calibrate.c.obj
 
 application/Referee_system/Calibrate.i: application/Referee_system/Calibrate.c.i
@@ -2021,7 +2021,7 @@ application/Referee_system/Calibrate.i: application/Referee_system/Calibrate.c.i
 
 # target to preprocess a source file
 application/Referee_system/Calibrate.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Referee_system/Calibrate.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Referee_system/Calibrate.c.i
 .PHONY : application/Referee_system/Calibrate.c.i
 
 application/Referee_system/Calibrate.s: application/Referee_system/Calibrate.c.s
@@ -2029,7 +2029,7 @@ application/Referee_system/Calibrate.s: application/Referee_system/Calibrate.c.s
 
 # target to generate assembly for a file
 application/Referee_system/Calibrate.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Referee_system/Calibrate.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Referee_system/Calibrate.c.s
 .PHONY : application/Referee_system/Calibrate.c.s
 
 application/Referee_system/Detection.obj: application/Referee_system/Detection.c.obj
@@ -2037,7 +2037,7 @@ application/Referee_system/Detection.obj: application/Referee_system/Detection.c
 
 # target to build an object file
 application/Referee_system/Detection.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Referee_system/Detection.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Referee_system/Detection.c.obj
 .PHONY : application/Referee_system/Detection.c.obj
 
 application/Referee_system/Detection.i: application/Referee_system/Detection.c.i
@@ -2045,7 +2045,7 @@ application/Referee_system/Detection.i: application/Referee_system/Detection.c.i
 
 # target to preprocess a source file
 application/Referee_system/Detection.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Referee_system/Detection.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Referee_system/Detection.c.i
 .PHONY : application/Referee_system/Detection.c.i
 
 application/Referee_system/Detection.s: application/Referee_system/Detection.c.s
@@ -2053,7 +2053,7 @@ application/Referee_system/Detection.s: application/Referee_system/Detection.c.s
 
 # target to generate assembly for a file
 application/Referee_system/Detection.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Referee_system/Detection.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Referee_system/Detection.c.s
 .PHONY : application/Referee_system/Detection.c.s
 
 application/Referee_system/Referee.obj: application/Referee_system/Referee.c.obj
@@ -2061,7 +2061,7 @@ application/Referee_system/Referee.obj: application/Referee_system/Referee.c.obj
 
 # target to build an object file
 application/Referee_system/Referee.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Referee_system/Referee.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Referee_system/Referee.c.obj
 .PHONY : application/Referee_system/Referee.c.obj
 
 application/Referee_system/Referee.i: application/Referee_system/Referee.c.i
@@ -2069,7 +2069,7 @@ application/Referee_system/Referee.i: application/Referee_system/Referee.c.i
 
 # target to preprocess a source file
 application/Referee_system/Referee.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Referee_system/Referee.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Referee_system/Referee.c.i
 .PHONY : application/Referee_system/Referee.c.i
 
 application/Referee_system/Referee.s: application/Referee_system/Referee.c.s
@@ -2077,7 +2077,7 @@ application/Referee_system/Referee.s: application/Referee_system/Referee.c.s
 
 # target to generate assembly for a file
 application/Referee_system/Referee.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/application/Referee_system/Referee.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Referee_system/Referee.c.s
 .PHONY : application/Referee_system/Referee.c.s
 
 bsp/bsp_adc.obj: bsp/bsp_adc.c.obj
@@ -2085,7 +2085,7 @@ bsp/bsp_adc.obj: bsp/bsp_adc.c.obj
 
 # target to build an object file
 bsp/bsp_adc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_adc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_adc.c.obj
 .PHONY : bsp/bsp_adc.c.obj
 
 bsp/bsp_adc.i: bsp/bsp_adc.c.i
@@ -2093,7 +2093,7 @@ bsp/bsp_adc.i: bsp/bsp_adc.c.i
 
 # target to preprocess a source file
 bsp/bsp_adc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_adc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_adc.c.i
 .PHONY : bsp/bsp_adc.c.i
 
 bsp/bsp_adc.s: bsp/bsp_adc.c.s
@@ -2101,7 +2101,7 @@ bsp/bsp_adc.s: bsp/bsp_adc.c.s
 
 # target to generate assembly for a file
 bsp/bsp_adc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_adc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_adc.c.s
 .PHONY : bsp/bsp_adc.c.s
 
 bsp/bsp_buzzer.obj: bsp/bsp_buzzer.c.obj
@@ -2109,7 +2109,7 @@ bsp/bsp_buzzer.obj: bsp/bsp_buzzer.c.obj
 
 # target to build an object file
 bsp/bsp_buzzer.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_buzzer.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_buzzer.c.obj
 .PHONY : bsp/bsp_buzzer.c.obj
 
 bsp/bsp_buzzer.i: bsp/bsp_buzzer.c.i
@@ -2117,7 +2117,7 @@ bsp/bsp_buzzer.i: bsp/bsp_buzzer.c.i
 
 # target to preprocess a source file
 bsp/bsp_buzzer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_buzzer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_buzzer.c.i
 .PHONY : bsp/bsp_buzzer.c.i
 
 bsp/bsp_buzzer.s: bsp/bsp_buzzer.c.s
@@ -2125,7 +2125,7 @@ bsp/bsp_buzzer.s: bsp/bsp_buzzer.c.s
 
 # target to generate assembly for a file
 bsp/bsp_buzzer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_buzzer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_buzzer.c.s
 .PHONY : bsp/bsp_buzzer.c.s
 
 bsp/bsp_can.obj: bsp/bsp_can.c.obj
@@ -2133,7 +2133,7 @@ bsp/bsp_can.obj: bsp/bsp_can.c.obj
 
 # target to build an object file
 bsp/bsp_can.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_can.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_can.c.obj
 .PHONY : bsp/bsp_can.c.obj
 
 bsp/bsp_can.i: bsp/bsp_can.c.i
@@ -2141,7 +2141,7 @@ bsp/bsp_can.i: bsp/bsp_can.c.i
 
 # target to preprocess a source file
 bsp/bsp_can.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_can.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_can.c.i
 .PHONY : bsp/bsp_can.c.i
 
 bsp/bsp_can.s: bsp/bsp_can.c.s
@@ -2149,7 +2149,7 @@ bsp/bsp_can.s: bsp/bsp_can.c.s
 
 # target to generate assembly for a file
 bsp/bsp_can.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_can.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_can.c.s
 .PHONY : bsp/bsp_can.c.s
 
 bsp/bsp_crc32.obj: bsp/bsp_crc32.c.obj
@@ -2157,7 +2157,7 @@ bsp/bsp_crc32.obj: bsp/bsp_crc32.c.obj
 
 # target to build an object file
 bsp/bsp_crc32.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_crc32.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_crc32.c.obj
 .PHONY : bsp/bsp_crc32.c.obj
 
 bsp/bsp_crc32.i: bsp/bsp_crc32.c.i
@@ -2165,7 +2165,7 @@ bsp/bsp_crc32.i: bsp/bsp_crc32.c.i
 
 # target to preprocess a source file
 bsp/bsp_crc32.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_crc32.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_crc32.c.i
 .PHONY : bsp/bsp_crc32.c.i
 
 bsp/bsp_crc32.s: bsp/bsp_crc32.c.s
@@ -2173,7 +2173,7 @@ bsp/bsp_crc32.s: bsp/bsp_crc32.c.s
 
 # target to generate assembly for a file
 bsp/bsp_crc32.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_crc32.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_crc32.c.s
 .PHONY : bsp/bsp_crc32.c.s
 
 bsp/bsp_delay.obj: bsp/bsp_delay.c.obj
@@ -2181,7 +2181,7 @@ bsp/bsp_delay.obj: bsp/bsp_delay.c.obj
 
 # target to build an object file
 bsp/bsp_delay.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_delay.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_delay.c.obj
 .PHONY : bsp/bsp_delay.c.obj
 
 bsp/bsp_delay.i: bsp/bsp_delay.c.i
@@ -2189,7 +2189,7 @@ bsp/bsp_delay.i: bsp/bsp_delay.c.i
 
 # target to preprocess a source file
 bsp/bsp_delay.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_delay.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_delay.c.i
 .PHONY : bsp/bsp_delay.c.i
 
 bsp/bsp_delay.s: bsp/bsp_delay.c.s
@@ -2197,7 +2197,7 @@ bsp/bsp_delay.s: bsp/bsp_delay.c.s
 
 # target to generate assembly for a file
 bsp/bsp_delay.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_delay.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_delay.c.s
 .PHONY : bsp/bsp_delay.c.s
 
 bsp/bsp_flash.obj: bsp/bsp_flash.c.obj
@@ -2205,7 +2205,7 @@ bsp/bsp_flash.obj: bsp/bsp_flash.c.obj
 
 # target to build an object file
 bsp/bsp_flash.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_flash.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_flash.c.obj
 .PHONY : bsp/bsp_flash.c.obj
 
 bsp/bsp_flash.i: bsp/bsp_flash.c.i
@@ -2213,7 +2213,7 @@ bsp/bsp_flash.i: bsp/bsp_flash.c.i
 
 # target to preprocess a source file
 bsp/bsp_flash.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_flash.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_flash.c.i
 .PHONY : bsp/bsp_flash.c.i
 
 bsp/bsp_flash.s: bsp/bsp_flash.c.s
@@ -2221,7 +2221,7 @@ bsp/bsp_flash.s: bsp/bsp_flash.c.s
 
 # target to generate assembly for a file
 bsp/bsp_flash.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_flash.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_flash.c.s
 .PHONY : bsp/bsp_flash.c.s
 
 bsp/bsp_i2c.obj: bsp/bsp_i2c.c.obj
@@ -2229,7 +2229,7 @@ bsp/bsp_i2c.obj: bsp/bsp_i2c.c.obj
 
 # target to build an object file
 bsp/bsp_i2c.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_i2c.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_i2c.c.obj
 .PHONY : bsp/bsp_i2c.c.obj
 
 bsp/bsp_i2c.i: bsp/bsp_i2c.c.i
@@ -2237,7 +2237,7 @@ bsp/bsp_i2c.i: bsp/bsp_i2c.c.i
 
 # target to preprocess a source file
 bsp/bsp_i2c.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_i2c.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_i2c.c.i
 .PHONY : bsp/bsp_i2c.c.i
 
 bsp/bsp_i2c.s: bsp/bsp_i2c.c.s
@@ -2245,7 +2245,7 @@ bsp/bsp_i2c.s: bsp/bsp_i2c.c.s
 
 # target to generate assembly for a file
 bsp/bsp_i2c.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_i2c.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_i2c.c.s
 .PHONY : bsp/bsp_i2c.c.s
 
 bsp/bsp_imu_pwm.obj: bsp/bsp_imu_pwm.c.obj
@@ -2253,7 +2253,7 @@ bsp/bsp_imu_pwm.obj: bsp/bsp_imu_pwm.c.obj
 
 # target to build an object file
 bsp/bsp_imu_pwm.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_imu_pwm.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_imu_pwm.c.obj
 .PHONY : bsp/bsp_imu_pwm.c.obj
 
 bsp/bsp_imu_pwm.i: bsp/bsp_imu_pwm.c.i
@@ -2261,7 +2261,7 @@ bsp/bsp_imu_pwm.i: bsp/bsp_imu_pwm.c.i
 
 # target to preprocess a source file
 bsp/bsp_imu_pwm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_imu_pwm.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_imu_pwm.c.i
 .PHONY : bsp/bsp_imu_pwm.c.i
 
 bsp/bsp_imu_pwm.s: bsp/bsp_imu_pwm.c.s
@@ -2269,7 +2269,7 @@ bsp/bsp_imu_pwm.s: bsp/bsp_imu_pwm.c.s
 
 # target to generate assembly for a file
 bsp/bsp_imu_pwm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_imu_pwm.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_imu_pwm.c.s
 .PHONY : bsp/bsp_imu_pwm.c.s
 
 bsp/bsp_laser.obj: bsp/bsp_laser.c.obj
@@ -2277,7 +2277,7 @@ bsp/bsp_laser.obj: bsp/bsp_laser.c.obj
 
 # target to build an object file
 bsp/bsp_laser.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_laser.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_laser.c.obj
 .PHONY : bsp/bsp_laser.c.obj
 
 bsp/bsp_laser.i: bsp/bsp_laser.c.i
@@ -2285,7 +2285,7 @@ bsp/bsp_laser.i: bsp/bsp_laser.c.i
 
 # target to preprocess a source file
 bsp/bsp_laser.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_laser.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_laser.c.i
 .PHONY : bsp/bsp_laser.c.i
 
 bsp/bsp_laser.s: bsp/bsp_laser.c.s
@@ -2293,7 +2293,7 @@ bsp/bsp_laser.s: bsp/bsp_laser.c.s
 
 # target to generate assembly for a file
 bsp/bsp_laser.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_laser.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_laser.c.s
 .PHONY : bsp/bsp_laser.c.s
 
 bsp/bsp_led.obj: bsp/bsp_led.c.obj
@@ -2301,7 +2301,7 @@ bsp/bsp_led.obj: bsp/bsp_led.c.obj
 
 # target to build an object file
 bsp/bsp_led.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_led.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_led.c.obj
 .PHONY : bsp/bsp_led.c.obj
 
 bsp/bsp_led.i: bsp/bsp_led.c.i
@@ -2309,7 +2309,7 @@ bsp/bsp_led.i: bsp/bsp_led.c.i
 
 # target to preprocess a source file
 bsp/bsp_led.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_led.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_led.c.i
 .PHONY : bsp/bsp_led.c.i
 
 bsp/bsp_led.s: bsp/bsp_led.c.s
@@ -2317,7 +2317,7 @@ bsp/bsp_led.s: bsp/bsp_led.c.s
 
 # target to generate assembly for a file
 bsp/bsp_led.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_led.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_led.c.s
 .PHONY : bsp/bsp_led.c.s
 
 bsp/bsp_rc.obj: bsp/bsp_rc.c.obj
@@ -2325,7 +2325,7 @@ bsp/bsp_rc.obj: bsp/bsp_rc.c.obj
 
 # target to build an object file
 bsp/bsp_rc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_rc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_rc.c.obj
 .PHONY : bsp/bsp_rc.c.obj
 
 bsp/bsp_rc.i: bsp/bsp_rc.c.i
@@ -2333,7 +2333,7 @@ bsp/bsp_rc.i: bsp/bsp_rc.c.i
 
 # target to preprocess a source file
 bsp/bsp_rc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_rc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_rc.c.i
 .PHONY : bsp/bsp_rc.c.i
 
 bsp/bsp_rc.s: bsp/bsp_rc.c.s
@@ -2341,7 +2341,7 @@ bsp/bsp_rc.s: bsp/bsp_rc.c.s
 
 # target to generate assembly for a file
 bsp/bsp_rc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_rc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_rc.c.s
 .PHONY : bsp/bsp_rc.c.s
 
 bsp/bsp_rng.obj: bsp/bsp_rng.c.obj
@@ -2349,7 +2349,7 @@ bsp/bsp_rng.obj: bsp/bsp_rng.c.obj
 
 # target to build an object file
 bsp/bsp_rng.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_rng.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_rng.c.obj
 .PHONY : bsp/bsp_rng.c.obj
 
 bsp/bsp_rng.i: bsp/bsp_rng.c.i
@@ -2357,7 +2357,7 @@ bsp/bsp_rng.i: bsp/bsp_rng.c.i
 
 # target to preprocess a source file
 bsp/bsp_rng.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_rng.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_rng.c.i
 .PHONY : bsp/bsp_rng.c.i
 
 bsp/bsp_rng.s: bsp/bsp_rng.c.s
@@ -2365,7 +2365,7 @@ bsp/bsp_rng.s: bsp/bsp_rng.c.s
 
 # target to generate assembly for a file
 bsp/bsp_rng.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_rng.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_rng.c.s
 .PHONY : bsp/bsp_rng.c.s
 
 bsp/bsp_servo_pwm.obj: bsp/bsp_servo_pwm.c.obj
@@ -2373,7 +2373,7 @@ bsp/bsp_servo_pwm.obj: bsp/bsp_servo_pwm.c.obj
 
 # target to build an object file
 bsp/bsp_servo_pwm.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_servo_pwm.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_servo_pwm.c.obj
 .PHONY : bsp/bsp_servo_pwm.c.obj
 
 bsp/bsp_servo_pwm.i: bsp/bsp_servo_pwm.c.i
@@ -2381,7 +2381,7 @@ bsp/bsp_servo_pwm.i: bsp/bsp_servo_pwm.c.i
 
 # target to preprocess a source file
 bsp/bsp_servo_pwm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_servo_pwm.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_servo_pwm.c.i
 .PHONY : bsp/bsp_servo_pwm.c.i
 
 bsp/bsp_servo_pwm.s: bsp/bsp_servo_pwm.c.s
@@ -2389,7 +2389,7 @@ bsp/bsp_servo_pwm.s: bsp/bsp_servo_pwm.c.s
 
 # target to generate assembly for a file
 bsp/bsp_servo_pwm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_servo_pwm.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_servo_pwm.c.s
 .PHONY : bsp/bsp_servo_pwm.c.s
 
 bsp/bsp_spi.obj: bsp/bsp_spi.c.obj
@@ -2397,7 +2397,7 @@ bsp/bsp_spi.obj: bsp/bsp_spi.c.obj
 
 # target to build an object file
 bsp/bsp_spi.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_spi.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_spi.c.obj
 .PHONY : bsp/bsp_spi.c.obj
 
 bsp/bsp_spi.i: bsp/bsp_spi.c.i
@@ -2405,7 +2405,7 @@ bsp/bsp_spi.i: bsp/bsp_spi.c.i
 
 # target to preprocess a source file
 bsp/bsp_spi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_spi.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_spi.c.i
 .PHONY : bsp/bsp_spi.c.i
 
 bsp/bsp_spi.s: bsp/bsp_spi.c.s
@@ -2413,7 +2413,7 @@ bsp/bsp_spi.s: bsp/bsp_spi.c.s
 
 # target to generate assembly for a file
 bsp/bsp_spi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_spi.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_spi.c.s
 .PHONY : bsp/bsp_spi.c.s
 
 bsp/bsp_usart.obj: bsp/bsp_usart.c.obj
@@ -2421,7 +2421,7 @@ bsp/bsp_usart.obj: bsp/bsp_usart.c.obj
 
 # target to build an object file
 bsp/bsp_usart.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_usart.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_usart.c.obj
 .PHONY : bsp/bsp_usart.c.obj
 
 bsp/bsp_usart.i: bsp/bsp_usart.c.i
@@ -2429,7 +2429,7 @@ bsp/bsp_usart.i: bsp/bsp_usart.c.i
 
 # target to preprocess a source file
 bsp/bsp_usart.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_usart.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_usart.c.i
 .PHONY : bsp/bsp_usart.c.i
 
 bsp/bsp_usart.s: bsp/bsp_usart.c.s
@@ -2437,7 +2437,7 @@ bsp/bsp_usart.s: bsp/bsp_usart.c.s
 
 # target to generate assembly for a file
 bsp/bsp_usart.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/bsp/bsp_usart.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_usart.c.s
 .PHONY : bsp/bsp_usart.c.s
 
 component/OneMessage/src/app/om_afl.obj: component/OneMessage/src/app/om_afl.c.obj
@@ -2445,7 +2445,7 @@ component/OneMessage/src/app/om_afl.obj: component/OneMessage/src/app/om_afl.c.o
 
 # target to build an object file
 component/OneMessage/src/app/om_afl.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_afl.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_afl.c.obj
 .PHONY : component/OneMessage/src/app/om_afl.c.obj
 
 component/OneMessage/src/app/om_afl.i: component/OneMessage/src/app/om_afl.c.i
@@ -2453,7 +2453,7 @@ component/OneMessage/src/app/om_afl.i: component/OneMessage/src/app/om_afl.c.i
 
 # target to preprocess a source file
 component/OneMessage/src/app/om_afl.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_afl.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_afl.c.i
 .PHONY : component/OneMessage/src/app/om_afl.c.i
 
 component/OneMessage/src/app/om_afl.s: component/OneMessage/src/app/om_afl.c.s
@@ -2461,7 +2461,7 @@ component/OneMessage/src/app/om_afl.s: component/OneMessage/src/app/om_afl.c.s
 
 # target to generate assembly for a file
 component/OneMessage/src/app/om_afl.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_afl.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_afl.c.s
 .PHONY : component/OneMessage/src/app/om_afl.c.s
 
 component/OneMessage/src/app/om_com.obj: component/OneMessage/src/app/om_com.c.obj
@@ -2469,7 +2469,7 @@ component/OneMessage/src/app/om_com.obj: component/OneMessage/src/app/om_com.c.o
 
 # target to build an object file
 component/OneMessage/src/app/om_com.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_com.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_com.c.obj
 .PHONY : component/OneMessage/src/app/om_com.c.obj
 
 component/OneMessage/src/app/om_com.i: component/OneMessage/src/app/om_com.c.i
@@ -2477,7 +2477,7 @@ component/OneMessage/src/app/om_com.i: component/OneMessage/src/app/om_com.c.i
 
 # target to preprocess a source file
 component/OneMessage/src/app/om_com.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_com.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_com.c.i
 .PHONY : component/OneMessage/src/app/om_com.c.i
 
 component/OneMessage/src/app/om_com.s: component/OneMessage/src/app/om_com.c.s
@@ -2485,7 +2485,7 @@ component/OneMessage/src/app/om_com.s: component/OneMessage/src/app/om_com.c.s
 
 # target to generate assembly for a file
 component/OneMessage/src/app/om_com.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_com.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_com.c.s
 .PHONY : component/OneMessage/src/app/om_com.c.s
 
 component/OneMessage/src/app/om_evt.obj: component/OneMessage/src/app/om_evt.c.obj
@@ -2493,7 +2493,7 @@ component/OneMessage/src/app/om_evt.obj: component/OneMessage/src/app/om_evt.c.o
 
 # target to build an object file
 component/OneMessage/src/app/om_evt.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_evt.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_evt.c.obj
 .PHONY : component/OneMessage/src/app/om_evt.c.obj
 
 component/OneMessage/src/app/om_evt.i: component/OneMessage/src/app/om_evt.c.i
@@ -2501,7 +2501,7 @@ component/OneMessage/src/app/om_evt.i: component/OneMessage/src/app/om_evt.c.i
 
 # target to preprocess a source file
 component/OneMessage/src/app/om_evt.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_evt.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_evt.c.i
 .PHONY : component/OneMessage/src/app/om_evt.c.i
 
 component/OneMessage/src/app/om_evt.s: component/OneMessage/src/app/om_evt.c.s
@@ -2509,7 +2509,7 @@ component/OneMessage/src/app/om_evt.s: component/OneMessage/src/app/om_evt.c.s
 
 # target to generate assembly for a file
 component/OneMessage/src/app/om_evt.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_evt.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_evt.c.s
 .PHONY : component/OneMessage/src/app/om_evt.c.s
 
 component/OneMessage/src/app/om_fmt.obj: component/OneMessage/src/app/om_fmt.c.obj
@@ -2517,7 +2517,7 @@ component/OneMessage/src/app/om_fmt.obj: component/OneMessage/src/app/om_fmt.c.o
 
 # target to build an object file
 component/OneMessage/src/app/om_fmt.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_fmt.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_fmt.c.obj
 .PHONY : component/OneMessage/src/app/om_fmt.c.obj
 
 component/OneMessage/src/app/om_fmt.i: component/OneMessage/src/app/om_fmt.c.i
@@ -2525,7 +2525,7 @@ component/OneMessage/src/app/om_fmt.i: component/OneMessage/src/app/om_fmt.c.i
 
 # target to preprocess a source file
 component/OneMessage/src/app/om_fmt.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_fmt.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_fmt.c.i
 .PHONY : component/OneMessage/src/app/om_fmt.c.i
 
 component/OneMessage/src/app/om_fmt.s: component/OneMessage/src/app/om_fmt.c.s
@@ -2533,7 +2533,7 @@ component/OneMessage/src/app/om_fmt.s: component/OneMessage/src/app/om_fmt.c.s
 
 # target to generate assembly for a file
 component/OneMessage/src/app/om_fmt.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_fmt.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_fmt.c.s
 .PHONY : component/OneMessage/src/app/om_fmt.c.s
 
 component/OneMessage/src/app/om_log.obj: component/OneMessage/src/app/om_log.c.obj
@@ -2541,7 +2541,7 @@ component/OneMessage/src/app/om_log.obj: component/OneMessage/src/app/om_log.c.o
 
 # target to build an object file
 component/OneMessage/src/app/om_log.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_log.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_log.c.obj
 .PHONY : component/OneMessage/src/app/om_log.c.obj
 
 component/OneMessage/src/app/om_log.i: component/OneMessage/src/app/om_log.c.i
@@ -2549,7 +2549,7 @@ component/OneMessage/src/app/om_log.i: component/OneMessage/src/app/om_log.c.i
 
 # target to preprocess a source file
 component/OneMessage/src/app/om_log.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_log.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_log.c.i
 .PHONY : component/OneMessage/src/app/om_log.c.i
 
 component/OneMessage/src/app/om_log.s: component/OneMessage/src/app/om_log.c.s
@@ -2557,7 +2557,7 @@ component/OneMessage/src/app/om_log.s: component/OneMessage/src/app/om_log.c.s
 
 # target to generate assembly for a file
 component/OneMessage/src/app/om_log.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_log.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_log.c.s
 .PHONY : component/OneMessage/src/app/om_log.c.s
 
 component/OneMessage/src/app/om_msg.obj: component/OneMessage/src/app/om_msg.c.obj
@@ -2565,7 +2565,7 @@ component/OneMessage/src/app/om_msg.obj: component/OneMessage/src/app/om_msg.c.o
 
 # target to build an object file
 component/OneMessage/src/app/om_msg.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_msg.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_msg.c.obj
 .PHONY : component/OneMessage/src/app/om_msg.c.obj
 
 component/OneMessage/src/app/om_msg.i: component/OneMessage/src/app/om_msg.c.i
@@ -2573,7 +2573,7 @@ component/OneMessage/src/app/om_msg.i: component/OneMessage/src/app/om_msg.c.i
 
 # target to preprocess a source file
 component/OneMessage/src/app/om_msg.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_msg.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_msg.c.i
 .PHONY : component/OneMessage/src/app/om_msg.c.i
 
 component/OneMessage/src/app/om_msg.s: component/OneMessage/src/app/om_msg.c.s
@@ -2581,7 +2581,7 @@ component/OneMessage/src/app/om_msg.s: component/OneMessage/src/app/om_msg.c.s
 
 # target to generate assembly for a file
 component/OneMessage/src/app/om_msg.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/app/om_msg.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_msg.c.s
 .PHONY : component/OneMessage/src/app/om_msg.c.s
 
 component/OneMessage/src/comp/om_color.obj: component/OneMessage/src/comp/om_color.c.obj
@@ -2589,7 +2589,7 @@ component/OneMessage/src/comp/om_color.obj: component/OneMessage/src/comp/om_col
 
 # target to build an object file
 component/OneMessage/src/comp/om_color.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_color.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_color.c.obj
 .PHONY : component/OneMessage/src/comp/om_color.c.obj
 
 component/OneMessage/src/comp/om_color.i: component/OneMessage/src/comp/om_color.c.i
@@ -2597,7 +2597,7 @@ component/OneMessage/src/comp/om_color.i: component/OneMessage/src/comp/om_color
 
 # target to preprocess a source file
 component/OneMessage/src/comp/om_color.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_color.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_color.c.i
 .PHONY : component/OneMessage/src/comp/om_color.c.i
 
 component/OneMessage/src/comp/om_color.s: component/OneMessage/src/comp/om_color.c.s
@@ -2605,7 +2605,7 @@ component/OneMessage/src/comp/om_color.s: component/OneMessage/src/comp/om_color
 
 # target to generate assembly for a file
 component/OneMessage/src/comp/om_color.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_color.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_color.c.s
 .PHONY : component/OneMessage/src/comp/om_color.c.s
 
 component/OneMessage/src/comp/om_crc.obj: component/OneMessage/src/comp/om_crc.c.obj
@@ -2613,7 +2613,7 @@ component/OneMessage/src/comp/om_crc.obj: component/OneMessage/src/comp/om_crc.c
 
 # target to build an object file
 component/OneMessage/src/comp/om_crc.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_crc.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_crc.c.obj
 .PHONY : component/OneMessage/src/comp/om_crc.c.obj
 
 component/OneMessage/src/comp/om_crc.i: component/OneMessage/src/comp/om_crc.c.i
@@ -2621,7 +2621,7 @@ component/OneMessage/src/comp/om_crc.i: component/OneMessage/src/comp/om_crc.c.i
 
 # target to preprocess a source file
 component/OneMessage/src/comp/om_crc.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_crc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_crc.c.i
 .PHONY : component/OneMessage/src/comp/om_crc.c.i
 
 component/OneMessage/src/comp/om_crc.s: component/OneMessage/src/comp/om_crc.c.s
@@ -2629,7 +2629,7 @@ component/OneMessage/src/comp/om_crc.s: component/OneMessage/src/comp/om_crc.c.s
 
 # target to generate assembly for a file
 component/OneMessage/src/comp/om_crc.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_crc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_crc.c.s
 .PHONY : component/OneMessage/src/comp/om_crc.c.s
 
 component/OneMessage/src/comp/om_fifo.obj: component/OneMessage/src/comp/om_fifo.c.obj
@@ -2637,7 +2637,7 @@ component/OneMessage/src/comp/om_fifo.obj: component/OneMessage/src/comp/om_fifo
 
 # target to build an object file
 component/OneMessage/src/comp/om_fifo.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_fifo.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_fifo.c.obj
 .PHONY : component/OneMessage/src/comp/om_fifo.c.obj
 
 component/OneMessage/src/comp/om_fifo.i: component/OneMessage/src/comp/om_fifo.c.i
@@ -2645,7 +2645,7 @@ component/OneMessage/src/comp/om_fifo.i: component/OneMessage/src/comp/om_fifo.c
 
 # target to preprocess a source file
 component/OneMessage/src/comp/om_fifo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_fifo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_fifo.c.i
 .PHONY : component/OneMessage/src/comp/om_fifo.c.i
 
 component/OneMessage/src/comp/om_fifo.s: component/OneMessage/src/comp/om_fifo.c.s
@@ -2653,7 +2653,7 @@ component/OneMessage/src/comp/om_fifo.s: component/OneMessage/src/comp/om_fifo.c
 
 # target to generate assembly for a file
 component/OneMessage/src/comp/om_fifo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_fifo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_fifo.c.s
 .PHONY : component/OneMessage/src/comp/om_fifo.c.s
 
 component/OneMessage/src/comp/om_list.obj: component/OneMessage/src/comp/om_list.c.obj
@@ -2661,7 +2661,7 @@ component/OneMessage/src/comp/om_list.obj: component/OneMessage/src/comp/om_list
 
 # target to build an object file
 component/OneMessage/src/comp/om_list.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_list.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_list.c.obj
 .PHONY : component/OneMessage/src/comp/om_list.c.obj
 
 component/OneMessage/src/comp/om_list.i: component/OneMessage/src/comp/om_list.c.i
@@ -2669,7 +2669,7 @@ component/OneMessage/src/comp/om_list.i: component/OneMessage/src/comp/om_list.c
 
 # target to preprocess a source file
 component/OneMessage/src/comp/om_list.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_list.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_list.c.i
 .PHONY : component/OneMessage/src/comp/om_list.c.i
 
 component/OneMessage/src/comp/om_list.s: component/OneMessage/src/comp/om_list.c.s
@@ -2677,7 +2677,7 @@ component/OneMessage/src/comp/om_list.s: component/OneMessage/src/comp/om_list.c
 
 # target to generate assembly for a file
 component/OneMessage/src/comp/om_list.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_list.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_list.c.s
 .PHONY : component/OneMessage/src/comp/om_list.c.s
 
 component/OneMessage/src/comp/om_rbt.obj: component/OneMessage/src/comp/om_rbt.c.obj
@@ -2685,7 +2685,7 @@ component/OneMessage/src/comp/om_rbt.obj: component/OneMessage/src/comp/om_rbt.c
 
 # target to build an object file
 component/OneMessage/src/comp/om_rbt.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_rbt.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_rbt.c.obj
 .PHONY : component/OneMessage/src/comp/om_rbt.c.obj
 
 component/OneMessage/src/comp/om_rbt.i: component/OneMessage/src/comp/om_rbt.c.i
@@ -2693,7 +2693,7 @@ component/OneMessage/src/comp/om_rbt.i: component/OneMessage/src/comp/om_rbt.c.i
 
 # target to preprocess a source file
 component/OneMessage/src/comp/om_rbt.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_rbt.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_rbt.c.i
 .PHONY : component/OneMessage/src/comp/om_rbt.c.i
 
 component/OneMessage/src/comp/om_rbt.s: component/OneMessage/src/comp/om_rbt.c.s
@@ -2701,7 +2701,7 @@ component/OneMessage/src/comp/om_rbt.s: component/OneMessage/src/comp/om_rbt.c.s
 
 # target to generate assembly for a file
 component/OneMessage/src/comp/om_rbt.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/comp/om_rbt.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_rbt.c.s
 .PHONY : component/OneMessage/src/comp/om_rbt.c.s
 
 component/OneMessage/src/core/om_core.obj: component/OneMessage/src/core/om_core.c.obj
@@ -2709,7 +2709,7 @@ component/OneMessage/src/core/om_core.obj: component/OneMessage/src/core/om_core
 
 # target to build an object file
 component/OneMessage/src/core/om_core.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/core/om_core.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/core/om_core.c.obj
 .PHONY : component/OneMessage/src/core/om_core.c.obj
 
 component/OneMessage/src/core/om_core.i: component/OneMessage/src/core/om_core.c.i
@@ -2717,7 +2717,7 @@ component/OneMessage/src/core/om_core.i: component/OneMessage/src/core/om_core.c
 
 # target to preprocess a source file
 component/OneMessage/src/core/om_core.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/core/om_core.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/core/om_core.c.i
 .PHONY : component/OneMessage/src/core/om_core.c.i
 
 component/OneMessage/src/core/om_core.s: component/OneMessage/src/core/om_core.c.s
@@ -2725,7 +2725,7 @@ component/OneMessage/src/core/om_core.s: component/OneMessage/src/core/om_core.c
 
 # target to generate assembly for a file
 component/OneMessage/src/core/om_core.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/core/om_core.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/core/om_core.c.s
 .PHONY : component/OneMessage/src/core/om_core.c.s
 
 component/OneMessage/src/om.obj: component/OneMessage/src/om.c.obj
@@ -2733,7 +2733,7 @@ component/OneMessage/src/om.obj: component/OneMessage/src/om.c.obj
 
 # target to build an object file
 component/OneMessage/src/om.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/om.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/om.c.obj
 .PHONY : component/OneMessage/src/om.c.obj
 
 component/OneMessage/src/om.i: component/OneMessage/src/om.c.i
@@ -2741,7 +2741,7 @@ component/OneMessage/src/om.i: component/OneMessage/src/om.c.i
 
 # target to preprocess a source file
 component/OneMessage/src/om.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/om.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/om.c.i
 .PHONY : component/OneMessage/src/om.c.i
 
 component/OneMessage/src/om.s: component/OneMessage/src/om.c.s
@@ -2749,7 +2749,7 @@ component/OneMessage/src/om.s: component/OneMessage/src/om.c.s
 
 # target to generate assembly for a file
 component/OneMessage/src/om.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/OneMessage/src/om.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/om.c.s
 .PHONY : component/OneMessage/src/om.c.s
 
 component/algorithm/AHRS.obj: component/algorithm/AHRS.c.obj
@@ -2757,7 +2757,7 @@ component/algorithm/AHRS.obj: component/algorithm/AHRS.c.obj
 
 # target to build an object file
 component/algorithm/AHRS.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/AHRS.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS.c.obj
 .PHONY : component/algorithm/AHRS.c.obj
 
 component/algorithm/AHRS.i: component/algorithm/AHRS.c.i
@@ -2765,7 +2765,7 @@ component/algorithm/AHRS.i: component/algorithm/AHRS.c.i
 
 # target to preprocess a source file
 component/algorithm/AHRS.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/AHRS.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS.c.i
 .PHONY : component/algorithm/AHRS.c.i
 
 component/algorithm/AHRS.s: component/algorithm/AHRS.c.s
@@ -2773,7 +2773,7 @@ component/algorithm/AHRS.s: component/algorithm/AHRS.c.s
 
 # target to generate assembly for a file
 component/algorithm/AHRS.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/AHRS.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS.c.s
 .PHONY : component/algorithm/AHRS.c.s
 
 component/algorithm/AHRS_MiddleWare.obj: component/algorithm/AHRS_MiddleWare.c.obj
@@ -2781,7 +2781,7 @@ component/algorithm/AHRS_MiddleWare.obj: component/algorithm/AHRS_MiddleWare.c.o
 
 # target to build an object file
 component/algorithm/AHRS_MiddleWare.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj
 .PHONY : component/algorithm/AHRS_MiddleWare.c.obj
 
 component/algorithm/AHRS_MiddleWare.i: component/algorithm/AHRS_MiddleWare.c.i
@@ -2789,7 +2789,7 @@ component/algorithm/AHRS_MiddleWare.i: component/algorithm/AHRS_MiddleWare.c.i
 
 # target to preprocess a source file
 component/algorithm/AHRS_MiddleWare.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/AHRS_MiddleWare.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS_MiddleWare.c.i
 .PHONY : component/algorithm/AHRS_MiddleWare.c.i
 
 component/algorithm/AHRS_MiddleWare.s: component/algorithm/AHRS_MiddleWare.c.s
@@ -2797,7 +2797,7 @@ component/algorithm/AHRS_MiddleWare.s: component/algorithm/AHRS_MiddleWare.c.s
 
 # target to generate assembly for a file
 component/algorithm/AHRS_MiddleWare.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/AHRS_MiddleWare.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS_MiddleWare.c.s
 .PHONY : component/algorithm/AHRS_MiddleWare.c.s
 
 component/algorithm/filter.obj: component/algorithm/filter.c.obj
@@ -2805,7 +2805,7 @@ component/algorithm/filter.obj: component/algorithm/filter.c.obj
 
 # target to build an object file
 component/algorithm/filter.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/filter.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/filter.c.obj
 .PHONY : component/algorithm/filter.c.obj
 
 component/algorithm/filter.i: component/algorithm/filter.c.i
@@ -2813,7 +2813,7 @@ component/algorithm/filter.i: component/algorithm/filter.c.i
 
 # target to preprocess a source file
 component/algorithm/filter.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/filter.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/filter.c.i
 .PHONY : component/algorithm/filter.c.i
 
 component/algorithm/filter.s: component/algorithm/filter.c.s
@@ -2821,7 +2821,7 @@ component/algorithm/filter.s: component/algorithm/filter.c.s
 
 # target to generate assembly for a file
 component/algorithm/filter.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/filter.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/filter.c.s
 .PHONY : component/algorithm/filter.c.s
 
 component/algorithm/ramp.obj: component/algorithm/ramp.c.obj
@@ -2829,7 +2829,7 @@ component/algorithm/ramp.obj: component/algorithm/ramp.c.obj
 
 # target to build an object file
 component/algorithm/ramp.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/ramp.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/ramp.c.obj
 .PHONY : component/algorithm/ramp.c.obj
 
 component/algorithm/ramp.i: component/algorithm/ramp.c.i
@@ -2837,7 +2837,7 @@ component/algorithm/ramp.i: component/algorithm/ramp.c.i
 
 # target to preprocess a source file
 component/algorithm/ramp.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/ramp.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/ramp.c.i
 .PHONY : component/algorithm/ramp.c.i
 
 component/algorithm/ramp.s: component/algorithm/ramp.c.s
@@ -2845,7 +2845,7 @@ component/algorithm/ramp.s: component/algorithm/ramp.c.s
 
 # target to generate assembly for a file
 component/algorithm/ramp.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/ramp.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/ramp.c.s
 .PHONY : component/algorithm/ramp.c.s
 
 component/algorithm/user_lib.obj: component/algorithm/user_lib.c.obj
@@ -2853,7 +2853,7 @@ component/algorithm/user_lib.obj: component/algorithm/user_lib.c.obj
 
 # target to build an object file
 component/algorithm/user_lib.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/user_lib.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/user_lib.c.obj
 .PHONY : component/algorithm/user_lib.c.obj
 
 component/algorithm/user_lib.i: component/algorithm/user_lib.c.i
@@ -2861,7 +2861,7 @@ component/algorithm/user_lib.i: component/algorithm/user_lib.c.i
 
 # target to preprocess a source file
 component/algorithm/user_lib.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/user_lib.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/user_lib.c.i
 .PHONY : component/algorithm/user_lib.c.i
 
 component/algorithm/user_lib.s: component/algorithm/user_lib.c.s
@@ -2869,7 +2869,7 @@ component/algorithm/user_lib.s: component/algorithm/user_lib.c.s
 
 # target to generate assembly for a file
 component/algorithm/user_lib.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/algorithm/user_lib.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/user_lib.c.s
 .PHONY : component/algorithm/user_lib.c.s
 
 component/communication/decode.obj: component/communication/decode.c.obj
@@ -2877,7 +2877,7 @@ component/communication/decode.obj: component/communication/decode.c.obj
 
 # target to build an object file
 component/communication/decode.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/communication/decode.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/communication/decode.c.obj
 .PHONY : component/communication/decode.c.obj
 
 component/communication/decode.i: component/communication/decode.c.i
@@ -2885,7 +2885,7 @@ component/communication/decode.i: component/communication/decode.c.i
 
 # target to preprocess a source file
 component/communication/decode.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/communication/decode.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/communication/decode.c.i
 .PHONY : component/communication/decode.c.i
 
 component/communication/decode.s: component/communication/decode.c.s
@@ -2893,7 +2893,7 @@ component/communication/decode.s: component/communication/decode.c.s
 
 # target to generate assembly for a file
 component/communication/decode.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/communication/decode.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/communication/decode.c.s
 .PHONY : component/communication/decode.c.s
 
 component/communication/packet.obj: component/communication/packet.c.obj
@@ -2901,7 +2901,7 @@ component/communication/packet.obj: component/communication/packet.c.obj
 
 # target to build an object file
 component/communication/packet.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/communication/packet.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/communication/packet.c.obj
 .PHONY : component/communication/packet.c.obj
 
 component/communication/packet.i: component/communication/packet.c.i
@@ -2909,7 +2909,7 @@ component/communication/packet.i: component/communication/packet.c.i
 
 # target to preprocess a source file
 component/communication/packet.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/communication/packet.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/communication/packet.c.i
 .PHONY : component/communication/packet.c.i
 
 component/communication/packet.s: component/communication/packet.c.s
@@ -2917,7 +2917,7 @@ component/communication/packet.s: component/communication/packet.c.s
 
 # target to generate assembly for a file
 component/communication/packet.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/communication/packet.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/communication/packet.c.s
 .PHONY : component/communication/packet.c.s
 
 component/controller/PID.obj: component/controller/PID.c.obj
@@ -2925,7 +2925,7 @@ component/controller/PID.obj: component/controller/PID.c.obj
 
 # target to build an object file
 component/controller/PID.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/controller/PID.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/controller/PID.c.obj
 .PHONY : component/controller/PID.c.obj
 
 component/controller/PID.i: component/controller/PID.c.i
@@ -2933,7 +2933,7 @@ component/controller/PID.i: component/controller/PID.c.i
 
 # target to preprocess a source file
 component/controller/PID.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/controller/PID.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/controller/PID.c.i
 .PHONY : component/controller/PID.c.i
 
 component/controller/PID.s: component/controller/PID.c.s
@@ -2941,7 +2941,7 @@ component/controller/PID.s: component/controller/PID.c.s
 
 # target to generate assembly for a file
 component/controller/PID.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/controller/PID.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/controller/PID.c.s
 .PHONY : component/controller/PID.c.s
 
 component/devices/BMI088Middleware.obj: component/devices/BMI088Middleware.c.obj
@@ -2949,7 +2949,7 @@ component/devices/BMI088Middleware.obj: component/devices/BMI088Middleware.c.obj
 
 # target to build an object file
 component/devices/BMI088Middleware.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/devices/BMI088Middleware.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088Middleware.c.obj
 .PHONY : component/devices/BMI088Middleware.c.obj
 
 component/devices/BMI088Middleware.i: component/devices/BMI088Middleware.c.i
@@ -2957,7 +2957,7 @@ component/devices/BMI088Middleware.i: component/devices/BMI088Middleware.c.i
 
 # target to preprocess a source file
 component/devices/BMI088Middleware.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/devices/BMI088Middleware.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088Middleware.c.i
 .PHONY : component/devices/BMI088Middleware.c.i
 
 component/devices/BMI088Middleware.s: component/devices/BMI088Middleware.c.s
@@ -2965,7 +2965,7 @@ component/devices/BMI088Middleware.s: component/devices/BMI088Middleware.c.s
 
 # target to generate assembly for a file
 component/devices/BMI088Middleware.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/devices/BMI088Middleware.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088Middleware.c.s
 .PHONY : component/devices/BMI088Middleware.c.s
 
 component/devices/BMI088driver.obj: component/devices/BMI088driver.c.obj
@@ -2973,7 +2973,7 @@ component/devices/BMI088driver.obj: component/devices/BMI088driver.c.obj
 
 # target to build an object file
 component/devices/BMI088driver.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/devices/BMI088driver.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088driver.c.obj
 .PHONY : component/devices/BMI088driver.c.obj
 
 component/devices/BMI088driver.i: component/devices/BMI088driver.c.i
@@ -2981,7 +2981,7 @@ component/devices/BMI088driver.i: component/devices/BMI088driver.c.i
 
 # target to preprocess a source file
 component/devices/BMI088driver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/devices/BMI088driver.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088driver.c.i
 .PHONY : component/devices/BMI088driver.c.i
 
 component/devices/BMI088driver.s: component/devices/BMI088driver.c.s
@@ -2989,7 +2989,7 @@ component/devices/BMI088driver.s: component/devices/BMI088driver.c.s
 
 # target to generate assembly for a file
 component/devices/BMI088driver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/devices/BMI088driver.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088driver.c.s
 .PHONY : component/devices/BMI088driver.c.s
 
 component/devices/ist8310driver.obj: component/devices/ist8310driver.c.obj
@@ -2997,7 +2997,7 @@ component/devices/ist8310driver.obj: component/devices/ist8310driver.c.obj
 
 # target to build an object file
 component/devices/ist8310driver.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/devices/ist8310driver.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver.c.obj
 .PHONY : component/devices/ist8310driver.c.obj
 
 component/devices/ist8310driver.i: component/devices/ist8310driver.c.i
@@ -3005,7 +3005,7 @@ component/devices/ist8310driver.i: component/devices/ist8310driver.c.i
 
 # target to preprocess a source file
 component/devices/ist8310driver.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/devices/ist8310driver.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver.c.i
 .PHONY : component/devices/ist8310driver.c.i
 
 component/devices/ist8310driver.s: component/devices/ist8310driver.c.s
@@ -3013,7 +3013,7 @@ component/devices/ist8310driver.s: component/devices/ist8310driver.c.s
 
 # target to generate assembly for a file
 component/devices/ist8310driver.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/devices/ist8310driver.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver.c.s
 .PHONY : component/devices/ist8310driver.c.s
 
 component/devices/ist8310driver_middleware.obj: component/devices/ist8310driver_middleware.c.obj
@@ -3021,7 +3021,7 @@ component/devices/ist8310driver_middleware.obj: component/devices/ist8310driver_
 
 # target to build an object file
 component/devices/ist8310driver_middleware.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/devices/ist8310driver_middleware.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver_middleware.c.obj
 .PHONY : component/devices/ist8310driver_middleware.c.obj
 
 component/devices/ist8310driver_middleware.i: component/devices/ist8310driver_middleware.c.i
@@ -3029,7 +3029,7 @@ component/devices/ist8310driver_middleware.i: component/devices/ist8310driver_mi
 
 # target to preprocess a source file
 component/devices/ist8310driver_middleware.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/devices/ist8310driver_middleware.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver_middleware.c.i
 .PHONY : component/devices/ist8310driver_middleware.c.i
 
 component/devices/ist8310driver_middleware.s: component/devices/ist8310driver_middleware.c.s
@@ -3037,7 +3037,7 @@ component/devices/ist8310driver_middleware.s: component/devices/ist8310driver_mi
 
 # target to generate assembly for a file
 component/devices/ist8310driver_middleware.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/devices/ist8310driver_middleware.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver_middleware.c.s
 .PHONY : component/devices/ist8310driver_middleware.c.s
 
 component/support/CRC8_CRC16.obj: component/support/CRC8_CRC16.c.obj
@@ -3045,7 +3045,7 @@ component/support/CRC8_CRC16.obj: component/support/CRC8_CRC16.c.obj
 
 # target to build an object file
 component/support/CRC8_CRC16.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/support/CRC8_CRC16.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/support/CRC8_CRC16.c.obj
 .PHONY : component/support/CRC8_CRC16.c.obj
 
 component/support/CRC8_CRC16.i: component/support/CRC8_CRC16.c.i
@@ -3053,7 +3053,7 @@ component/support/CRC8_CRC16.i: component/support/CRC8_CRC16.c.i
 
 # target to preprocess a source file
 component/support/CRC8_CRC16.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/support/CRC8_CRC16.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/support/CRC8_CRC16.c.i
 .PHONY : component/support/CRC8_CRC16.c.i
 
 component/support/CRC8_CRC16.s: component/support/CRC8_CRC16.c.s
@@ -3061,7 +3061,7 @@ component/support/CRC8_CRC16.s: component/support/CRC8_CRC16.c.s
 
 # target to generate assembly for a file
 component/support/CRC8_CRC16.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/support/CRC8_CRC16.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/support/CRC8_CRC16.c.s
 .PHONY : component/support/CRC8_CRC16.c.s
 
 component/support/fifo.obj: component/support/fifo.c.obj
@@ -3069,7 +3069,7 @@ component/support/fifo.obj: component/support/fifo.c.obj
 
 # target to build an object file
 component/support/fifo.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/support/fifo.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/support/fifo.c.obj
 .PHONY : component/support/fifo.c.obj
 
 component/support/fifo.i: component/support/fifo.c.i
@@ -3077,7 +3077,7 @@ component/support/fifo.i: component/support/fifo.c.i
 
 # target to preprocess a source file
 component/support/fifo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/support/fifo.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/support/fifo.c.i
 .PHONY : component/support/fifo.c.i
 
 component/support/fifo.s: component/support/fifo.c.s
@@ -3085,7 +3085,7 @@ component/support/fifo.s: component/support/fifo.c.s
 
 # target to generate assembly for a file
 component/support/fifo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/support/fifo.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/support/fifo.c.s
 .PHONY : component/support/fifo.c.s
 
 component/support/mem_mang4.obj: component/support/mem_mang4.c.obj
@@ -3093,7 +3093,7 @@ component/support/mem_mang4.obj: component/support/mem_mang4.c.obj
 
 # target to build an object file
 component/support/mem_mang4.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/support/mem_mang4.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/support/mem_mang4.c.obj
 .PHONY : component/support/mem_mang4.c.obj
 
 component/support/mem_mang4.i: component/support/mem_mang4.c.i
@@ -3101,7 +3101,7 @@ component/support/mem_mang4.i: component/support/mem_mang4.c.i
 
 # target to preprocess a source file
 component/support/mem_mang4.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/support/mem_mang4.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/support/mem_mang4.c.i
 .PHONY : component/support/mem_mang4.c.i
 
 component/support/mem_mang4.s: component/support/mem_mang4.c.s
@@ -3109,7 +3109,7 @@ component/support/mem_mang4.s: component/support/mem_mang4.c.s
 
 # target to generate assembly for a file
 component/support/mem_mang4.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero.elf.dir\build.make CMakeFiles/2024_Hero.elf.dir/component/support/mem_mang4.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/component/support/mem_mang4.c.s
 .PHONY : component/support/mem_mang4.c.s
 
 # Help Target
@@ -3120,7 +3120,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... 2024_Hero.elf
+	@echo ... 2024_Hero_three.elf
 	@echo ... Core/Src/adc.obj
 	@echo ... Core/Src/adc.i
 	@echo ... Core/Src/adc.s

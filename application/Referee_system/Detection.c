@@ -104,7 +104,7 @@ void offline_remind(uint8_t offline_num,uint8_t max_level,uint8_t max_level_coun
                         buzzer_off();
                     }
                 }
-                if(BUZZER_REMIND_ENABLE&&detect_list[DETECT_LAUNCHER_2006_SINGLE_SHOT].status==OFFLINE)
+                if(BUZZER_REMIND_ENABLE&&detect_list[DETECT_LAUNCHER_3508_FIRE_ON].status==OFFLINE)
                 {
                     if(buzzer_remind_count==5||buzzer_remind_count==10||buzzer_remind_count==15)
                     {
@@ -155,6 +155,24 @@ void offline_remind(uint8_t offline_num,uint8_t max_level,uint8_t max_level_coun
     //点灯
     aRGB_led_show(rgb);
 }
+
+uint8_t control_flag =0;
+//检测遥控器和图传是否断开
+void control_judge(void){
+    if(detect_list[DETECT_REMOTE].status == ONLINE ){
+        control_flag = RC_ONLINE;
+    }
+    if(detect_list[DETECT_VIDEO_TRANSIMITTER].status == ONLINE ){
+        control_flag = VT_ONLINE;
+    }
+    if(detect_list[DETECT_REMOTE].status == ONLINE && detect_list[DETECT_VIDEO_TRANSIMITTER].status == ONLINE ){
+        control_flag = ALL_ONLINE;
+    }
+    if(detect_list[DETECT_REMOTE].status == OFFLINE && detect_list[DETECT_VIDEO_TRANSIMITTER].status == OFFLINE ){
+        control_flag = ALL_OFFLINE;
+    }
+}
+
 uint8_t same_level_count[6]={0};
 
 void Detect_task(void const*pvParameters){
@@ -172,7 +190,7 @@ void Detect_task(void const*pvParameters){
 
     detect_init(DETECT_LAUNCHER_3508_FIRE_L,200,3);
     detect_init(DETECT_LAUNCHER_3508_FIRE_R,200,3);
-    detect_init(DETECT_LAUNCHER_2006_SINGLE_SHOT,200,3);
+    detect_init(DETECT_LAUNCHER_3508_FIRE_ON,200,3);
     detect_init(DETECT_LAUNCHER_3508_TRIGGER,200,3);
 
     detect_init(DETECT_GIMBAL_6020_PITCH,200,4);

@@ -41,7 +41,7 @@ typedef enum {
     CAN_LAUNCHER_3508_TRIGGER=0X207,    //1     拨盘
 
 
-    CAN_LAUNCHER_2006_SINGLE_SHOT=0x204,//2     单发
+    CAN_LAUNCHER_3508_FIRE_ON=0x204,    //2     上摩擦轮
     CAN_GIMBAL_6020_YAW=0x205,          //2     yaw轴
     CAN_GIMBAL_6020_PITCH=0x206,        //2     pitch轴
     CAN_LAUNCHER_3508_FIRE_R=0X207,     //2     左摩擦轮
@@ -81,10 +81,9 @@ union com{
 
 /******************** extern *******************/
 
-extern motor_measure_t motor_3508_measure[7];//前4个为底盘电机 后2个为摩擦轮电机 最后一个是拨盘
+extern motor_measure_t motor_3508_measure[8];//前4个为底盘电机 后2个为摩擦轮电机 6是拨盘，7是上摩擦轮
 extern motor_measure_t motor_yaw_measure;
 extern motor_measure_t motor_pitch_measure;
-extern motor_measure_t motor_2006_measure;//拨弹电机
 
 extern void CAN_cmd_motor(CAN_TYPE can_type,can_msg_id_e CMD_ID,int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);
 extern void CAN_cmd_chassis_rudder(int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);

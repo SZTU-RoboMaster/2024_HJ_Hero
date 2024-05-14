@@ -13,7 +13,7 @@ extern osThreadId uipaintTaskHandle;
 extern osThreadId ledTaskHandle;
 
 void StartDefaultTask(void const * argument) {
-#define GIMBAL
+//#define GIMBAL
 #ifdef GIMBAL
     vTaskDelete(chassisTaskHandle);
     vTaskDelete(uipaintTaskHandle);
