@@ -9,6 +9,7 @@
 #include "cmsis_os.h"
 #include "bsp_buzzer.h"
 #include "bsp_led.h"
+#include "key_board.h"
 
 #define ONLINE 1
 #define OFFLINE 0
@@ -38,8 +39,17 @@ typedef enum {
     DETECT_AUTO_AIM,    //自动瞄准
     DETECT_REFEREE,     //裁判
     DETECT_CAP,
+    DETECT_VIDEO_TRANSIMITTER,  //图传
     DETECT_DEVICE_LIST_LEN, //设备列表LEN
 }detect_device_index;
+
+typedef enum
+{
+    ALL_ONLINE = 1,
+    RC_ONLINE,
+    VT_ONLINE,
+    ALL_OFFLINE,
+}control_status;
 
 extern detect_device_t detect_list[DETECT_DEVICE_LIST_LEN];
 extern void detect_task(void const*pvParameters);

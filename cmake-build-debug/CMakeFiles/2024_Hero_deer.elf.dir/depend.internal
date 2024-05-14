@@ -423,6 +423,7 @@ CMakeFiles/2024_Hero_deer.elf.dir/Core/Src/main.c.obj
  D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/struct_typedef.h
  D:/software/CLionProjects/2024_Hero_deer/application/Communication/Atti.h
  D:/software/CLionProjects/2024_Hero_deer/application/Communication/can_receive.h
+ D:/software/CLionProjects/2024_Hero_deer/application/Operate/key_board.h
  D:/software/CLionProjects/2024_Hero_deer/application/Operate/remote.h
  D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Calibrate.h
  D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Detection.h
@@ -3189,12 +3190,15 @@ CMakeFiles/2024_Hero_deer.elf.dir/application/Communication/Atti.c.obj
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
+ D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/struct_typedef.h
  D:/software/CLionProjects/2024_Hero_deer/application/Communication/Atti.c
  D:/software/CLionProjects/2024_Hero_deer/application/Communication/Atti.h
+ D:/software/CLionProjects/2024_Hero_deer/application/Operate/key_board.h
  D:/software/CLionProjects/2024_Hero_deer/application/Operate/remote.h
  D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Calibrate.h
  D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Detection.h
+ D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Referee.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_adc.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_buzzer.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_flash.h
@@ -3202,12 +3206,15 @@ CMakeFiles/2024_Hero_deer.elf.dir/application/Communication/Atti.c.obj
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_led.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_rc.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_spi.h
+ D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_usart.h
  D:/software/CLionProjects/2024_Hero_deer/component/algorithm/AHRS.h
  D:/software/CLionProjects/2024_Hero_deer/component/algorithm/AHRS_MiddleWare.h
+ D:/software/CLionProjects/2024_Hero_deer/component/algorithm/ramp.h
  D:/software/CLionProjects/2024_Hero_deer/component/algorithm/user_lib.h
  D:/software/CLionProjects/2024_Hero_deer/component/controller/PID.h
  D:/software/CLionProjects/2024_Hero_deer/component/devices/BMI088driver.h
  D:/software/CLionProjects/2024_Hero_deer/component/devices/ist8310driver.h
+ D:/software/CLionProjects/2024_Hero_deer/component/support/CRC8_CRC16.h
 CMakeFiles/2024_Hero_deer.elf.dir/application/Communication/can_receive.c.obj
  D:/software/CLionProjects/2024_Hero_deer/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_deer/Core/Inc/main.h
@@ -3739,15 +3746,21 @@ CMakeFiles/2024_Hero_deer.elf.dir/application/Operate/key_board.c.obj
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
+ D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/struct_typedef.h
  D:/software/CLionProjects/2024_Hero_deer/application/Operate/key_board.c
  D:/software/CLionProjects/2024_Hero_deer/application/Operate/key_board.h
  D:/software/CLionProjects/2024_Hero_deer/application/Operate/remote.h
  D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Detection.h
+ D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Referee.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_buzzer.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_led.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_rc.h
+ D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_deer/component/algorithm/ramp.h
  D:/software/CLionProjects/2024_Hero_deer/component/algorithm/user_lib.h
+ D:/software/CLionProjects/2024_Hero_deer/component/controller/PID.h
+ D:/software/CLionProjects/2024_Hero_deer/component/support/CRC8_CRC16.h
 CMakeFiles/2024_Hero_deer.elf.dir/application/Operate/remote.c.obj
  D:/software/CLionProjects/2024_Hero_deer/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_deer/Core/Inc/main.h
@@ -3807,14 +3820,21 @@ CMakeFiles/2024_Hero_deer.elf.dir/application/Operate/remote.c.obj
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
+ D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_deer/application/Operate/key_board.h
  D:/software/CLionProjects/2024_Hero_deer/application/Operate/remote.c
  D:/software/CLionProjects/2024_Hero_deer/application/Operate/remote.h
  D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Detection.h
+ D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Referee.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_buzzer.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_led.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_rc.h
+ D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_deer/component/algorithm/ramp.h
  D:/software/CLionProjects/2024_Hero_deer/component/algorithm/user_lib.h
+ D:/software/CLionProjects/2024_Hero_deer/component/controller/PID.h
+ D:/software/CLionProjects/2024_Hero_deer/component/support/CRC8_CRC16.h
 CMakeFiles/2024_Hero_deer.elf.dir/application/Referee_system/Calibrate.c.obj
  D:/software/CLionProjects/2024_Hero_deer/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_deer/Core/Inc/main.h
@@ -3874,12 +3894,15 @@ CMakeFiles/2024_Hero_deer.elf.dir/application/Referee_system/Calibrate.c.obj
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
+ D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/struct_typedef.h
  D:/software/CLionProjects/2024_Hero_deer/application/Communication/Atti.h
+ D:/software/CLionProjects/2024_Hero_deer/application/Operate/key_board.h
  D:/software/CLionProjects/2024_Hero_deer/application/Operate/remote.h
  D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Calibrate.c
  D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Calibrate.h
  D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Detection.h
+ D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Referee.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_adc.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_buzzer.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_flash.h
@@ -3887,12 +3910,15 @@ CMakeFiles/2024_Hero_deer.elf.dir/application/Referee_system/Calibrate.c.obj
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_led.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_rc.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_spi.h
+ D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_usart.h
  D:/software/CLionProjects/2024_Hero_deer/component/algorithm/AHRS.h
  D:/software/CLionProjects/2024_Hero_deer/component/algorithm/AHRS_MiddleWare.h
+ D:/software/CLionProjects/2024_Hero_deer/component/algorithm/ramp.h
  D:/software/CLionProjects/2024_Hero_deer/component/algorithm/user_lib.h
  D:/software/CLionProjects/2024_Hero_deer/component/controller/PID.h
  D:/software/CLionProjects/2024_Hero_deer/component/devices/BMI088driver.h
  D:/software/CLionProjects/2024_Hero_deer/component/devices/ist8310driver.h
+ D:/software/CLionProjects/2024_Hero_deer/component/support/CRC8_CRC16.h
 CMakeFiles/2024_Hero_deer.elf.dir/application/Referee_system/Detection.c.obj
  D:/software/CLionProjects/2024_Hero_deer/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_deer/Core/Inc/main.h
@@ -3952,11 +3978,21 @@ CMakeFiles/2024_Hero_deer.elf.dir/application/Referee_system/Detection.c.obj
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_deer/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
+ D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_deer/application/Operate/key_board.h
+ D:/software/CLionProjects/2024_Hero_deer/application/Operate/remote.h
  D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Detection.c
  D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Detection.h
+ D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Referee.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_buzzer.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_led.h
+ D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_rc.h
+ D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_deer/component/algorithm/ramp.h
+ D:/software/CLionProjects/2024_Hero_deer/component/algorithm/user_lib.h
+ D:/software/CLionProjects/2024_Hero_deer/component/controller/PID.h
+ D:/software/CLionProjects/2024_Hero_deer/component/support/CRC8_CRC16.h
 CMakeFiles/2024_Hero_deer.elf.dir/application/Referee_system/Referee.c.obj
  D:/software/CLionProjects/2024_Hero_deer/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_deer/Core/Inc/main.h
@@ -5419,10 +5455,13 @@ CMakeFiles/2024_Hero_deer.elf.dir/component/communication/decode.c.obj
  D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/protocol_hero.h
  D:/software/CLionProjects/2024_Hero_deer/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_deer/application/Operate/key_board.h
+ D:/software/CLionProjects/2024_Hero_deer/application/Operate/remote.h
  D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Detection.h
  D:/software/CLionProjects/2024_Hero_deer/application/Referee_system/Referee.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_buzzer.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_led.h
+ D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_rc.h
  D:/software/CLionProjects/2024_Hero_deer/bsp/bsp_usart.h
  D:/software/CLionProjects/2024_Hero_deer/component/OneMessage/src/app/om_afl.h
  D:/software/CLionProjects/2024_Hero_deer/component/OneMessage/src/app/om_com.h
@@ -5441,6 +5480,7 @@ CMakeFiles/2024_Hero_deer.elf.dir/component/communication/decode.c.obj
  D:/software/CLionProjects/2024_Hero_deer/component/OneMessage/src/om.h
  D:/software/CLionProjects/2024_Hero_deer/component/OneMessage/src/om_config.h
  D:/software/CLionProjects/2024_Hero_deer/component/algorithm/ramp.h
+ D:/software/CLionProjects/2024_Hero_deer/component/algorithm/user_lib.h
  D:/software/CLionProjects/2024_Hero_deer/component/communication/decode.c
  D:/software/CLionProjects/2024_Hero_deer/component/communication/decode.h
  D:/software/CLionProjects/2024_Hero_deer/component/controller/PID.h

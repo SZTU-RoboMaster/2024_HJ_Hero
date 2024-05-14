@@ -64,12 +64,11 @@ void Chassis_task(void const *pvParameters) {
                       CAN_MOTOR_0x1FF_ID,
                       0,                                //205
                       0,                                //206
-                      2000,//launcher.trigger.give_current,    //207
+                      launcher.trigger.give_current,    //207
                       0);                               //208
 
         //  底盘相关模块 对底盘进行离线处理
-        //  chassis_device_offline_handle();
-        //  chassis_power_stop();
+//        chassis_device_offline_handle();
 
         Send_referee(Referee.PowerHeatData.chassis_power);
         vTaskDelay(1);

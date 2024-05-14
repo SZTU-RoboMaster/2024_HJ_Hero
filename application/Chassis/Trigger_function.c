@@ -72,7 +72,7 @@ void Keep_rotating() {
         else {
             launcher.trigger.speed = 0;
         }
-        launcher.trigger.give_current = (int16_t)pid_calc(&launcher.trigger.speed_p,
+        launcher.trigger.give_current = (int16_t)pid_calc(&launcher.trigger.speed_p_1,
                                                           launcher.trigger.motor_measure->speed_rpm,
                                                           launcher.trigger.speed);
     }

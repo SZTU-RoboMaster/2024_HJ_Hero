@@ -4,6 +4,11 @@
 
 #include "Detection.h"
 
+//如果觉得吵可以关掉蜂鸣器掉电提醒
+extern key_board_t KeyBoard;
+
+
+
 #define DETECT_TASK_INIT_TIME 800//8000
 #define buzzer_remind() buzzer_on(1,18888);
 //如果觉得吵可以关掉蜂鸣器掉电提醒
@@ -155,6 +160,25 @@ void offline_remind(uint8_t offline_num,uint8_t max_level,uint8_t max_level_coun
     //点灯
     aRGB_led_show(rgb);
 }
+
+
+uint8_t control_flag =0;
+//检测遥控器和图传是否断开
+void control_judge(void){
+    if(detect_list[DETECT_REMOTE].status == ONLINE ){
+        control_flag = RC_ONLINE;
+    }
+    if(detect_list[DETECT_VIDEO_TRANSIMITTER].status == ONLINE ){
+        control_flag = VT_ONLINE;
+    }
+    if(detect_list[DETECT_REMOTE].status == ONLINE && detect_list[DETECT_VIDEO_TRANSIMITTER].status == ONLINE ){
+        control_flag = ALL_ONLINE;
+    }
+    if(detect_list[DETECT_REMOTE].status == OFFLINE && detect_list[DETECT_VIDEO_TRANSIMITTER].status == OFFLINE ){
+        control_flag = ALL_OFFLINE;
+    }
+}
+
 uint8_t same_level_count[6]={0};
 
 void Detect_task(void const*pvParameters){

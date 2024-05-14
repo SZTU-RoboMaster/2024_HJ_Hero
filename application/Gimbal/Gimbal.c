@@ -101,9 +101,9 @@ void Gimbal_task(void const*pvParameters) {
 
         Send_Mode(chassis.mode, gimbal.mode, launcher.fire_mode, launcher.single_shoot_cmd);
 //        Send_command(robot_ctrl.fire_command);
+
         //检测电机、电源是否断线  TODO:取消注释会失能，要装裁判系统
-//        gimbal_device_offline_handle();//TODO:检测离线,装完裁判系统后可以打开
-//        gimbal_power_stop();
+        gimbal_device_offline_handle();//TODO:检测离线,装完裁判系统后可以打开
 
         gimbal_can_send_back_mapping(); // 接受can信号，传到UI
 
@@ -192,7 +192,7 @@ static void gimbal_init(){
 
     //pitch轴和yaw轴电机的校准编码值
 //    gimbal.pitch.motor_measure->offset_ecd=3220;//2370;
-    gimbal.yaw.motor_measure->offset_ecd = 7234;
+    gimbal.yaw.motor_measure->offset_ecd = 2062;//7234;
 
     //低通滤波初始化
     first_order_filter_init(&pitch_first_order_set, 0.f, 500);

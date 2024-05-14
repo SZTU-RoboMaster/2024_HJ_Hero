@@ -6,6 +6,7 @@
 #define DEMO1_KEY_BOARD_H
 
 #include "remote.h"
+#include "Referee.h"
 
 #define DEFAULT_CNT 100/24 // 100/任务周期=实际经过时间
 #define MOUSE_CLICK_R_CNT 5

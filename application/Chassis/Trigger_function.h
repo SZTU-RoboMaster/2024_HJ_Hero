@@ -13,7 +13,7 @@
 #define TRIGGER_SPEED (-350)
 ///往前就是大了
 //// 3508编码器转一圈编码值加8192  减速比1:14  编码器转19圈输出轴才转一圈  19×8192
-#define DEGREE_60_TO_ENCODER 19014.66667f//19114.66667f//12970.66666f//25941.3333f//26218.3333f   //3508拨盘
+#define DEGREE_60_TO_ENCODER 26255//19014.66667f//19114.66667f//12970.66666f//25941.3333f//26218.3333f   //3508拨盘
 
 
 /******************Trigger******************/
@@ -35,14 +35,14 @@ extern void trigger_finish_judge();
 //拨盘速度环PID
 #define TRIGGER_SPEED_PID_KP 3//30
 #define TRIGGER_SPEED_PID_KI 0.f
-#define TRIGGER_SPEED_PID_KD 6//28.f
+#define TRIGGER_SPEED_PID_KD 7//28.f
 #define TRIGGER_SPEED_PID_MAX_OUT    10000
 #define TRIGGER_SPEED_PID_MAX_IOUT   10
 
 //拨盘速度环PID,一直转
-#define TRIGGER_PID_KP 800.f//22.4f//30
-#define TRIGGER_PID_KI 0.4f//0.4f
-#define TRIGGER_PID_KD 0.001f//0.00001f//28.f
+#define TRIGGER_PID_KP 10.f//22.4f//30
+#define TRIGGER_PID_KI 0.f//0.4f
+#define TRIGGER_PID_KD 0.f//0.00001f//28.f
 #define TRIGGER_PID_MAX_OUT    25000
 #define TRIGGER_PID_MAX_IOUT   10000
 

@@ -19,6 +19,7 @@ extern first_order_filter_type_t auto_pitch;
 extern first_order_filter_type_t auto_yaw[2];
 extern fp32 gyro_pitch;
 extern fp32 gyro_yaw;
+extern uint8_t control_flag;
 
 /**
   * @brief          云台失能模式(四个电机)
@@ -50,60 +51,75 @@ static void gimbal_turn_back_judge(){
   * @retval         返回空
   */
 void gimbal_active_handle() {
-
-    if (KeyBoard.CTRL.status == KEY_PRESS) {
-
-        if (KeyBoard.B.status == KEY_CLICK) {
-            // MOUSE_X_RADIO 是鼠标输入的比例系数
-            gimbal.pitch.absolute_angle_set = (fp32) (gimbal.pitch.absolute_angle_set + (fp32) (0.3f));
-        }
-        else if (KeyBoard.C.status == KEY_CLICK) {
-            gimbal.pitch.absolute_angle_set = (fp32) (gimbal.pitch.absolute_angle_set - (fp32) (0.3f));
-        }
-        else {
-            gimbal.pitch.absolute_angle_set = gimbal.pitch.absolute_angle_set;
-            gimbal.yaw.absolute_angle_set = gimbal.yaw.absolute_angle_set;
-        }
-    }
     //鼠标输入滤波
-    else {
-        //对输入滤波器进行校准，将鼠标的x坐标作为输入
-        first_order_filter_cali(&mouse_in_x, rc_ctrl.mouse.x);//输入滤波
-        //在yaw期望值上,按遥控器或者鼠标进行增减
-        gimbal.yaw.absolute_angle_set -=
-                (float) rc_ctrl.rc.ch[YAW_CHANNEL] * RC_TO_YAW * GIMBAL_RC_MOVE_RATIO_YAW
-                + (float) mouse_in_x.out * MOUSE_X_RADIO;    // rc_ctrl.mouse.x
+    //对输入滤波器进行校准，将鼠标的x坐标作为输入
+    first_order_filter_cali(&mouse_in_x, rc_ctrl.mouse.x);//输入滤波
+    if(control_flag == ALL_ONLINE)
+    {
+        /* 图传优先 */
+        //first_order_filter_cali(&mouse_in_x,Referee.keyboard.mouse_x);
+        /* 遥控器优先 */
+        first_order_filter_cali(&mouse_in_x,rc_ctrl.mouse.x);
+    }
+    if(control_flag == RC_ONLINE)
+    {
+        first_order_filter_cali(&mouse_in_x,rc_ctrl.mouse.x);
+    }
+    if(control_flag == VT_ONLINE)
+    {
+        first_order_filter_cali(&mouse_in_x,Referee.keyboard.mouse_x);
+    }
 
-        //一键掉头判断
-        gimbal_turn_back_judge();
+    //在yaw期望值上,按遥控器或者鼠标进行增减
+    gimbal.yaw.absolute_angle_set -=
+            (float) rc_ctrl.rc.ch[YAW_CHANNEL] * RC_TO_YAW * GIMBAL_RC_MOVE_RATIO_YAW
+            + (float) mouse_in_x.out * MOUSE_X_RADIO;    // rc_ctrl.mouse.x
 
-        //对输入滤波器进行校准，将鼠标的y坐标作为输入
-        first_order_filter_cali(&mouse_in_y, rc_ctrl.mouse.y);//输入滤波
-        //在pit期望值上,按遥控器或者鼠标进行增减
-        gimbal.pitch.absolute_angle_set +=
-                (float) rc_ctrl.rc.ch[PITCH_CHANNEL] * RC_TO_PITCH * GIMBAL_RC_MOVE_RATIO_PIT
-                - mouse_in_y.out * MOUSE_Y_RADIO;  // rc_ctrl.mouse.y
+    //一键掉头判断
+    gimbal_turn_back_judge();
 
-        //云台绕圈时进行绝对角循环设置
-        if (gimbal.yaw.absolute_angle_set >= 180) {
-            gimbal.yaw.absolute_angle_set -= 360;
-        }
-            //当yaw期望值超过180度时，将其调整到[-180,180]的范围
-        else if (gimbal.yaw.absolute_angle_set <= -180) {
-            gimbal.yaw.absolute_angle_set += 360;
-        }
+    //对输入滤波器进行校准，将鼠标的y坐标作为输入
+    first_order_filter_cali(&mouse_in_y, rc_ctrl.mouse.y);//输入滤波
+    if(control_flag == ALL_ONLINE)
+    {
+        /* 图传优先 */
+        // first_order_filter_cali(&mouse_in_y,Referee.keyboard.mouse_y);
+        /* 遥控器优先 */
+        first_order_filter_cali(&mouse_in_y,rc_ctrl.mouse.y);
+    }
+    if(control_flag == RC_ONLINE)
+    {
+        first_order_filter_cali(&mouse_in_y,rc_ctrl.mouse.y);
+    }
+    if(control_flag == VT_ONLINE)
+    {
+        first_order_filter_cali(&mouse_in_y,Referee.keyboard.mouse_y);
+    }
 
-        //对pit期望值进行动态限幅（通过陀螺仪和编码器得到动态的限位）
-        gimbal.pitch.absolute_angle_set = fp32_constrain(gimbal.pitch.absolute_angle_set,
-                                                         MIN_ABS_ANGLE,
-                                                         MAX_ABS_ANGLE);
+    //在pit期望值上,按遥控器或者鼠标进行增减
+    gimbal.pitch.absolute_angle_set +=
+            (float) rc_ctrl.rc.ch[PITCH_CHANNEL] * RC_TO_PITCH * GIMBAL_RC_MOVE_RATIO_PIT
+            - mouse_in_y.out * MOUSE_Y_RADIO;  // rc_ctrl.mouse.y
+
+    //云台绕圈时进行绝对角循环设置
+    if (gimbal.yaw.absolute_angle_set >= 180) {
+        gimbal.yaw.absolute_angle_set -= 360;
+    }
+        //当yaw期望值超过180度时，将其调整到[-180,180]的范围
+    else if (gimbal.yaw.absolute_angle_set <= -180) {
+        gimbal.yaw.absolute_angle_set += 360;
+    }
+
+    //对pit期望值进行动态限幅（通过陀螺仪和编码器得到动态的限位）
+    gimbal.pitch.absolute_angle_set = fp32_constrain(gimbal.pitch.absolute_angle_set,
+                                                     MIN_ABS_ANGLE,
+                                                     MAX_ABS_ANGLE);
 //    gimbal.pitch.absolute_angle_set=fp32_constrain(gimbal.pitch.absolute_angle_set,
 //                                                   MIN_ABS_ANGLE+
 //                                                   gimbal.pitch.absolute_angle_get - gimbal.pitch.relative_angle_get,
 //                                                   MAX_ABS_ANGLE+
 //                                                   gimbal.pitch.absolute_angle_get - gimbal.pitch.relative_angle_get);
 
-    }
 }
 
 
@@ -153,20 +169,20 @@ void gimbal_auto_handle() {
   */
 void gimbal_ctrl_loop_cal(){
     //计算yaw轴的控制输出
-    if(abs(gimbal.yaw.absolute_angle_set-gimbal.yaw.absolute_angle_get)<0.5){
-        gimbal.yaw.gyro_set=pid_loop_calc(&gimbal.yaw.auto_angle_p,
-                                          gimbal.yaw.absolute_angle_get,
-                                          gimbal.yaw.absolute_angle_set,
-                                          180,
-                                          -180);//gimbal.yaw.absolute_angle_set
-
-        first_order_filter_cali(&filter_yaw_gyro_in, gyro_yaw);
-
-        gimbal.yaw.give_current = (int16_t)-pid_calc(&gimbal.yaw.auto_speed_p,
-                                                     gyro_yaw,//gimbal.yaw.motor_measure->speed_rpm,
-                                                     gimbal.yaw.gyro_set);
-    }
-    else {
+//    if(abs(gimbal.yaw.absolute_angle_set-gimbal.yaw.absolute_angle_get)<0.5){
+//        gimbal.yaw.gyro_set=pid_loop_calc(&gimbal.yaw.auto_angle_p,
+//                                          gimbal.yaw.absolute_angle_get,
+//                                          gimbal.yaw.absolute_angle_set,
+//                                          180,
+//                                          -180);//gimbal.yaw.absolute_angle_set
+//
+//        first_order_filter_cali(&filter_yaw_gyro_in, gyro_yaw);
+//
+//        gimbal.yaw.give_current = (int16_t)-pid_calc(&gimbal.yaw.auto_speed_p,
+//                                                     gyro_yaw,//gimbal.yaw.motor_measure->speed_rpm,
+//                                                     gimbal.yaw.gyro_set);
+//    }
+//    else {
         gimbal.yaw.gyro_set= pid_loop_calc(&gimbal.yaw.angle_p,
                                            gimbal.yaw.absolute_angle_get,
                                            gimbal.yaw.absolute_angle_set,
@@ -175,27 +191,28 @@ void gimbal_ctrl_loop_cal(){
 
         first_order_filter_cali(&filter_yaw_gyro_in, gyro_yaw);
 
-        gimbal.yaw.give_current = (int16_t)-pid_calc(&gimbal.yaw.speed_p,
+        gimbal.yaw.give_current = (int16_t)pid_calc(&gimbal.yaw.speed_p,
                                                     filter_yaw_gyro_in.out,//gimbal.yaw.motor_measure->speed_rpm,
                                                      gimbal.yaw.gyro_set);
 
-    }
-    if(rc_ctrl.rc.ch[3] == 0) {
-        gimbal.pitch.give_current = 0;
-    }
-    else {
-        if (gimbal.pitch.absolute_angle_get < 0 && rc_ctrl.rc.ch[3] < 0) {
-            //计算pitch轴的控制输出
-            gimbal.pitch.gyro_set = pid_calc(&gimbal.pitch.auto_angle_p,
-                                             gimbal.pitch.absolute_angle_get,
-                                             gimbal.pitch.absolute_angle_set);//Vision_info.pitch.value
-            first_order_filter_cali(&filter_pitch_gyro_in, gyro_pitch);
+//    }
 
-            ///// 读取陀螺仪的角速度加在内环的期望上面
-            gimbal.pitch.give_current = (int16_t) pid_calc(&gimbal.pitch.auto_speed_p,
-                                                           filter_pitch_gyro_in.out,
-                                                           gimbal.pitch.gyro_set);//加负号为了电机反转
-        } else {
+//    if(rc_ctrl.rc.ch[3] == 0) {
+//        gimbal.pitch.give_current = 0;
+//    }
+//    else {
+//        if (gimbal.pitch.absolute_angle_get < 0 && rc_ctrl.rc.ch[3] < 0) {
+//            //计算pitch轴的控制输出
+//            gimbal.pitch.gyro_set = pid_calc(&gimbal.pitch.auto_angle_p,
+//                                             gimbal.pitch.absolute_angle_get,
+//                                             gimbal.pitch.absolute_angle_set);//Vision_info.pitch.value
+//            first_order_filter_cali(&filter_pitch_gyro_in, gyro_pitch);
+//
+//            ///// 读取陀螺仪的角速度加在内环的期望上面
+//            gimbal.pitch.give_current = (int16_t) pid_calc(&gimbal.pitch.auto_speed_p,
+//                                                           filter_pitch_gyro_in.out,
+//                                                           gimbal.pitch.gyro_set);//加负号为了电机反转
+//        } else {
             //计算pitch轴的控制输出
             gimbal.pitch.gyro_set = pid_calc(&gimbal.pitch.angle_p,
                                              gimbal.pitch.absolute_angle_get,
@@ -204,13 +221,11 @@ void gimbal_ctrl_loop_cal(){
 
             ///// 读取陀螺仪的角速度加在内环的期望上面
             gimbal.pitch.give_current = (int16_t) pid_calc(&gimbal.pitch.speed_p,
-                    //gimbal.pitch.motor_measure->speed_rpm,
                                                            filter_pitch_gyro_in.out,
                                                            gimbal.pitch.gyro_set);//加负号为了电机反转
-        }
+//        }
 
-    }
-    //gimbal.pitch.give_current= (int16_t)Apply(&pitch_current_out,gimbal.pitch.give_current);
+//    }
 }
 
 
@@ -262,9 +277,8 @@ void gimbal_auto_ctrl_loop_cal(){
   * 当检测到某个设备离线时，将相应电机的给定电流设置为0，以确保在设备离线的情况下停止对应电机的运动。
   * @retval         返回空
   */
-///TODO:还没有用到的
 void gimbal_device_offline_handle() {
-    if(detect_list[DETECT_REMOTE].status == OFFLINE){
+    if(detect_list[DETECT_REMOTE].status == OFFLINE  && detect_list[DETECT_VIDEO_TRANSIMITTER].status == OFFLINE){
         gimbal.pitch.give_current = 0;
         gimbal.yaw.give_current = 0;
         launcher.trigger.give_current = 0;
