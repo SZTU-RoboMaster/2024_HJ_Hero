@@ -10,6 +10,7 @@
 #include "PID.h"
 #include "Detection.h"
 #include "cmsis_os.h"
+#include "bsp_xidi_cap.h"
 /******************** define *******************/
 
 #define HALF_ECD_RANGE  4096
@@ -38,6 +39,7 @@ typedef enum {
     CAN_CHASSIS_3508_MOTOR_2=0x202,     //1     前左
     CAN_CHASSIS_3508_MOTOR_3=0x203,     //1     后左
     CAN_CHASSIS_3508_MOTOR_4=0x204,     //1     后右
+    CAN_IMAGE_2006_TRANSMISSION=0x205,  //1     图传电机
     CAN_LAUNCHER_3508_TRIGGER=0X207,    //1     拨盘
 
 
@@ -51,7 +53,7 @@ typedef enum {
 typedef enum {
     CAN_1,
     CAN_2,
-}CAN_TYPE;//////////////////
+}CAN_TYPE;
 
 
 union ctrl_ch{
@@ -84,6 +86,7 @@ union com{
 extern motor_measure_t motor_3508_measure[8];//前4个为底盘电机 后2个为摩擦轮电机 6是拨盘，7是上摩擦轮
 extern motor_measure_t motor_yaw_measure;
 extern motor_measure_t motor_pitch_measure;
+extern motor_measure_t motor_image_measure;    //图传电机
 
 extern void CAN_cmd_motor(CAN_TYPE can_type,can_msg_id_e CMD_ID,int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);
 extern void CAN_cmd_chassis_rudder(int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);

@@ -32,10 +32,12 @@
 #define CONTINUES_SHOOT_TIMING_COMPLETE() HAL_GetTick()-continue_shoot_time>1500
 #define CONTINUES_BLOCKED_JUDGE() (HAL_GetTick()-blocked_start_time>900)
 #define TRIGGER_REVERSE_TIME_JUDGE() (HAL_GetTick()-reverse_start_time<900)
-#define FIRE_SPEED 4500  //TODO: 摩擦轮转速
+#define FIRE_SPEED_L 5100  //TODO: 摩擦轮转速
+#define FIRE_SPEED_R 5100  //TODO: 摩擦轮转速
+#define FIRE_SPEED_ON 5100  //TODO: 摩擦轮转速
 
 //// 2006编码器转一圈编码值加8192  减速比1:36  编码器转36圈输出轴才转一圈  36×8192
-#define DEGREE_93_TO_ENCODER 98304.0000f    //2006单发 120：98304    95:77824    90:73728  100:81920
+#define DEGREE_TO_ENCODER 15000.0000f    //2006单发 120：98304    95:77824    90:73728  100:81920
 
 //#define FIRE_ON() KeyBoard.Q.click_flag==1
 //#define FIRE_OFF() KeyBoard.Q.click_flag==0
@@ -44,24 +46,36 @@
 //左边摩擦轮转速PID
 #define SHOOT_FIRE_L_PID_KP 30 //80
 #define SHOOT_FIRE_L_PID_KI 0.f
-#define SHOOT_FIRE_L_PID_KD 0.f//50.f
+#define SHOOT_FIRE_L_PID_KD 1.f//50.f
 #define SHOOT_FIRE_L_PID_MAX_OUT    26000
 #define SHOOT_FIRE_L_PID_MAX_IOUT   100
 
 //右边摩擦轮转速PID
 #define SHOOT_FIRE_R_PID_KP 30//80
 #define SHOOT_FIRE_R_PID_KI 0.f
-#define SHOOT_FIRE_R_PID_KD 0.f//50.f
+#define SHOOT_FIRE_R_PID_KD 1.f//50.f
 #define SHOOT_FIRE_R_PID_MAX_OUT    26000
 #define SHOOT_FIRE_R_PID_MAX_IOUT   100
 
 //上边摩擦轮转速PID
-#define SINGLE_FIRE_ON_PID_KP  30//80
-#define SINGLE_FIRE_ON_PID_KI  0.f
-#define SINGLE_FIRE_ON_PID_KD  0.f//50.f
-#define SINGLE_FIRE_ON_PID_MAX_OUT 26000
-#define SINGLE_FIRE_ON_PID_MAX_IOUT 100
+#define SHOOT_FIRE_ON_PID_KP  30//80
+#define SHOOT_FIRE_ON_PID_KI  0.f
+#define SHOOT_FIRE_ON_PID_KD  1.f//50.f
+#define SHOOT_FIRE_ON_PID_MAX_OUT 26000
+#define SHOOT_FIRE_ON_PID_MAX_IOUT 100
 
+//图传PID
+#define IMAGE_ANGLE_PID_KP 0.7
+#define IMAGE_ANGLE_PID_KI 0.02
+#define IMAGE_ANGLE_PID_KD 1.6
+#define IMAGE_ANGLE_PID_MAX_OUT 10000
+#define IMAGE_ANGLE_PID_MAX_IOUT 10000
+
+#define IMAGE_SPEED_PID_KP 2
+#define IMAGE_SPEED_PID_KI 0
+#define IMAGE_SPEED_PID_KD 4.5
+#define IMAGE_SPEED_PID_MAX_OUT 20000
+#define IMAGE_SPEED_PID_MAX_IOUT 0
 
 
 /**
@@ -84,7 +98,7 @@ extern void launcher_init();
   * @retval         返回空
   */
 extern void launcher_mode_set();
-
+extern void images_mode_set();
 
 
 /**

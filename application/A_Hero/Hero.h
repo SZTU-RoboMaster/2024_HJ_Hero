@@ -6,6 +6,7 @@
 
 #ifndef INC_2024_HERO_HERO_H
 #define INC_2024_HERO_HERO_H
+#define GIMBAL
 
 /**** 电机数组配合枚举使用 ****/
 typedef enum {
@@ -133,6 +134,7 @@ typedef struct {
     fp32 relative_angle_get; //°    获取
     fp32 relative_angle_set; //°    设定
     fp32 absolute_angle_get;//      rad
+    fp32 absolute_angle_get_down;//      rad
     fp32 absolute_angle_set;
     fp32 gyro_set;  //转速设置
     int16_t give_current; //最终电流值
@@ -195,6 +197,7 @@ typedef struct {
     motor_2006_t fire_r;
     motor_2006_t fire_on;
     motor_2006_t trigger;     //拨盘电机
+    motor_2006_t images;      //图传电机
 }launcher_t;
 
 

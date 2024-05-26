@@ -369,7 +369,11 @@ CMakeFiles/2024_Hero_three.elf.dir/Core/Src/main.c.obj
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_gcc.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_iccarm.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_version.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm0.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm0plus.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm3.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm4.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm7.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/mpu_armv7.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
@@ -421,8 +425,13 @@ CMakeFiles/2024_Hero_three.elf.dir/Core/Src/main.c.obj
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
+ D:/software/CLionProjects/2024_Hero_three/application/Gimbal/launcher.h
+ D:/software/CLionProjects/2024_Hero_three/application/Operate/key_board.h
  D:/software/CLionProjects/2024_Hero_three/application/Operate/remote.h
  D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Calibrate.h
  D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Detection.h
@@ -433,14 +442,19 @@ CMakeFiles/2024_Hero_three.elf.dir/Core/Src/main.c.obj
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_delay.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_flash.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_imu_pwm.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_laser.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_led.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_rc.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/filter.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/ramp.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/user_lib.h
+ D:/software/CLionProjects/2024_Hero_three/component/communication/packet.h
  D:/software/CLionProjects/2024_Hero_three/component/controller/PID.h
  D:/software/CLionProjects/2024_Hero_three/component/devices/BMI088driver.h
  D:/software/CLionProjects/2024_Hero_three/component/devices/ist8310driver.h
@@ -2667,7 +2681,7 @@ CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
  D:/software/CLionProjects/2024_Hero_three/Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
  D:/software/CLionProjects/2024_Hero_three/USB_DEVICE/Target/usbd_conf.c
  D:/software/CLionProjects/2024_Hero_three/USB_DEVICE/Target/usbd_conf.h
-CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.obj
+CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.obj
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
@@ -2726,45 +2740,16 @@ CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.obj
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.c
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
- D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
- D:/software/CLionProjects/2024_Hero_three/application/Operate/key_board.h
- D:/software/CLionProjects/2024_Hero_three/application/Operate/remote.h
- D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Detection.h
- D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Referee.h
- D:/software/CLionProjects/2024_Hero_three/bsp/bsp_buzzer.h
- D:/software/CLionProjects/2024_Hero_three/bsp/bsp_led.h
- D:/software/CLionProjects/2024_Hero_three/bsp/bsp_rc.h
- D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
- D:/software/CLionProjects/2024_Hero_three/component/algorithm/ramp.h
- D:/software/CLionProjects/2024_Hero_three/component/algorithm/user_lib.h
- D:/software/CLionProjects/2024_Hero_three/component/controller/PID.h
- D:/software/CLionProjects/2024_Hero_three/component/support/CRC8_CRC16.h
-CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.obj
- D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/list.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/StartDefault.c
-CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis.c.obj
+ D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/ramp.h
+ D:/software/CLionProjects/2024_Hero_three/component/controller/PID.h
+CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Cap.c.obj
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
- D:/software/CLionProjects/2024_Hero_three/Core/Inc/tim.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/usart.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
@@ -2824,15 +2809,16 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis.c.obj
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
- D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.c
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.c
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
+ D:/software/CLionProjects/2024_Hero_three/application/Gimbal/launcher.h
  D:/software/CLionProjects/2024_Hero_three/application/Operate/key_board.h
  D:/software/CLionProjects/2024_Hero_three/application/Operate/remote.h
  D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Calibrate.h
@@ -2847,6 +2833,108 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis.c.obj
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_rc.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/filter.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/ramp.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/user_lib.h
+ D:/software/CLionProjects/2024_Hero_three/component/communication/packet.h
+ D:/software/CLionProjects/2024_Hero_three/component/controller/PID.h
+ D:/software/CLionProjects/2024_Hero_three/component/devices/BMI088driver.h
+ D:/software/CLionProjects/2024_Hero_three/component/devices/ist8310driver.h
+ D:/software/CLionProjects/2024_Hero_three/component/support/CRC8_CRC16.h
+CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis.c.obj
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/tim.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/usart.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_armcc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_armclang.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_compiler.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_gcc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_iccarm.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_version.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm0.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm0plus.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm3.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm4.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm7.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/mpu_armv7.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
+ D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
+ D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
+ D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.c
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
+ D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
+ D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
+ D:/software/CLionProjects/2024_Hero_three/application/Gimbal/launcher.h
+ D:/software/CLionProjects/2024_Hero_three/application/Operate/key_board.h
+ D:/software/CLionProjects/2024_Hero_three/application/Operate/remote.h
+ D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Calibrate.h
+ D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Detection.h
+ D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Referee.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_adc.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_buzzer.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_flash.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_imu_pwm.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_laser.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_led.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_rc.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
@@ -2862,6 +2950,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_behaviour.c.obj
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/usart.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
@@ -2921,15 +3010,16 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_behaviour.c.obj
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis_behaviour.c
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
+ D:/software/CLionProjects/2024_Hero_three/application/Gimbal/launcher.h
  D:/software/CLionProjects/2024_Hero_three/application/Operate/key_board.h
  D:/software/CLionProjects/2024_Hero_three/application/Operate/remote.h
  D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Calibrate.h
@@ -2944,6 +3034,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_behaviour.c.obj
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_rc.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
@@ -2959,6 +3050,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_send.c.obj
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/usart.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
@@ -3018,15 +3110,16 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_send.c.obj
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis_send.c
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
+ D:/software/CLionProjects/2024_Hero_three/application/Gimbal/launcher.h
  D:/software/CLionProjects/2024_Hero_three/application/Operate/key_board.h
  D:/software/CLionProjects/2024_Hero_three/application/Operate/remote.h
  D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Calibrate.h
@@ -3041,6 +3134,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_send.c.obj
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_rc.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
@@ -3057,6 +3151,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Trigger_function.c.obj
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/tim.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/usart.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
@@ -3066,7 +3161,11 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Trigger_function.c.obj
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_gcc.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_iccarm.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_version.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm0.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm0plus.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm3.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm4.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm7.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/mpu_armv7.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
@@ -3115,20 +3214,38 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Trigger_function.c.obj
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.c
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
+ D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
+ D:/software/CLionProjects/2024_Hero_three/application/Gimbal/launcher.h
  D:/software/CLionProjects/2024_Hero_three/application/Operate/key_board.h
  D:/software/CLionProjects/2024_Hero_three/application/Operate/remote.h
+ D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Calibrate.h
  D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Detection.h
  D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Referee.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_adc.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_buzzer.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_flash.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_imu_pwm.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_laser.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_led.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_rc.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/filter.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/ramp.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/user_lib.h
+ D:/software/CLionProjects/2024_Hero_three/component/communication/packet.h
  D:/software/CLionProjects/2024_Hero_three/component/controller/PID.h
+ D:/software/CLionProjects/2024_Hero_three/component/devices/BMI088driver.h
+ D:/software/CLionProjects/2024_Hero_three/component/devices/ist8310driver.h
  D:/software/CLionProjects/2024_Hero_three/component/support/CRC8_CRC16.h
 CMakeFiles/2024_Hero_three.elf.dir/application/Communication/Atti.c.obj
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
@@ -3212,82 +3329,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Communication/can_receive.c.obj
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_armcc.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_armclang.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_compiler.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_gcc.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_iccarm.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_version.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm4.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/mpu_armv7.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
- D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/list.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
- D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
- D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.c
- D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
- D:/software/CLionProjects/2024_Hero_three/application/Operate/key_board.h
- D:/software/CLionProjects/2024_Hero_three/application/Operate/remote.h
- D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Detection.h
- D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Referee.h
- D:/software/CLionProjects/2024_Hero_three/bsp/bsp_buzzer.h
- D:/software/CLionProjects/2024_Hero_three/bsp/bsp_led.h
- D:/software/CLionProjects/2024_Hero_three/bsp/bsp_rc.h
- D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
- D:/software/CLionProjects/2024_Hero_three/component/algorithm/ramp.h
- D:/software/CLionProjects/2024_Hero_three/component/algorithm/user_lib.h
- D:/software/CLionProjects/2024_Hero_three/component/controller/PID.h
- D:/software/CLionProjects/2024_Hero_three/component/support/CRC8_CRC16.h
-CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal.c.obj
- D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
- D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
- D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/usart.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
@@ -3347,10 +3389,112 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal.c.obj
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
+ D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
+ D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.c
+ D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
+ D:/software/CLionProjects/2024_Hero_three/application/Gimbal/launcher.h
+ D:/software/CLionProjects/2024_Hero_three/application/Operate/key_board.h
+ D:/software/CLionProjects/2024_Hero_three/application/Operate/remote.h
+ D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Calibrate.h
+ D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Detection.h
+ D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Referee.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_adc.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_buzzer.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_flash.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_imu_pwm.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_laser.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_led.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_rc.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/filter.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/ramp.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/user_lib.h
+ D:/software/CLionProjects/2024_Hero_three/component/communication/packet.h
+ D:/software/CLionProjects/2024_Hero_three/component/controller/PID.h
+ D:/software/CLionProjects/2024_Hero_three/component/devices/BMI088driver.h
+ D:/software/CLionProjects/2024_Hero_three/component/devices/ist8310driver.h
+ D:/software/CLionProjects/2024_Hero_three/component/support/CRC8_CRC16.h
+CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal.c.obj
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/usart.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_armcc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_armclang.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_compiler.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_gcc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_iccarm.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_version.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm0.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm0plus.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm3.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm4.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm7.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/mpu_armv7.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
+ D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
+ D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
+ D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
  D:/software/CLionProjects/2024_Hero_three/application/Gimbal/Gimbal.c
@@ -3371,6 +3515,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal.c.obj
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_servo_pwm.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
@@ -3387,6 +3532,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal_behaviour.c.obj
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/usart.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
@@ -3446,10 +3592,12 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal_behaviour.c.obj
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
  D:/software/CLionProjects/2024_Hero_three/application/Gimbal/Gimbal.h
@@ -3470,6 +3618,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal_behaviour.c.obj
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_servo_pwm.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
@@ -3486,6 +3635,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal_send.c.obj
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/usart.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
@@ -3545,10 +3695,12 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal_send.c.obj
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
  D:/software/CLionProjects/2024_Hero_three/application/Gimbal/Gimbal.h
@@ -3569,6 +3721,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/Gimbal_send.c.obj
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_servo_pwm.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
@@ -3585,6 +3738,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/launcher.c.obj
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/usart.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
@@ -3644,10 +3798,12 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/launcher.c.obj
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
  D:/software/CLionProjects/2024_Hero_three/application/Gimbal/Gimbal.h
@@ -3668,6 +3824,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Gimbal/launcher.c.obj
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_servo_pwm.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
@@ -3967,6 +4124,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Referee_system/Referee.c.obj
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/usart.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
@@ -4026,14 +4184,15 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Referee_system/Referee.c.obj
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
+ D:/software/CLionProjects/2024_Hero_three/application/Gimbal/launcher.h
  D:/software/CLionProjects/2024_Hero_three/application/Operate/key_board.h
  D:/software/CLionProjects/2024_Hero_three/application/Operate/remote.h
  D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Calibrate.h
@@ -4049,6 +4208,7 @@ CMakeFiles/2024_Hero_three.elf.dir/application/Referee_system/Referee.c.obj
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_rc.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
@@ -4497,6 +4657,7 @@ CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_led.c.obj
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/spi.h
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/usart.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
  D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
@@ -4556,14 +4717,15 @@ CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_led.c.obj
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
- D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
  D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
  D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
+ D:/software/CLionProjects/2024_Hero_three/application/Gimbal/launcher.h
  D:/software/CLionProjects/2024_Hero_three/application/Operate/key_board.h
  D:/software/CLionProjects/2024_Hero_three/application/Operate/remote.h
  D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Calibrate.h
@@ -4579,6 +4741,7 @@ CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_led.c.obj
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_rc.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
  D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
@@ -4830,6 +4993,106 @@ CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_usart.c.obj
  D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.c
  D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_xidi_cap.c.obj
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/main.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/stm32f4xx_hal_conf.h
+ D:/software/CLionProjects/2024_Hero_three/Core/Inc/usart.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f407xx.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Device/ST/STM32F4xx/Include/system_stm32f4xx.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_armcc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_armclang.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_compiler.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_gcc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_iccarm.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/cmsis_version.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm0.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm0plus.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm3.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm4.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/core_cm7.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/CMSIS/Include/mpu_armv7.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_adc_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_can.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_crc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_dma_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_exti.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_gpio_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rng.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h
+ D:/software/CLionProjects/2024_Hero_three/Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+ D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/portmacro.h
+ D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h
+ D:/software/CLionProjects/2024_Hero_three/application/A_Hero/protocol_hero.h
+ D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.h
+ D:/software/CLionProjects/2024_Hero_three/application/Chassis/Trigger_function.h
+ D:/software/CLionProjects/2024_Hero_three/application/Communication/Atti.h
+ D:/software/CLionProjects/2024_Hero_three/application/Communication/can_receive.h
+ D:/software/CLionProjects/2024_Hero_three/application/Gimbal/launcher.h
+ D:/software/CLionProjects/2024_Hero_three/application/Operate/key_board.h
+ D:/software/CLionProjects/2024_Hero_three/application/Operate/remote.h
+ D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Calibrate.h
+ D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Detection.h
+ D:/software/CLionProjects/2024_Hero_three/application/Referee_system/Referee.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_adc.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_buzzer.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_flash.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_imu_pwm.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_laser.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_led.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_rc.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_spi.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.c
+ D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/arm_math.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/filter.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/ramp.h
+ D:/software/CLionProjects/2024_Hero_three/component/algorithm/user_lib.h
+ D:/software/CLionProjects/2024_Hero_three/component/communication/packet.h
+ D:/software/CLionProjects/2024_Hero_three/component/controller/PID.h
+ D:/software/CLionProjects/2024_Hero_three/component/devices/BMI088driver.h
+ D:/software/CLionProjects/2024_Hero_three/component/devices/ist8310driver.h
+ D:/software/CLionProjects/2024_Hero_three/component/support/CRC8_CRC16.h
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_afl.c.obj
  D:/software/CLionProjects/2024_Hero_three/Core/Inc/FreeRTOSConfig.h
  D:/software/CLionProjects/2024_Hero_three/Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h

@@ -117,7 +117,7 @@ CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 CMAKE_DEPENDS_USE_COMPILER:UNINITIALIZED=FALSE
 
 //Path to a program.
-CMAKE_DLLTOOL:FILEPATH=D:/software/CLion 2023.2.1/bin/mingw/bin/dlltool.exe
+CMAKE_DLLTOOL:FILEPATH=D:/software/Qt/Tools/mingw1120_64/bin/dlltool.exe
 
 //Flags used by the linker during all build types.
 CMAKE_EXE_LINKER_FLAGS:STRING=
@@ -143,8 +143,8 @@ CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/2024_Hero_three
 //Path to a program.
 CMAKE_LINKER:FILEPATH=D:/software/gcc-arm-none-eabi-10.3-2021.10/bin/arm-none-eabi-ld.exe
 
-//make program
-CMAKE_MAKE_PROGRAM:FILEPATH=D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe
+//Path to a program.
+CMAKE_MAKE_PROGRAM:FILEPATH=D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe
 
 //Flags used by the linker during the creation of modules during
 // all build types.

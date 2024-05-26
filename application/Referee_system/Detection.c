@@ -224,7 +224,7 @@ void Detect_task(void const*pvParameters){
                 detect_list[i].status=ONLINE;
             }
         }
-
+        control_judge();
         //TODO:模块离线提示
         offline_remind(offline_num,max_level,same_level_count[max_level]);
 

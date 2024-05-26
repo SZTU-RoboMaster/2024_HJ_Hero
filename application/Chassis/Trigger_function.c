@@ -9,6 +9,7 @@ extern trigger_t trigger;
 static first_order_filter_type_t filter_trigger_rpm_in;
 extern robot_ctrl_info_t robot_ctrl;
 extern uint8_t fire_lock;
+
 // 拨盘初始化
 void Trigger_init(){
     // 获取 trigger 电机数据

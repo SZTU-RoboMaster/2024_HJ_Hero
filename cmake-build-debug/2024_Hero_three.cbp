@@ -11,10 +11,10 @@
 				<Option working_dir="D:/software/CLionProjects/2024_Hero_three/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="2024_Hero_three.elf">
@@ -67,10 +67,10 @@
 					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 2024_Hero_three.elf"/>
-					<CompileFile command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 2024_Hero_three.elf"/>
+					<CompileFile command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="2024_Hero_three.elf/fast">
@@ -123,30 +123,30 @@
 					<Add directory="d:\software\gcc-arm-none-eabi-10.3-2021.10\bin\../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 2024_Hero_three.elf/fast"/>
-					<CompileFile command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 2024_Hero_three.elf/fast"/>
+					<CompileFile command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="D:/software/CLionProjects/2024_Hero_three/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="D:/software/CLionProjects/2024_Hero_three/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/software/CLion 2023.2.1/bin/mingw/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/software/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f &quot;D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -708,12 +708,6 @@
 		<Unit filename="D:/software/CLionProjects/2024_Hero_three/USB_DEVICE/Target/usbd_conf.h">
 			<Option target="2024_Hero_three.elf"/>
 		</Unit>
-		<Unit filename="D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.c">
-			<Option target="2024_Hero_three.elf"/>
-		</Unit>
-		<Unit filename="D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.h">
-			<Option target="2024_Hero_three.elf"/>
-		</Unit>
 		<Unit filename="D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Hero.h">
 			<Option target="2024_Hero_three.elf"/>
 		</Unit>
@@ -724,6 +718,12 @@
 			<Option target="2024_Hero_three.elf"/>
 		</Unit>
 		<Unit filename="D:/software/CLionProjects/2024_Hero_three/application/A_Hero/struct_typedef.h">
+			<Option target="2024_Hero_three.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.c">
+			<Option target="2024_Hero_three.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.h">
 			<Option target="2024_Hero_three.elf"/>
 		</Unit>
 		<Unit filename="D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.c">
@@ -892,6 +892,12 @@
 			<Option target="2024_Hero_three.elf"/>
 		</Unit>
 		<Unit filename="D:/software/CLionProjects/2024_Hero_three/bsp/bsp_usart.h">
+			<Option target="2024_Hero_three.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.c">
+			<Option target="2024_Hero_three.elf"/>
+		</Unit>
+		<Unit filename="D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.h">
 			<Option target="2024_Hero_three.elf"/>
 		</Unit>
 		<Unit filename="D:/software/CLionProjects/2024_Hero_three/component/OneMessage/.clang-format">

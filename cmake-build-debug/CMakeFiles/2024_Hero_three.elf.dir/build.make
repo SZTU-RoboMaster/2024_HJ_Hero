@@ -910,22 +910,9 @@ CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/Target/usbd_conf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/Target/usbd_conf.c.s"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\software\CLionProjects\2024_Hero_three\USB_DEVICE\Target\usbd_conf.c -o CMakeFiles\2024_Hero_three.elf.dir\USB_DEVICE\Target\usbd_conf.c.s
 
-CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
-CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.obj: D:/software/CLionProjects/2024_Hero_three/application/A_Hero/Cap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.obj"
-	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\application\A_Hero\Cap.c.obj -c D:\software\CLionProjects\2024_Hero_three\application\A_Hero\Cap.c
-
-CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.i"
-	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\software\CLionProjects\2024_Hero_three\application\A_Hero\Cap.c > CMakeFiles\2024_Hero_three.elf.dir\application\A_Hero\Cap.c.i
-
-CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.s"
-	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\software\CLionProjects\2024_Hero_three\application\A_Hero\Cap.c -o CMakeFiles\2024_Hero_three.elf.dir\application\A_Hero\Cap.c.s
-
 CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.obj: D:/software/CLionProjects/2024_Hero_three/application/A_Hero/StartDefault.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\application\A_Hero\StartDefault.c.obj -c D:\software\CLionProjects\2024_Hero_three\application\A_Hero\StartDefault.c
 
 CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.i: cmake_force
@@ -935,6 +922,19 @@ CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.i: cmake_fo
 CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.s"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\software\CLionProjects\2024_Hero_three\application\A_Hero\StartDefault.c -o CMakeFiles\2024_Hero_three.elf.dir\application\A_Hero\StartDefault.c.s
+
+CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Cap.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
+CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Cap.c.obj: D:/software/CLionProjects/2024_Hero_three/application/Chassis/Cap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Cap.c.obj"
+	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\application\Chassis\Cap.c.obj -c D:\software\CLionProjects\2024_Hero_three\application\Chassis\Cap.c
+
+CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Cap.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Cap.c.i"
+	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\software\CLionProjects\2024_Hero_three\application\Chassis\Cap.c > CMakeFiles\2024_Hero_three.elf.dir\application\Chassis\Cap.c.i
+
+CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Cap.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Cap.c.s"
+	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\software\CLionProjects\2024_Hero_three\application\Chassis\Cap.c -o CMakeFiles\2024_Hero_three.elf.dir\application\Chassis\Cap.c.s
 
 CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis.c.obj: D:/software/CLionProjects/2024_Hero_three/application/Chassis/Chassis.c
@@ -1326,9 +1326,22 @@ CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_usart.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_usart.c.s"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\software\CLionProjects\2024_Hero_three\bsp\bsp_usart.c -o CMakeFiles\2024_Hero_three.elf.dir\bsp\bsp_usart.c.s
 
+CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_xidi_cap.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
+CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_xidi_cap.c.obj: D:/software/CLionProjects/2024_Hero_three/bsp/bsp_xidi_cap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_xidi_cap.c.obj"
+	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\bsp\bsp_xidi_cap.c.obj -c D:\software\CLionProjects\2024_Hero_three\bsp\bsp_xidi_cap.c
+
+CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_xidi_cap.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_xidi_cap.c.i"
+	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E D:\software\CLionProjects\2024_Hero_three\bsp\bsp_xidi_cap.c > CMakeFiles\2024_Hero_three.elf.dir\bsp\bsp_xidi_cap.c.i
+
+CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_xidi_cap.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_xidi_cap.c.s"
+	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S D:\software\CLionProjects\2024_Hero_three\bsp\bsp_xidi_cap.c -o CMakeFiles\2024_Hero_three.elf.dir\bsp\bsp_xidi_cap.c.s
+
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_afl.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_afl.c.obj: D:/software/CLionProjects/2024_Hero_three/component/OneMessage/src/app/om_afl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_afl.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_afl.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\OneMessage\src\app\om_afl.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\OneMessage\src\app\om_afl.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_afl.c.i: cmake_force
@@ -1341,7 +1354,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_afl.c.s: cmak
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_com.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_com.c.obj: D:/software/CLionProjects/2024_Hero_three/component/OneMessage/src/app/om_com.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_com.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_com.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\OneMessage\src\app\om_com.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\OneMessage\src\app\om_com.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_com.c.i: cmake_force
@@ -1354,7 +1367,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_com.c.s: cmak
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_evt.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_evt.c.obj: D:/software/CLionProjects/2024_Hero_three/component/OneMessage/src/app/om_evt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_evt.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_evt.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\OneMessage\src\app\om_evt.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\OneMessage\src\app\om_evt.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_evt.c.i: cmake_force
@@ -1367,7 +1380,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_evt.c.s: cmak
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_fmt.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_fmt.c.obj: D:/software/CLionProjects/2024_Hero_three/component/OneMessage/src/app/om_fmt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_fmt.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_fmt.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\OneMessage\src\app\om_fmt.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\OneMessage\src\app\om_fmt.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_fmt.c.i: cmake_force
@@ -1380,7 +1393,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_fmt.c.s: cmak
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_log.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_log.c.obj: D:/software/CLionProjects/2024_Hero_three/component/OneMessage/src/app/om_log.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_log.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_log.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\OneMessage\src\app\om_log.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\OneMessage\src\app\om_log.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_log.c.i: cmake_force
@@ -1393,7 +1406,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_log.c.s: cmak
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_msg.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_msg.c.obj: D:/software/CLionProjects/2024_Hero_three/component/OneMessage/src/app/om_msg.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_msg.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_msg.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\OneMessage\src\app\om_msg.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\OneMessage\src\app\om_msg.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_msg.c.i: cmake_force
@@ -1406,7 +1419,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_msg.c.s: cmak
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_color.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_color.c.obj: D:/software/CLionProjects/2024_Hero_three/component/OneMessage/src/comp/om_color.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_color.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_color.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\OneMessage\src\comp\om_color.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\OneMessage\src\comp\om_color.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_color.c.i: cmake_force
@@ -1419,7 +1432,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_color.c.s: c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_crc.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_crc.c.obj: D:/software/CLionProjects/2024_Hero_three/component/OneMessage/src/comp/om_crc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_crc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_crc.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\OneMessage\src\comp\om_crc.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\OneMessage\src\comp\om_crc.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_crc.c.i: cmake_force
@@ -1432,7 +1445,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_crc.c.s: cma
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_fifo.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_fifo.c.obj: D:/software/CLionProjects/2024_Hero_three/component/OneMessage/src/comp/om_fifo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_fifo.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_fifo.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\OneMessage\src\comp\om_fifo.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\OneMessage\src\comp\om_fifo.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_fifo.c.i: cmake_force
@@ -1445,7 +1458,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_fifo.c.s: cm
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_list.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_list.c.obj: D:/software/CLionProjects/2024_Hero_three/component/OneMessage/src/comp/om_list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_list.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_list.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\OneMessage\src\comp\om_list.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\OneMessage\src\comp\om_list.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_list.c.i: cmake_force
@@ -1458,7 +1471,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_list.c.s: cm
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_rbt.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_rbt.c.obj: D:/software/CLionProjects/2024_Hero_three/component/OneMessage/src/comp/om_rbt.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_rbt.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_rbt.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\OneMessage\src\comp\om_rbt.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\OneMessage\src\comp\om_rbt.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_rbt.c.i: cmake_force
@@ -1471,7 +1484,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/comp/om_rbt.c.s: cma
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/core/om_core.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/core/om_core.c.obj: D:/software/CLionProjects/2024_Hero_three/component/OneMessage/src/core/om_core.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/core/om_core.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/core/om_core.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\OneMessage\src\core\om_core.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\OneMessage\src\core\om_core.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/core/om_core.c.i: cmake_force
@@ -1484,7 +1497,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/core/om_core.c.s: cm
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/om.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/om.c.obj: D:/software/CLionProjects/2024_Hero_three/component/OneMessage/src/om.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/om.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/om.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\OneMessage\src\om.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\OneMessage\src\om.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/om.c.i: cmake_force
@@ -1497,7 +1510,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/om.c.s: cmake_force
 
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS.c.obj: D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\algorithm\AHRS.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\algorithm\AHRS.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS.c.i: cmake_force
@@ -1510,7 +1523,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS.c.s: cmake_force
 
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj: D:/software/CLionProjects/2024_Hero_three/component/algorithm/AHRS_MiddleWare.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS_MiddleWare.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\algorithm\AHRS_MiddleWare.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\algorithm\AHRS_MiddleWare.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS_MiddleWare.c.i: cmake_force
@@ -1523,7 +1536,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/AHRS_MiddleWare.c.s: cmak
 
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/filter.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/filter.c.obj: D:/software/CLionProjects/2024_Hero_three/component/algorithm/filter.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/filter.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/filter.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\algorithm\filter.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\algorithm\filter.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/filter.c.i: cmake_force
@@ -1536,7 +1549,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/filter.c.s: cmake_force
 
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/ramp.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/ramp.c.obj: D:/software/CLionProjects/2024_Hero_three/component/algorithm/ramp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/ramp.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/ramp.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\algorithm\ramp.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\algorithm\ramp.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/ramp.c.i: cmake_force
@@ -1549,7 +1562,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/ramp.c.s: cmake_force
 
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/user_lib.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/user_lib.c.obj: D:/software/CLionProjects/2024_Hero_three/component/algorithm/user_lib.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/user_lib.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/user_lib.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\algorithm\user_lib.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\algorithm\user_lib.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/user_lib.c.i: cmake_force
@@ -1562,7 +1575,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/algorithm/user_lib.c.s: cmake_force
 
 CMakeFiles/2024_Hero_three.elf.dir/component/communication/decode.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/communication/decode.c.obj: D:/software/CLionProjects/2024_Hero_three/component/communication/decode.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/communication/decode.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/communication/decode.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\communication\decode.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\communication\decode.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/communication/decode.c.i: cmake_force
@@ -1575,7 +1588,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/communication/decode.c.s: cmake_for
 
 CMakeFiles/2024_Hero_three.elf.dir/component/communication/packet.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/communication/packet.c.obj: D:/software/CLionProjects/2024_Hero_three/component/communication/packet.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/communication/packet.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/communication/packet.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\communication\packet.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\communication\packet.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/communication/packet.c.i: cmake_force
@@ -1588,7 +1601,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/communication/packet.c.s: cmake_for
 
 CMakeFiles/2024_Hero_three.elf.dir/component/controller/PID.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/controller/PID.c.obj: D:/software/CLionProjects/2024_Hero_three/component/controller/PID.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/controller/PID.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/controller/PID.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\controller\PID.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\controller\PID.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/controller/PID.c.i: cmake_force
@@ -1601,7 +1614,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/controller/PID.c.s: cmake_force
 
 CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088Middleware.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088Middleware.c.obj: D:/software/CLionProjects/2024_Hero_three/component/devices/BMI088Middleware.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088Middleware.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088Middleware.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\devices\BMI088Middleware.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\devices\BMI088Middleware.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088Middleware.c.i: cmake_force
@@ -1614,7 +1627,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088Middleware.c.s: cmake
 
 CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088driver.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088driver.c.obj: D:/software/CLionProjects/2024_Hero_three/component/devices/BMI088driver.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088driver.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088driver.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\devices\BMI088driver.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\devices\BMI088driver.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088driver.c.i: cmake_force
@@ -1627,7 +1640,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/devices/BMI088driver.c.s: cmake_for
 
 CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver.c.obj: D:/software/CLionProjects/2024_Hero_three/component/devices/ist8310driver.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\devices\ist8310driver.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\devices\ist8310driver.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver.c.i: cmake_force
@@ -1640,7 +1653,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver.c.s: cmake_fo
 
 CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver_middleware.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver_middleware.c.obj: D:/software/CLionProjects/2024_Hero_three/component/devices/ist8310driver_middleware.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver_middleware.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver_middleware.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\devices\ist8310driver_middleware.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\devices\ist8310driver_middleware.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver_middleware.c.i: cmake_force
@@ -1653,7 +1666,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/devices/ist8310driver_middleware.c.
 
 CMakeFiles/2024_Hero_three.elf.dir/component/support/CRC8_CRC16.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/support/CRC8_CRC16.c.obj: D:/software/CLionProjects/2024_Hero_three/component/support/CRC8_CRC16.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/support/CRC8_CRC16.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/support/CRC8_CRC16.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\support\CRC8_CRC16.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\support\CRC8_CRC16.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/support/CRC8_CRC16.c.i: cmake_force
@@ -1666,7 +1679,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/support/CRC8_CRC16.c.s: cmake_force
 
 CMakeFiles/2024_Hero_three.elf.dir/component/support/fifo.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/support/fifo.c.obj: D:/software/CLionProjects/2024_Hero_three/component/support/fifo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/support/fifo.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/support/fifo.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\support\fifo.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\support\fifo.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/support/fifo.c.i: cmake_force
@@ -1679,7 +1692,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/support/fifo.c.s: cmake_force
 
 CMakeFiles/2024_Hero_three.elf.dir/component/support/mem_mang4.c.obj: CMakeFiles/2024_Hero_three.elf.dir/flags.make
 CMakeFiles/2024_Hero_three.elf.dir/component/support/mem_mang4.c.obj: D:/software/CLionProjects/2024_Hero_three/component/support/mem_mang4.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/support/mem_mang4.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/2024_Hero_three.elf.dir/component/support/mem_mang4.c.obj"
 	D:\software\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\2024_Hero_three.elf.dir\component\support\mem_mang4.c.obj -c D:\software\CLionProjects\2024_Hero_three\component\support\mem_mang4.c
 
 CMakeFiles/2024_Hero_three.elf.dir/component/support/mem_mang4.c.i: cmake_force
@@ -1757,8 +1770,8 @@ CMakeFiles/2024_Hero_three.elf.dir/component/support/mem_mang4.c.s: cmake_force
 "CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj" \
 "CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usbd_desc.c.obj" \
 "CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj" \
-"CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.obj" \
 "CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.obj" \
+"CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Cap.c.obj" \
 "CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis.c.obj" \
 "CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_behaviour.c.obj" \
 "CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_send.c.obj" \
@@ -1789,6 +1802,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/support/mem_mang4.c.s: cmake_force
 "CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_servo_pwm.c.obj" \
 "CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_spi.c.obj" \
 "CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_usart.c.obj" \
+"CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_xidi_cap.c.obj" \
 "CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_afl.c.obj" \
 "CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_com.c.obj" \
 "CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_evt.c.obj" \
@@ -1886,8 +1900,8 @@ CMakeFiles/2024_Hero_three.elf.dir/component/support/mem_mang4.c.s: cmake_force
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usbd_cdc_if.c.obj
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/App/usbd_desc.c.obj
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/Target/usbd_conf.c.obj
-2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.obj
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.obj
+2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Cap.c.obj
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis.c.obj
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_behaviour.c.obj
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Chassis_send.c.obj
@@ -1918,6 +1932,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/support/mem_mang4.c.s: cmake_force
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_servo_pwm.c.obj
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_spi.c.obj
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_usart.c.obj
+2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_xidi_cap.c.obj
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_afl.c.obj
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_com.c.obj
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/component/OneMessage/src/app/om_evt.c.obj
@@ -1949,7 +1964,7 @@ CMakeFiles/2024_Hero_three.elf.dir/component/support/mem_mang4.c.s: cmake_force
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/build.make
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/objects1.rsp
 2024_Hero_three.elf: CMakeFiles/2024_Hero_three.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Linking C executable 2024_Hero_three.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Linking C executable 2024_Hero_three.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\2024_Hero_three.elf.dir\link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/2024_Hero_three.hex"
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Building D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/2024_Hero_three.bin"

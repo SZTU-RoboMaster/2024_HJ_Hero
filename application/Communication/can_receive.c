@@ -19,18 +19,31 @@ extern uint8_t fire_lock;
 RC_ctrl_t rc_ctrl;       //遥控器
 cap_info_t cap_info;     //电容
 
-void cap_info_decode(cap_info_t *cap, const uint16_t *rx_data){
-    cap->  input_value=(float)rx_data[0]/100;
-    cap->    cap_value=(float)rx_data[1]/100;
-    cap->input_current=(float)rx_data[2]/100;
-    cap-> target_power=(float)rx_data[3]/100;
+extern int32_t cap_percentage;
+
+int cap_can_cnt = 0;
+//void cap_info_decode(cap_info_t *cap, const uint16_t *rx_data){
+//    cap->  input_value=(float)rx_data[0]/100;
+//    cap->    cap_value=(float)rx_data[1]/100;
+//    cap->input_current=(float)rx_data[2]/100;
+//    cap-> target_power=(float)rx_data[3]/100;
+//}
+////将接收到的数据解码并存储到 `cap_info_t` 结构体中，具体的解码方式如下：
+////将 `rx_data` 数组中的第一个元素除以 100，并将结果转换为浮点数，然后将其赋值给 `cap` 结构体的 ` input_value ` 成员。
+////将 `rx_data` 数组中的第二个元素除以 100，并将结果转换为浮点数，然后将其赋值给 `cap` 结构体的 `  cap_value  ` 成员。
+////将 `rx_data` 数组中的第三个元素除以 100，并将结果转换为浮点数，然后将其赋值给 `cap` 结构体的 `input_current` 成员。
+////将 `rx_data` 数组中的第四个元素除以 100，并将结果转换为浮点数，然后将其赋值给 `cap` 结构体的 ` target_power` 成员。
+////目的是将接收到的数据解析为浮点数，并存储到 `cap_info_t` 结构体的相应成员中，以便后续在程序中使用这些数据进行计算或控制。
+void cap2_info_decode(cap2_info_t *cap,uint8_t *rx_data){
+    cap->mode=rx_data[0];
+//    cap->rec_cap_cmd=rx_data[1];
+//    cap->cap_voltage=rx_data[2];
+    cap->cap_voltage=(uint16_t)(rx_data[2]<<8|rx_data[3]);
+//    cap->chassis_current=(uint16_t)(rx_data[4]<<8|rx_data[5])/1000;
+    cap_percentage=cap->cap_voltage/22.f;
+
+    cap_can_cnt++;
 }
-//将接收到的数据解码并存储到 `cap_info_t` 结构体中，具体的解码方式如下：
-//将 `rx_data` 数组中的第一个元素除以 100，并将结果转换为浮点数，然后将其赋值给 `cap` 结构体的 ` input_value ` 成员。
-//将 `rx_data` 数组中的第二个元素除以 100，并将结果转换为浮点数，然后将其赋值给 `cap` 结构体的 `  cap_value  ` 成员。
-//将 `rx_data` 数组中的第三个元素除以 100，并将结果转换为浮点数，然后将其赋值给 `cap` 结构体的 `input_current` 成员。
-//将 `rx_data` 数组中的第四个元素除以 100，并将结果转换为浮点数，然后将其赋值给 `cap` 结构体的 ` target_power` 成员。
-//目的是将接收到的数据解析为浮点数，并存储到 `cap_info_t` 结构体的相应成员中，以便后续在程序中使用这些数据进行计算或控制。
 
 
 /******************** define *******************/
@@ -45,25 +58,26 @@ void cap_info_decode(cap_info_t *cap, const uint16_t *rx_data){
         (ptr)->temperate = (data)[6];                                   \
     }
 
-//电机总编码值的计算
+//电机总编码值的计算，解决过零点问题
 #define get_motor_round_cnt(ptr)                                        \
     {                                                                   \
-             if(ptr.ecd-ptr.last_ecd> 4192){                            \
+             if(ptr.ecd-ptr.last_ecd > 4096){                           \
                 ptr.round_cnt--;                                        \
              }                                                          \
-             else if(ptr.ecd-ptr.last_ecd<-4192)                        \
+             else if(ptr.ecd-ptr.last_ecd < -4096)                      \
              {                                                          \
                 ptr.round_cnt++;                                        \
              }                                                          \
              ptr.total_ecd= ptr.round_cnt*8192+ptr.ecd-ptr.offset_ecd;  \
     }
 
-
 /******************** variable *******************/
 
 motor_measure_t motor_3508_measure[8];//0-3 分别对应  RF,LF,LB,RB 4,5分别对应FIRE_L,FIRE_R 6对应拨盘电机  7对应上摩擦轮
-motor_measure_t motor_yaw_measure;    //yaw轴
-motor_measure_t motor_pitch_measure;  //云台pitch轴
+motor_measure_t motor_image_measure;    //图传电机
+motor_measure_t motor_yaw_measure;      //yaw轴
+motor_measure_t motor_pitch_measure;    //云台pitch轴
+extern cap2_info_t cap2;
 
 static CAN_TxHeaderTypeDef  tx_message;
 static uint8_t              can_send_data[8];
@@ -267,8 +281,14 @@ void CAN_Chass_init(){
     can_filter_st.FilterFIFOAssignment = CAN_RX_FIFO0;
     HAL_CAN_ConfigFilter(&hcan1, &can_filter_st);
 
+    // CAN_IMAGE_2006_TRANSMISSION-0x205 图传电机
+    can_filter_st.FilterBank = 11;
+    can_filter_st.FilterIdHigh = (0x205 << 5);
+    can_filter_st.FilterFIFOAssignment = CAN_RX_FIFO0;
+    HAL_CAN_ConfigFilter(&hcan1, &can_filter_st);
+
     // TRIGGER-0x207 拨盘电机
-    can_filter_st.FilterBank = 1;
+    can_filter_st.FilterBank = 12;
     can_filter_st.FilterIdHigh = (0x207 << 5);
     can_filter_st.FilterFIFOAssignment = CAN_RX_FIFO0;
     HAL_CAN_ConfigFilter(&hcan1, &can_filter_st);
@@ -321,13 +341,15 @@ void CAN1_RX0_IRQHandler(){
             get_motor_measure(&motor_3508_measure[3], rx_data);
             detect_handle(DETECT_CHASSIS_3508_RB);
             break;
+        case CAN_IMAGE_2006_TRANSMISSION:    //205 图传
+            get_motor_measure(&motor_image_measure, rx_data);
+            get_motor_round_cnt(motor_image_measure);//获取转动拨轮电机转动圈数和总编码值
+            detect_handle(DETECT_IMAGE_2006_TRANSMISSION);
+            break;
         case CAN_LAUNCHER_3508_TRIGGER: //207
             get_motor_measure(&motor_3508_measure[6], rx_data);
             get_motor_round_cnt(motor_3508_measure[6]);//获取转动拨轮电机转动圈数和总编码值
             detect_handle(DETECT_LAUNCHER_3508_TRIGGER);
-            break;
-        case 0x211:
-            cap_info_decode(&cap_info,(uint16_t *)rx_data);
             break;
         default:
             break;
@@ -412,17 +434,23 @@ void CAN1_RX1_IRQHandler(){
 
         case 0x114:{    //TODO: 没用完
             union referee power;
+            union angle angle;
             {
                 power.data[0] = rx_data[0];
                 power.data[1] = rx_data[1];
                 power.data[2] = rx_data[2];
                 power.data[3] = rx_data[3];
-                Referee.GameRobotStat.robot_id = rx_data[4];
+                angle.data[0] = rx_data[4];
+                angle.data[1] = rx_data[5];
+                angle.data[2] = rx_data[6];
+                angle.data[3] = rx_data[7];
             }
             Referee.PowerHeatData.chassis_power = power.referee;
+            gimbal.pitch.absolute_angle_get_down = angle.value;
         } break;
 
         case 0x115:{
+            Referee.GameRobotStat.robot_id = rx_data[0];
 
         } break;
 

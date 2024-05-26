@@ -2,7 +2,7 @@
 #include "main.h"
 
 extern TIM_HandleTypeDef htim1;
-
+// 舵机调控
 void servo_pwm_set(uint16_t pwm, uint8_t i)
 {
     switch(i)

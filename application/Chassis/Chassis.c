@@ -37,6 +37,7 @@ double test_y=0, test_w=0, test_x=0;
 uint32_t time;
 uint32_t test_om=0;
 uint32_t time_last_time;
+extern fp32 INS_angle[3];
 
 _Noreturn void Chassis_task(void const *pvParameters);
 static void chassis_init(chassis_t *chassis);
@@ -44,6 +45,7 @@ static float chassis_speed_change();
 static void chassis_pc_ctrl();
 static void chassis_ctrl_info_get();
 static void chassis_control();
+static void chassis_power_stop();
 
 /******************函数实现******************/
 void Chassis_task(void const *pvParameters) {
@@ -68,13 +70,14 @@ void Chassis_task(void const *pvParameters) {
                       0);                               //208
 
         //  底盘相关模块 对底盘进行离线处理
-        //  chassis_device_offline_handle();
-        //  chassis_power_stop();
+        chassis_device_offline_handle();
+        chassis_power_stop();
 
         Send_referee(Referee.PowerHeatData.chassis_power);
         vTaskDelay(1);
         Send_id(Referee.GameRobotStat.robot_id);
-
+        gimbal.pitch.absolute_angle_get_down = INS_angle[2];
+        Send_angle(gimbal.pitch.absolute_angle_get_down);
         // 底盘不是失能状态时进行麦轮运动
         if(chassis.mode != CHASSIS_RELAX) {
             chassis_meknum_wheel_cal();     //麦轮解算
@@ -446,5 +449,14 @@ static void chassis_control() {
             break;
         default:
             break;
+    }
+}
+
+
+void chassis_power_stop(){
+    if(detect_list[DETECT_REFEREE].status==ONLINE) {
+        if (Referee.GameRobotStat.power_management_chassis_output == 0) {
+            chassis.mode = CHASSIS_RELAX;
+        }
     }
 }

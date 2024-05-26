@@ -1672,30 +1672,6 @@ USB_DEVICE/Target/usbd_conf.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/USB_DEVICE/Target/usbd_conf.c.s
 .PHONY : USB_DEVICE/Target/usbd_conf.c.s
 
-application/A_Hero/Cap.obj: application/A_Hero/Cap.c.obj
-.PHONY : application/A_Hero/Cap.obj
-
-# target to build an object file
-application/A_Hero/Cap.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.obj
-.PHONY : application/A_Hero/Cap.c.obj
-
-application/A_Hero/Cap.i: application/A_Hero/Cap.c.i
-.PHONY : application/A_Hero/Cap.i
-
-# target to preprocess a source file
-application/A_Hero/Cap.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.i
-.PHONY : application/A_Hero/Cap.c.i
-
-application/A_Hero/Cap.s: application/A_Hero/Cap.c.s
-.PHONY : application/A_Hero/Cap.s
-
-# target to generate assembly for a file
-application/A_Hero/Cap.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/Cap.c.s
-.PHONY : application/A_Hero/Cap.c.s
-
 application/A_Hero/StartDefault.obj: application/A_Hero/StartDefault.c.obj
 .PHONY : application/A_Hero/StartDefault.obj
 
@@ -1719,6 +1695,30 @@ application/A_Hero/StartDefault.s: application/A_Hero/StartDefault.c.s
 application/A_Hero/StartDefault.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/A_Hero/StartDefault.c.s
 .PHONY : application/A_Hero/StartDefault.c.s
+
+application/Chassis/Cap.obj: application/Chassis/Cap.c.obj
+.PHONY : application/Chassis/Cap.obj
+
+# target to build an object file
+application/Chassis/Cap.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Cap.c.obj
+.PHONY : application/Chassis/Cap.c.obj
+
+application/Chassis/Cap.i: application/Chassis/Cap.c.i
+.PHONY : application/Chassis/Cap.i
+
+# target to preprocess a source file
+application/Chassis/Cap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Cap.c.i
+.PHONY : application/Chassis/Cap.c.i
+
+application/Chassis/Cap.s: application/Chassis/Cap.c.s
+.PHONY : application/Chassis/Cap.s
+
+# target to generate assembly for a file
+application/Chassis/Cap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/application/Chassis/Cap.c.s
+.PHONY : application/Chassis/Cap.c.s
 
 application/Chassis/Chassis.obj: application/Chassis/Chassis.c.obj
 .PHONY : application/Chassis/Chassis.obj
@@ -2439,6 +2439,30 @@ bsp/bsp_usart.s: bsp/bsp_usart.c.s
 bsp/bsp_usart.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_usart.c.s
 .PHONY : bsp/bsp_usart.c.s
+
+bsp/bsp_xidi_cap.obj: bsp/bsp_xidi_cap.c.obj
+.PHONY : bsp/bsp_xidi_cap.obj
+
+# target to build an object file
+bsp/bsp_xidi_cap.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_xidi_cap.c.obj
+.PHONY : bsp/bsp_xidi_cap.c.obj
+
+bsp/bsp_xidi_cap.i: bsp/bsp_xidi_cap.c.i
+.PHONY : bsp/bsp_xidi_cap.i
+
+# target to preprocess a source file
+bsp/bsp_xidi_cap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_xidi_cap.c.i
+.PHONY : bsp/bsp_xidi_cap.c.i
+
+bsp/bsp_xidi_cap.s: bsp/bsp_xidi_cap.c.s
+.PHONY : bsp/bsp_xidi_cap.s
+
+# target to generate assembly for a file
+bsp/bsp_xidi_cap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\2024_Hero_three.elf.dir\build.make CMakeFiles/2024_Hero_three.elf.dir/bsp/bsp_xidi_cap.c.s
+.PHONY : bsp/bsp_xidi_cap.c.s
 
 component/OneMessage/src/app/om_afl.obj: component/OneMessage/src/app/om_afl.c.obj
 .PHONY : component/OneMessage/src/app/om_afl.obj
@@ -3314,12 +3338,12 @@ help:
 	@echo ... USB_DEVICE/Target/usbd_conf.obj
 	@echo ... USB_DEVICE/Target/usbd_conf.i
 	@echo ... USB_DEVICE/Target/usbd_conf.s
-	@echo ... application/A_Hero/Cap.obj
-	@echo ... application/A_Hero/Cap.i
-	@echo ... application/A_Hero/Cap.s
 	@echo ... application/A_Hero/StartDefault.obj
 	@echo ... application/A_Hero/StartDefault.i
 	@echo ... application/A_Hero/StartDefault.s
+	@echo ... application/Chassis/Cap.obj
+	@echo ... application/Chassis/Cap.i
+	@echo ... application/Chassis/Cap.s
 	@echo ... application/Chassis/Chassis.obj
 	@echo ... application/Chassis/Chassis.i
 	@echo ... application/Chassis/Chassis.s
@@ -3410,6 +3434,9 @@ help:
 	@echo ... bsp/bsp_usart.obj
 	@echo ... bsp/bsp_usart.i
 	@echo ... bsp/bsp_usart.s
+	@echo ... bsp/bsp_xidi_cap.obj
+	@echo ... bsp/bsp_xidi_cap.i
+	@echo ... bsp/bsp_xidi_cap.s
 	@echo ... component/OneMessage/src/app/om_afl.obj
 	@echo ... component/OneMessage/src/app/om_afl.i
 	@echo ... component/OneMessage/src/app/om_afl.s

@@ -101,37 +101,41 @@ int main(void)
 
   /* USER CODE END SysInit */
 
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_DMA_Init();
-  MX_CAN1_Init();
-  MX_CAN2_Init();
-  MX_SPI1_Init();
-  MX_TIM4_Init();
-  MX_TIM5_Init();
-  MX_USART3_UART_Init();
-  MX_USART6_UART_Init();
-  MX_TIM3_Init();
-  MX_TIM10_Init();
-  MX_ADC1_Init();
-  MX_CRC_Init();
-  MX_RNG_Init();
-  MX_TIM1_Init();
-  MX_TIM8_Init();
-  MX_ADC3_Init();
-  MX_I2C2_Init();
-  MX_I2C3_Init();
-  MX_SPI2_Init();
+    /* Initialize all configured peripherals */
+    MX_GPIO_Init();
+    MX_DMA_Init();
+    MX_CRC_Init();
+    MX_RNG_Init();
+    MX_CAN1_Init();
+    MX_CAN2_Init();
+    MX_SPI1_Init();
+    MX_SPI2_Init();
+    MX_TIM1_Init();
+    MX_TIM3_Init();
+    MX_TIM4_Init();
+    MX_TIM5_Init();
+    MX_TIM8_Init();
+    MX_TIM10_Init();
+    MX_ADC1_Init();
+    MX_ADC3_Init();
+    MX_I2C2_Init();
+    MX_I2C3_Init();
+    MX_USART1_UART_Init();
+    MX_USART3_UART_Init();
+    MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
 //    can_filter_init();
     delay_init();
-    HAL_TIM_PWM_Start(&htim8,TIM_CHANNEL_3);
+    HAL_TIM_PWM_Start(&htim8,TIM_CHANNEL_1);
     HAL_TIM_PWM_Start(&htim8,TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim8,TIM_CHANNEL_3);
     HAL_TIM_Base_Start(&htim1);
     HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
+    HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_2);
     HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_3);
     HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_4);
     usart6_init(&usart6_buf[0], REFEREE_BUFFER_SIZE);
+    usart1_init(&usart1_buf[0], REFEREE_BUFFER_SIZE);
 
     CAN_Chass_init();
     CAN_Gimbal_init();
@@ -141,12 +145,12 @@ int main(void)
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */
-  MX_FREERTOS_Init();
+    MX_FREERTOS_Init();
 
-  /* Start scheduler */
-  osKernelStart();
-  /* We should never get here as control is now taken by the scheduler */
-  /* Infinite loop */
+    /* Start scheduler */
+    osKernelStart();
+    /* We should never get here as control is now taken by the scheduler */
+    /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {

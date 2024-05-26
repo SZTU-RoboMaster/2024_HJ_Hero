@@ -117,6 +117,7 @@
 /******************函数声明******************/
 /******************下板传上板******************/
 extern void Send_referee(fp32 power);
+extern void Send_angle(fp32 absolute_angle);
 extern void Send_id(uint8_t robot_id);
 /******************底盘功能******************/
 extern void chassis_relax_handle();

@@ -57,6 +57,7 @@ osThreadId usbtaskHandle;
 osThreadId decodetaskHandle;
 osThreadId uipaintTaskHandle;
 osThreadId ledTaskHandle;
+osThreadId CapTaskHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -73,6 +74,7 @@ void USB_task(void const * argument);
 void Decode_task(void const * argument);
 void UI_Paint_task(void const * argument);
 void led_Task(void const * argument);
+void cap_task(void const * argument);
 
 extern void MX_USB_DEVICE_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -161,6 +163,10 @@ void MX_FREERTOS_Init(void) {
   /* definition and creation of ledTask */
   osThreadDef(ledTask, led_Task, osPriorityBelowNormal, 0, 128);
   ledTaskHandle = osThreadCreate(osThread(ledTask), NULL);
+
+  /* definition and creation of CapTask */
+  osThreadDef(CapTask, cap_task, osPriorityAboveNormal, 0, 256);
+  CapTaskHandle = osThreadCreate(osThread(CapTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
@@ -349,6 +355,24 @@ __weak void led_Task(void const * argument)
     osDelay(1);
   }
   /* USER CODE END led_Task */
+}
+
+/* USER CODE BEGIN Header_cap_task */
+/**
+* @brief Function implementing the CapTask thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_cap_task */
+__weak void cap_task(void const * argument)
+{
+  /* USER CODE BEGIN cap_task */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END cap_task */
 }
 
 /* Private application code --------------------------------------------------*/

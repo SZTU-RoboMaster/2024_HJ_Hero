@@ -150,7 +150,7 @@ void chassis_spin_handle(){
 
 
 void chassis_device_offline_handle() {
-    if(detect_list[DETECT_REMOTE].status == OFFLINE)
+    if(detect_list[DETECT_REMOTE].status == OFFLINE&&detect_list[DETECT_VIDEO_TRANSIMITTER].status==OFFLINE)
         chassis.mode = CHASSIS_RELAX;//防止出现底盘疯转
 }
 
@@ -168,8 +168,12 @@ void calc_power_limit(pid_type_def *pid,int i)
 void chassis_power_limit() {
     chassis.chassis_power_limit.power_set=Referee.GameRobotStat.chassis_power_limit-2;
     chassis.chassis_power_limit.k_c=1;
+    //防止裁判系统串口离线时，Referee.GameRobotStat.chassis_power_limit=0，出现底盘被限0w的情况
+    if(Referee.GameRobotStat.chassis_power_limit<=0){
+        chassis.chassis_power_limit.power_set=70;
+    }
     //更新电容状态
-//    cap_info_update();
+    cap_info_update();
     for (int i = 0; i < 4; ++i) {
         //计算K,M
         calc_power_limit(&chassis.motor_chassis[i].speed_p,i);
@@ -196,6 +200,9 @@ void chassis_power_limit() {
     //当预测功率大于最大功率时或者缓冲能量过低时，启动功率限制，求出刚好令预测功率<=最大功率的系数K_c
     if(chassis.chassis_power_limit.predict_send_power > chassis.chassis_power_limit.power_set||dangerous)
     {
+        if(a<=0){
+            return;
+        }
         if(b*b < 4*c*a)
         {
             chassis.chassis_power_limit.k_c = fp32_constrain(-b/(2*a),0.0f,1.0f);
@@ -208,9 +215,9 @@ void chassis_power_limit() {
         }
         //当开电容并且缓冲能量充足时，函数直接返回，不执行后续的功率控制
         //电容返回的数据具体参考电容手册
-//        if(cap2.mode==1 && !dangerous){
-//            return;
-//        }
+        if(!dangerous&&detect_list[DETECT_CAP].status==ONLINE){
+            return;
+        }
         for (int i = 0; i < 4; ++i) {
             //对rpm_set进行比例缩减，达到功率控制效果
             chassis.motor_chassis[i].rpm_set *= chassis.chassis_power_limit.k_c;
@@ -219,12 +226,6 @@ void chassis_power_limit() {
     }
 }
 
-//void chassis_power_stop(){
-//    if(Referee.GameRobotStat.mains_power_chassis_output==0)
-//    {
-//        chassis.mode=CHASSIS_RELAX;
-//    }
-//}
 
 /**
   * @brief          底盘移动小一点

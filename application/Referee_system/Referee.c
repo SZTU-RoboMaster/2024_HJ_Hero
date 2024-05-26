@@ -55,6 +55,7 @@
 //画模式方框时的间隔
 #define UI_CHAR_LENGTH 15
 extern UART_HandleTypeDef huart6;
+extern UART_HandleTypeDef huart1;
 
 extern trigger_t trigger;//堵转的逻辑
 extern key_board_t KeyBoard;
@@ -71,6 +72,7 @@ Graphic_Operate one_layer_update_flag=UI_NONE;
 Graphic_Operate two_layer_update_flag=UI_NONE;
 Graphic_Operate three_layer_update_flag=UI_NONE;
 
+uint8_t usart1_buf[REFEREE_BUFFER_SIZE]={0};
 uint8_t usart6_buf[REFEREE_BUFFER_SIZE]={0};
 
 Referee_info_t Referee;
@@ -109,6 +111,7 @@ void USART6_IRQHandler(void)
 
         Referee_read_data(&usart6_buf[0]);
 
+
         memset(&usart6_buf[0],0,REFEREE_BUFFER_SIZE);//置0
 
         __HAL_DMA_CLEAR_FLAG(huart6.hdmarx,DMA_LISR_TCIF1); //清除传输完成标志位
@@ -120,29 +123,36 @@ void USART6_IRQHandler(void)
     }
 }
 ////图传串口中断函数
-//void USART1_IRQHandler(void)
-//{
-//    static volatile uint8_t res;
-//    if(USART1->SR & UART_FLAG_IDLE)
-//    {
-//        __HAL_UART_CLEAR_PEFLAG(&huart1);//读取UART1-SR 和UART1-DR; 清除中断标志位
-//
-//        __HAL_DMA_DISABLE(huart1.hdmarx); //使能dma_rx
-//
-//        Referee_read_data(&usart1_buf[0]);
-//
-//        memset(&usart1_buf[0],0,REFEREE_BUFFER_SIZE);//置0
-//
-//        __HAL_DMA_CLEAR_FLAG(huart1.hdmarx,DMA_LISR_TCIF1); //清除传输完成标志位
-//
-//        __HAL_DMA_SET_COUNTER(huart1.hdmarx, REFEREE_BUFFER_SIZE);//设置DMA 搬运数据大小 单位为字节
-//
-//        __HAL_DMA_ENABLE(huart1.hdmarx); //使能DMARx
-//
-//        detect_handle(DETECT_VIDEO_TRANSIMITTER);
-//
-//    }
-//}
+void USART1_IRQHandler(void)
+{
+    static volatile uint8_t res;
+    if(USART1->SR & UART_FLAG_IDLE)
+    {
+        __HAL_UART_CLEAR_PEFLAG(&huart1);//读取UART1-SR 和UART1-DR; 清除中断标志位
+
+        __HAL_DMA_DISABLE(huart1.hdmarx); //使能dma_rx
+
+#ifdef GIMBAL
+        Referee_read_data(&usart1_buf[0]);
+#else //CHASSIS
+        CapRxCallback(&usart1_buf[0]);
+#endif //GIMBAL
+
+        memset(&usart1_buf[0],0,REFEREE_BUFFER_SIZE);//置0
+
+        __HAL_DMA_CLEAR_FLAG(huart1.hdmarx,DMA_LISR_TCIF1); //清除传输完成标志位
+
+        __HAL_DMA_SET_COUNTER(huart1.hdmarx, REFEREE_BUFFER_SIZE);//设置DMA 搬运数据大小 单位为字节
+
+        __HAL_DMA_ENABLE(huart1.hdmarx); //使能DMARx
+
+#ifdef GIMBAL
+        detect_handle(DETECT_VIDEO_TRANSIMITTER);
+#else //CHASSIS
+        detect_handle(DETECT_CAP);
+#endif //GIMBAL
+    }
+}
 
 //根据裁判系统信息判断机器人的ID和对应客户端的ID
 void judge_team_client(){

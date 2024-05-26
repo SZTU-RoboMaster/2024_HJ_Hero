@@ -1,3 +1,4 @@
+#include "Hero.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "cmsis_os.h"
@@ -11,12 +12,13 @@ extern osThreadId usbtaskHandle;
 extern osThreadId decodetaskHandle;
 extern osThreadId uipaintTaskHandle;
 extern osThreadId ledTaskHandle;
+extern osThreadId CapTaskHandle;
 
 void StartDefaultTask(void const * argument) {
-//#define GIMBAL
 #ifdef GIMBAL
     vTaskDelete(chassisTaskHandle);
     vTaskDelete(uipaintTaskHandle);
+    vTaskDelete(CapTaskHandle);
     vTaskDelete(NULL);
 
 #else //CHASSIS
