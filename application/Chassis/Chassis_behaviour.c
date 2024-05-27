@@ -5,6 +5,7 @@
 #include "Chassis.h"
 extern chassis_t chassis;
 extern gimbal_t gimbal;
+extern launcher_t launcher;
 // 机械信息
 static fp32 rotate_ratio_f = ((WHEELBASE+WHEELTRACK) / 2.0f - GIMBAL_OFFSET);// / RADIAN_COEF;
 static fp32 rotate_ratio_b = ((WHEELBASE + WHEELTRACK) / 2.0f + GIMBAL_OFFSET);// / RADIAN_COEF;
@@ -165,10 +166,13 @@ void chassis_spin_handle_1(){
     chassis.vw = -220;//
 }
 
-void chassis_device_offline_handle() {
-    if(detect_list[DETECT_REMOTE].status == OFFLINE&&detect_list[DETECT_VIDEO_TRANSIMITTER].status==OFFLINE)
-        chassis.mode = CHASSIS_RELAX;//防止出现底盘疯转
+void chassis_power_stop(){
+    if (Referee.GameRobotStat.power_management_chassis_output == 0) {
+        chassis.mode = CHASSIS_RELAX;
+    }
 }
+
+void chassis_device_offline_handle() {}
 
 //计算函数f(iset)=K*Ωset+M的系数K，M
 void calc_power_limit(pid_type_def *pid,int i)

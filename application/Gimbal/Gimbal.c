@@ -89,14 +89,19 @@ void Gimbal_task(void const*pvParameters) {
         vTaskDelay(1);
 
         gimbal_angle_update();  //更新绝对、相对角度接收值
-
-        Send_Yaw_Angle(gimbal.yaw.relative_angle_get, fire_lock, KeyBoard.V.click_flag);
+        if(detect_list[DETECT_GIMBAL_6020_YAW].status == OFFLINE) {
+            gimbal.yaw.relative_angle_get = 0;
+            Send_Yaw_Angle(gimbal.yaw.relative_angle_get, fire_lock, KeyBoard.V.click_flag);
+        } else {
+            Send_Yaw_Angle(gimbal.yaw.relative_angle_get, fire_lock, KeyBoard.V.click_flag);
+        }
 
         ////注意：校准时采用，校准完毕一定注释掉
         //pit_offset_get();
 
         chassis_mode_set(); //设置底盘模式
         gimbal_mode_set();  //设置云台模式
+        images_mode_set();  //设置图传模式
         launcher_mode_set();//设置发射模式
 
         gimbal_control();  //云台模式设置实现
@@ -300,10 +305,10 @@ static void chassis_mode_set(){
         chassis.last_mode=chassis.mode;
         chassis.mode=CHASSIS_RELAX;
     }
-    else if(rc_ctrl.rc.ch[AUTO_CHANNEL]> 50) {
-        chassis.last_mode=chassis.mode;
-        chassis.mode=CHASSIS_SPIN_1;
-    }
+//    else if(rc_ctrl.rc.ch[AUTO_CHANNEL]> 50) {
+//        chassis.last_mode=chassis.mode;
+//        chassis.mode=CHASSIS_SPIN_1;
+//    }
         //左不下 右下： 底盘独立CHASSIS_ONLY
     else if(!switch_is_down(rc_ctrl.rc.s[RC_s_L])&&switch_is_down(rc_ctrl.rc.s[RC_s_R])) {
         chassis.last_mode=chassis.mode;
@@ -379,9 +384,6 @@ static void gimbal_mode_set(){
   * 如果四通道开启且视觉返回 0x31 —— 进入自瞄模式，0x32 —— 本次自瞄不进行
   * @retval         返回空
   */
-uint16_t vision_mode;
-uint8_t thread_lock = 0;    // 线程锁
-uint8_t lens_flag = 0;
 static void gimbal_mode_change() {
     if (gimbal.mode == GIMBAL_ACTIVE) {   //自瞄判定
         if (rc_ctrl.rc.ch[AUTO_CHANNEL] > 50 || KeyBoard.Mouse_r.status == KEY_PRESS) {
@@ -404,28 +406,6 @@ static void gimbal_mode_change() {
             vision_data.mode = 0;
         }
     }
-
-    // 六倍镜开启 | 按键暂定X
-    if(rc_ctrl.rc.ch[AUTO_CHANNEL] < -300 || KeyBoard.X.status == KEY_PRESS){
-        if(!thread_lock){
-            if(lens_flag == 0) lens_flag = 1;
-            else lens_flag = 0;
-        }
-        thread_lock = 1;    // 线程锁死
-    }
-    else if(rc_ctrl.rc.ch[AUTO_CHANNEL] == 0 || KeyBoard.X.status == KEY_PRESS){
-        thread_lock = 0;    // 线程解锁
-    }
-    // 舵机模式判断
-    if(lens_flag == 0){
-        servo_pwm_set(1000,1);
-//        htim1.Instance->CCR3 = 1000;
-    }
-    else if(lens_flag == 1){
-        servo_pwm_set(2400,1);
-//        htim1.Instance->CCR3 = 2400;
-    }
-
     // TODO: 离线检测问题 记得开关
 //    if(detect_list[DETECT_LAUNCHER_2006_SINGLE_SHOT].status==OFFLINE)
 //    {

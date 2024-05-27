@@ -37,7 +37,7 @@
 #define FIRE_SPEED_ON 5600  //TODO: 摩擦轮转速
 
 //// 2006编码器转一圈编码值加8192  减速比1:36  编码器转36圈输出轴才转一圈  36×8192
-#define DEGREE_TO_ENCODER 14000.0000f    //2006单发 120：98304    95:77824    90:73728  100:81920
+#define DEGREE_TO_ENCODER 19000.0000f    //2006单发 120：98304    95:77824    90:73728  100:81920
 
 //#define FIRE_ON() KeyBoard.Q.click_flag==1
 //#define FIRE_OFF() KeyBoard.Q.click_flag==0
@@ -65,10 +65,16 @@
 #define SHOOT_FIRE_ON_PID_MAX_IOUT 100
 
 //图传PID
-#define IMAGE_SPEED_PID_KP 10
-#define IMAGE_SPEED_PID_KI 0
-#define IMAGE_SPEED_PID_KD 55
-#define IMAGE_SPEED_PID_MAX_OUT 10000
+#define IMAGE_ANGLE_PID_KP 0.7f
+#define IMAGE_ANGLE_PID_KI 0.01f
+#define IMAGE_ANGLE_PID_KD 1.6f
+#define IMAGE_ANGLE_PID_MAX_OUT 10000
+#define IMAGE_ANGLE_PID_MAX_IOUT 10000
+
+#define IMAGE_SPEED_PID_KP 2.f
+#define IMAGE_SPEED_PID_KI 0.f
+#define IMAGE_SPEED_PID_KD 4.5f
+#define IMAGE_SPEED_PID_MAX_OUT 20000
 #define IMAGE_SPEED_PID_MAX_IOUT 0
 
 /**
@@ -91,7 +97,7 @@ extern void launcher_init();
   * @retval         返回空
   */
 extern void launcher_mode_set();
-
+extern void images_mode_set();
 
 
 /**

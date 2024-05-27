@@ -130,6 +130,7 @@ extern void chassis_meknum_wheel_cal();
 extern void chassis_wheel_loop_cal();
 /******************/
 extern void chassis_power_limit();
-void chassis_device_offline_handle();
+extern void chassis_power_stop();
+extern void chassis_device_offline_handle();
 
 #endif //DEMO1_CHASSIS_H

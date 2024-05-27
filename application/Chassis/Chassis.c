@@ -21,11 +21,10 @@
 extern chassis_t chassis;       // 底盘
 extern gimbal_t gimbal;         // 云台
 extern launcher_t launcher;     // 发射机构
-extern cap_info_t cap_info;     // 电容
 extern key_board_t KeyBoard;    // 键盘
 extern RC_ctrl_t rc_ctrl;       // 遥控器
 cap_receive_data_t capReceiveData;  //接收溪地电容反馈数据
-static void chassis_power_stop();
+
 first_kalman_filter_t chassis_filter[4];
 first_order_filter_type_t vx_slow={.frame_period=1, .num=8};
 first_order_filter_type_t vy_slow={.frame_period=1, .num=15};
@@ -70,12 +69,11 @@ void Chassis_task(void const *pvParameters) {
                       launcher.trigger.give_current,    //207
                       0);                               //208
 
-        //  底盘相关模块 对底盘进行离线处理
-//          chassis_device_offline_handle();
+        // 底盘相关模块 对底盘进行离线处理
+        // chassis_device_offline_handle();
 
         gimbal.pitch.absolute_angle_get_down=INS_angle[2]*MOTOR_RAD_TO_ANGLE;
         Send_referee(Referee.PowerHeatData.chassis_power, gimbal.pitch.absolute_angle_get_down);
-
         vTaskDelay(1);
         Send_id(Referee.GameRobotStat.robot_id);
 
@@ -459,14 +457,5 @@ static void chassis_control() {
             break;
         default:
             break;
-    }
-}
-
-
-void chassis_power_stop(){
-    if(detect_list[DETECT_REFEREE].status==ONLINE) {
-        if (Referee.GameRobotStat.power_management_chassis_output == 0) {
-            chassis.mode = CHASSIS_RELAX;
-        }
     }
 }
