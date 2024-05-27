@@ -341,7 +341,7 @@ void CAN1_RX0_IRQHandler(){
             get_motor_measure(&motor_3508_measure[3], rx_data);
             detect_handle(DETECT_CHASSIS_3508_RB);
             break;
-        case CAN_IMAGE_2006_TRANSMISSION:    //205 图传
+        case CAN_IMAGE_2006_TRANSMISSION:    //205
             get_motor_measure(&motor_image_measure, rx_data);
             get_motor_round_cnt(motor_image_measure);//获取转动拨轮电机转动圈数和总编码值
             detect_handle(DETECT_IMAGE_2006_TRANSMISSION);
@@ -451,7 +451,6 @@ void CAN1_RX1_IRQHandler(){
 
         case 0x115:{
             Referee.GameRobotStat.robot_id = rx_data[0];
-
         } break;
 
         case 0x116:{

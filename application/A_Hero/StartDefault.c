@@ -23,7 +23,7 @@ void StartDefaultTask(void const * argument) {
 
 #else //CHASSIS
     vTaskDelete(calibrateTaskHandle);
-    vTaskDelete(imuTaskHandle);
+//    vTaskDelete(imuTaskHandle);
     vTaskDelete(detectTaskHandle);
     vTaskDelete(gimbalTaskHandle);
     vTaskDelete(usbtaskHandle);

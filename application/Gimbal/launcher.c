@@ -65,57 +65,21 @@ extern robot_ctrl_info_t robot_ctrl;
 static uint8_t rc_last_sw_L;
 static int32_t total_ecd_ref;      //电机总编码值
 
-static int32_t ref;
-static uint32_t t0,t1;
-uint8_t thread_lock = 0;    // 线程锁
-static uint8_t lens_flag = 0;
-void images_mode_set(){
-    // 图传2006
-    if(gimbal.mode != GIMBAL_RELAX) {
-        if (rc_ctrl.rc.ch[AUTO_CHANNEL] > 50 || KeyBoard.Z.click_flag == 1) {
-            launcher.images.speed = pid_calc(&launcher.images.angle_p,
-                                             launcher.images.motor_measure->speed_rpm,
-                                             DEGREE_TO_ENCODER);
-            launcher.images.give_current =
-                    (int16_t)pid_calc(&launcher.images.speed_p,
-                                      launcher.images.motor_measure->speed_rpm,
-                                      launcher.images.speed);
-        }
-        else {
-            launcher.images.speed = pid_calc(&launcher.images.angle_p,
-                                             launcher.images.motor_measure->total_ecd,
-                                             ref);
-            launcher.images.give_current =
-                    (int16_t)pid_calc(&launcher.images.speed_p,
-                                      launcher.images.motor_measure->speed_rpm,
-                                      launcher.images.speed);
-        }
-
-        // 六倍镜开启 | 按键暂定X
-        if(rc_ctrl.rc.ch[AUTO_CHANNEL] < -300 || KeyBoard.X.status == KEY_PRESS){
-            if(!thread_lock){
-                if(lens_flag == 0) lens_flag = 1;
-                else lens_flag = 0;
-            }
-            thread_lock = 1;    // 线程锁死
-        }
-        else if(rc_ctrl.rc.ch[AUTO_CHANNEL] == 0 || KeyBoard.X.status == KEY_PRESS){
-            thread_lock = 0;    // 线程解锁
-        }
-        // 舵机模式判断
-        if(lens_flag == 0){
-            servo_pwm_set(1000,1);
-        }
-        else if(lens_flag == 1){
-            servo_pwm_set(2400,1);
-        }
-    }
-    else {
-        launcher.images.give_current = 0;
-        ref = launcher.images.motor_measure->total_ecd;
-    }
-}
 void launcher_mode_set(){
+    // 图传2006
+//    if(KeyBoard.Z.click_flag == 1) {
+//        launcher.images.give_current =
+//                (int16_t)pid_calc(&launcher.images.speed_p,
+//                                  launcher.images.motor_measure->total_ecd,
+//                                  DEGREE_TO_ENCODER);
+//    }
+//    else {
+//        launcher.images.give_current =
+//                (int16_t)pid_calc(&launcher.images.speed_p,
+//                                  launcher.images.motor_measure->total_ecd,
+//                                  4192);
+//    }
+
     //摩擦轮关闭时,做拨杆向上拨一下开启摩擦轮
     //遥控器和键盘可以同步修改摩擦轮状态
     // 键盘直接修改相关按键click_flag的状态 通过click状态直接判断摩擦轮模式 避免遥控打开的摩擦轮被键盘关闭
@@ -241,10 +205,6 @@ void launcher_init(){
     pid_init(&launcher.images.speed_p,
              IMAGE_SPEED_PID_MAX_OUT, IMAGE_SPEED_PID_MAX_IOUT,
              IMAGE_SPEED_PID_KP, IMAGE_SPEED_PID_KI, IMAGE_SPEED_PID_KD);
-
-    pid_init(&launcher.images.angle_p,
-             IMAGE_ANGLE_PID_MAX_OUT, IMAGE_ANGLE_PID_MAX_IOUT,
-             IMAGE_ANGLE_PID_KP, IMAGE_ANGLE_PID_KI, IMAGE_ANGLE_PID_KD);
 
     launcher.images.motor_measure->offset_ecd = 0;
     //最开始的编码值作为拨轮电机的校准值

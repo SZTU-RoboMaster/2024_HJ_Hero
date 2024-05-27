@@ -5,7 +5,6 @@
 #include "Chassis.h"
 extern chassis_t chassis;
 extern gimbal_t gimbal;
-
 // 机械信息
 static fp32 rotate_ratio_f = ((WHEELBASE+WHEELTRACK) / 2.0f - GIMBAL_OFFSET);// / RADIAN_COEF;
 static fp32 rotate_ratio_b = ((WHEELBASE + WHEELTRACK) / 2.0f + GIMBAL_OFFSET);// / RADIAN_COEF;
@@ -145,9 +144,26 @@ void chassis_spin_handle(){
     chassis.vx = (cos_yaw * vx_temp + sin_yaw * vy_temp);
     chassis.vy = -(sin_yaw * vx_temp - cos_yaw * vy_temp);
     // 给定vw转速
-    chassis.vw = 420;//
+    chassis.vw = 220;//
 }
 
+void chassis_spin_handle_1(){
+    //获取云台偏航角的相对角度，并转换为弧度
+    fp32 yaw_relative_radian = -gimbal.yaw.relative_angle_get*ANGLE_TO_RAD;
+    fp32 sin_yaw, cos_yaw;
+    sin_yaw = -(fp32)sin(yaw_relative_radian);
+    cos_yaw = (fp32)cos(yaw_relative_radian);
+
+    // 保存底盘速度
+    fp32 vx_temp = chassis.vx;
+    fp32 vy_temp = chassis.vy;
+
+    // 保存的底盘速度在云台坐标系下进行分解，得到在该坐标系下的底盘速度
+    chassis.vx = (cos_yaw * vx_temp + sin_yaw * vy_temp);
+    chassis.vy = -(sin_yaw * vx_temp - cos_yaw * vy_temp);
+    // 给定vw转速
+    chassis.vw = -220;//
+}
 
 void chassis_device_offline_handle() {
     if(detect_list[DETECT_REMOTE].status == OFFLINE&&detect_list[DETECT_VIDEO_TRANSIMITTER].status==OFFLINE)
@@ -222,7 +238,6 @@ void chassis_power_limit() {
             //对rpm_set进行比例缩减，达到功率控制效果
             chassis.motor_chassis[i].rpm_set *= chassis.chassis_power_limit.k_c;
         }
-
     }
 }
 

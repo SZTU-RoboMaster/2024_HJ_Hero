@@ -32,6 +32,7 @@ typedef enum {
     CHASSIS_ONLY,           //底盘独立 左不下 E.click_flag==1
     CHASSIS_FOLLOW_GIMBAL,  //底盘跟随云台 右中
     CHASSIS_SPIN,           //小陀螺
+    CHASSIS_SPIN_1,           //小陀螺
     CHASSIS_BLOCK,          //底盘刹车
     CHASSIS_INDEPENDENT_CONTROL
 } chassis_mode_e;
@@ -134,7 +135,9 @@ typedef struct {
     fp32 relative_angle_get; //°    获取
     fp32 relative_angle_set; //°    设定
     fp32 absolute_angle_get;//      rad
-    fp32 absolute_angle_get_down;//      rad
+    fp32 absolute_angle_get_down;
+    fp32 relative_up_down_get;  // 云台底盘相对角度
+    fp32 relative_up_down_set;
     fp32 absolute_angle_set;
     fp32 gyro_set;  //转速设置
     int16_t give_current; //最终电流值

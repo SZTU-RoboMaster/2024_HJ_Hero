@@ -111,18 +111,18 @@
 #define CHASSIS_3508_PID_KP     7.0f
 #define CHASSIS_3508_PID_KI     0.0f
 #define CHASSIS_3508_PID_KD     0.0f
-#define CHASSIS_3508_PID_MAX_OUT 3000.0f
+#define CHASSIS_3508_PID_MAX_OUT 25000.0f
 #define CHASSIS_3508_PID_MAX_IOUT 0
 
 /******************函数声明******************/
 /******************下板传上板******************/
-extern void Send_referee(fp32 power);
-extern void Send_angle(fp32 absolute_angle);
+extern void Send_referee(fp32 power, fp32 absolute_angle);
 extern void Send_id(uint8_t robot_id);
 /******************底盘功能******************/
 extern void chassis_relax_handle();
 extern void chassis_follow_gimbal_handle();
 extern void chassis_spin_handle();
+extern void chassis_spin_handle_1();
 extern void chassis_independent_handle();
 /******************底盘运动******************/
 extern void chassis_movement();

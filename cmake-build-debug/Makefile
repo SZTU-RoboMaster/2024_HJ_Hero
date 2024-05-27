@@ -56,10 +56,10 @@ RM = "D:\software\CLion 2023.2.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\software\CLionProjects\2024_Hero_three
+CMAKE_SOURCE_DIR = C:\Users\86173\Desktop\2024_Hero_three
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\software\CLionProjects\2024_Hero_three\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\86173\Desktop\2024_Hero_three\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\86173\Desktop\2024_Hero_three\cmake-build-debug\CMakeFiles C:\Users\86173\Desktop\2024_Hero_three\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\software\CLionProjects\2024_Hero_three\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\86173\Desktop\2024_Hero_three\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target

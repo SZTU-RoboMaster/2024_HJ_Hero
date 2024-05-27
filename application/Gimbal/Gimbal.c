@@ -33,7 +33,6 @@ extern fp32 INS_quat[4];
 
 vision_t vision_data;   //发送机器人id
 extern robot_ctrl_info_t robot_ctrl;
-
 first_order_filter_type_t pitch_first_order_set;
 first_order_filter_type_t pitch_current_first_order_set;
 first_order_filter_type_t filter_yaw_gyro_in;
@@ -57,6 +56,8 @@ static void gimbal_mode_set();
 static void gimbal_mode_change();
 static void gimbal_control();
 
+uint8_t Referee_ID;
+uint8_t Referee_Hit_Flag;
 uint8_t fire_lock = 0;
 /******************函数实现******************/
 
@@ -68,22 +69,13 @@ uint8_t fire_lock = 0;
   */
 void Gimbal_task(void const*pvParameters) {
     vTaskDelay(GIMBAL_TASK_INIT_TIME);  //任务初始化时间
-    gimbal_angle_update();
     gimbal_init();  //云台初始化
     launcher_init();//发射机构初始化
+
     while(1) {
         //更新PC的控制信息
         update_pc_info();
-
-        if(detect_list[DETECT_REMOTE].status == OFFLINE  && detect_list[DETECT_VIDEO_TRANSIMITTER].status == OFFLINE)
-        {
-            KeyBoard.W.status = KeyBoard.A.status = KeyBoard.S.status = KeyBoard.D.status = KEY_RELAX;
-            chassis.mode = CHASSIS_RELAX;
-            Send_Keyboard(KeyBoard.W.status, KeyBoard.A.status, KeyBoard.S.status, KeyBoard.D.status, trigger.state);
-        }
-        else {
-            Send_Keyboard(KeyBoard.W.status, KeyBoard.A.status, KeyBoard.S.status, KeyBoard.D.status, trigger.state);
-        }
+        Send_Keyboard(KeyBoard.W.status, KeyBoard.A.status, KeyBoard.S.status, KeyBoard.D.status, trigger.state);
 
         if(robot_ctrl.fire_command == 1) {
             fire_lock = 1;
@@ -93,26 +85,18 @@ void Gimbal_task(void const*pvParameters) {
             fire_lock ++;
             if(fire_lock > 5) fire_lock = 0;
         }
-
         Send_Chassis_Speed(rc_ctrl.rc.ch[1], rc_ctrl.rc.ch[0], rc_ctrl.rc.ch[2], rc_ctrl.rc.s[1], KeyBoard.Mouse_l.status);
         vTaskDelay(1);
 
         gimbal_angle_update();  //更新绝对、相对角度接收值
 
-        if(detect_list[DETECT_GIMBAL_6020_YAW].status == OFFLINE) {
-            gimbal.yaw.relative_angle_get = 0;
-            Send_Yaw_Angle(gimbal.yaw.relative_angle_get, fire_lock, KeyBoard.V.click_flag);
-        }
-        else{
-            Send_Yaw_Angle(gimbal.yaw.relative_angle_get, fire_lock, KeyBoard.V.click_flag);
-        }
+        Send_Yaw_Angle(gimbal.yaw.relative_angle_get, fire_lock, KeyBoard.V.click_flag);
 
         ////注意：校准时采用，校准完毕一定注释掉
         //pit_offset_get();
 
         chassis_mode_set(); //设置底盘模式
         gimbal_mode_set();  //设置云台模式
-        images_mode_set();  //设置图传模式
         launcher_mode_set();//设置发射模式
 
         gimbal_control();  //云台模式设置实现
@@ -122,37 +106,36 @@ void Gimbal_task(void const*pvParameters) {
 //        Send_command(robot_ctrl.fire_command);
 
         //检测电机、电源是否断线  TODO:取消注释会失能，要装裁判系统
-        gimbal_device_offline_handle();//TODO:检测离线,装完裁判系统后可以打开
+//        gimbal_device_offline_handle();//TODO:检测离线,装完裁判系统后可以打开
 
         gimbal_can_send_back_mapping(); // 接受can信号，传到UI
         vTaskDelay(1);
 
-        if(gimbal.mode != GIMBAL_RELAX){
-            //接收CAN信号
-            CAN_cmd_motor(CAN_1,
-                          CAN_MOTOR_0x1FF_ID,
-                          launcher.images.give_current,     //205
-                          0,                                //206
-                          0,                                //207
-                          0                                 //208
-            );
+        //接收CAN信号
+        CAN_cmd_motor(CAN_1,
+                      CAN_MOTOR_0x1FF_ID,
+                      launcher.images.give_current,     //205
+                      0,                                //206
+                      0,                                //207
+                      0                                 //208
+        );
 
-            CAN_cmd_motor(CAN_2,
-                          CAN_MOTOR_0x200_ID,
-                          0,                                //201
-                          0,                                //202
-                          0,                                //203
-                          launcher.fire_on.give_current     //204
-            );
+        CAN_cmd_motor(CAN_2,
+                      CAN_MOTOR_0x200_ID,
+                      0,                                //201
+                      0,                                //202
+                      0,                                //203
+                      0//launcher.fire_on.give_current     //204
+        );
 
-            CAN_cmd_motor(CAN_2,
-                          CAN_MOTOR_0x1FF_ID,
-                          gimbal.yaw.give_current,           //205
-                          gimbal.pitch.give_current,         //206
-                          launcher.fire_r.give_current,      //207
-                          launcher.fire_l.give_current       //208
-            );
-        }
+        CAN_cmd_motor(CAN_2,
+                      CAN_MOTOR_0x1FF_ID,
+                      gimbal.yaw.give_current,           //205
+                      gimbal.pitch.give_current,         //206
+                      0,//launcher.fire_r.give_current,      //207
+                      0//launcher.fire_l.give_current       //208
+        );
+
         gimbal_uiInfo_packet();     //更新UI云台状态
 
         vTaskDelay(2);
@@ -223,7 +206,6 @@ static void gimbal_init(){
     gimbal.pitch.motor_measure->offset_ecd=3220;//2370;
     gimbal.yaw.motor_measure->offset_ecd = 6470;//6470;//7400
 
-    gimbal.pitch.absolute_angle_set = gimbal.pitch.absolute_angle_get;
     //低通滤波初始化
     first_order_filter_init(&pitch_first_order_set, 0.f, 500);
     first_order_filter_init(&pitch_current_first_order_set, 5, 30);
@@ -250,12 +232,15 @@ static void gimbal_init(){
   */
 static void gimbal_angle_update(){
     // 更新云台俯仰角度信息
-    gimbal.pitch.absolute_angle_get=(gimbal.pitch.absolute_angle_get_down-INS_angle[2])*MOTOR_RAD_TO_ANGLE;
+    gimbal.pitch.absolute_angle_get=INS_angle[2]*MOTOR_RAD_TO_ANGLE;
     gimbal.pitch.relative_angle_get= motor_ecd_to_angle_change(gimbal.pitch.motor_measure->ecd,
                                                                gimbal.pitch.motor_measure->offset_ecd);
     gimbal.yaw.absolute_angle_get=INS_angle[0]*MOTOR_RAD_TO_ANGLE;
     gimbal.yaw.relative_angle_get= motor_ecd_to_angle_change(gimbal.yaw.motor_measure->ecd,
                                                              gimbal.yaw.motor_measure->offset_ecd);
+
+    // 更新云台底盘相对角 | get
+    gimbal.pitch.relative_up_down_get = gimbal.pitch.absolute_angle_get - gimbal.pitch.absolute_angle_get_down;
 
 //     更新云台偏航角度信息,通过陀螺仪测量的偏航和俯仰角速度
     gyro_yaw=INS_gyro[2]*MOTOR_RAD_TO_ANGLE;
@@ -314,6 +299,10 @@ static void chassis_mode_set(){
     if(switch_is_down(rc_ctrl.rc.s[RC_s_L])&&switch_is_down(rc_ctrl.rc.s[RC_s_R])) {
         chassis.last_mode=chassis.mode;
         chassis.mode=CHASSIS_RELAX;
+    }
+    else if(rc_ctrl.rc.ch[AUTO_CHANNEL]> 50) {
+        chassis.last_mode=chassis.mode;
+        chassis.mode=CHASSIS_SPIN_1;
     }
         //左不下 右下： 底盘独立CHASSIS_ONLY
     else if(!switch_is_down(rc_ctrl.rc.s[RC_s_L])&&switch_is_down(rc_ctrl.rc.s[RC_s_R])) {
@@ -391,6 +380,8 @@ static void gimbal_mode_set(){
   * @retval         返回空
   */
 uint16_t vision_mode;
+uint8_t thread_lock = 0;    // 线程锁
+uint8_t lens_flag = 0;
 static void gimbal_mode_change() {
     if (gimbal.mode == GIMBAL_ACTIVE) {   //自瞄判定
         if (rc_ctrl.rc.ch[AUTO_CHANNEL] > 50 || KeyBoard.Mouse_r.status == KEY_PRESS) {
@@ -412,6 +403,27 @@ static void gimbal_mode_change() {
             gimbal.mode = GIMBAL_ACTIVE;//默认回到一般模式
             vision_data.mode = 0;
         }
+    }
+
+    // 六倍镜开启 | 按键暂定X
+    if(rc_ctrl.rc.ch[AUTO_CHANNEL] < -300 || KeyBoard.X.status == KEY_PRESS){
+        if(!thread_lock){
+            if(lens_flag == 0) lens_flag = 1;
+            else lens_flag = 0;
+        }
+        thread_lock = 1;    // 线程锁死
+    }
+    else if(rc_ctrl.rc.ch[AUTO_CHANNEL] == 0 || KeyBoard.X.status == KEY_PRESS){
+        thread_lock = 0;    // 线程解锁
+    }
+    // 舵机模式判断
+    if(lens_flag == 0){
+        servo_pwm_set(1000,1);
+//        htim1.Instance->CCR3 = 1000;
+    }
+    else if(lens_flag == 1){
+        servo_pwm_set(2400,1);
+//        htim1.Instance->CCR3 = 2400;
     }
 
     // TODO: 离线检测问题 记得开关

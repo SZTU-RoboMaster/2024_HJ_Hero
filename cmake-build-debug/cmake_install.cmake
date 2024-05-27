@@ -1,4 +1,4 @@
-# Install script for directory: D:/software/CLionProjects/2024_Hero_three
+# Install script for directory: C:/Users/86173/Desktop/2024_Hero_three
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/software/CLionProjects/2024_Hero_three/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/86173/Desktop/2024_Hero_three/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

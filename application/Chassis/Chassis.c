@@ -24,7 +24,8 @@ extern launcher_t launcher;     // 发射机构
 extern cap_info_t cap_info;     // 电容
 extern key_board_t KeyBoard;    // 键盘
 extern RC_ctrl_t rc_ctrl;       // 遥控器
-
+cap_receive_data_t capReceiveData;  //接收溪地电容反馈数据
+static void chassis_power_stop();
 first_kalman_filter_t chassis_filter[4];
 first_order_filter_type_t vx_slow={.frame_period=1, .num=8};
 first_order_filter_type_t vy_slow={.frame_period=1, .num=15};
@@ -37,6 +38,7 @@ double test_y=0, test_w=0, test_x=0;
 uint32_t time;
 uint32_t test_om=0;
 uint32_t time_last_time;
+
 extern fp32 INS_angle[3];
 
 _Noreturn void Chassis_task(void const *pvParameters);
@@ -45,7 +47,6 @@ static float chassis_speed_change();
 static void chassis_pc_ctrl();
 static void chassis_ctrl_info_get();
 static void chassis_control();
-static void chassis_power_stop();
 
 /******************函数实现******************/
 void Chassis_task(void const *pvParameters) {
@@ -57,8 +58,8 @@ void Chassis_task(void const *pvParameters) {
     htim5.Instance->CCR1 = 1000;
     while (1){
         chassis_ctrl_info_get();        //遥控器获取底盘方向矢量
-        volatile_judge = get_battery_voltage();//电压测试
-
+        // volatile_judge = get_battery_voltage();//电压测试
+        chassis_power_stop();
         chassis_control();              //底盘控制
         Trigger_control();              //拨盘控制
 
@@ -70,18 +71,20 @@ void Chassis_task(void const *pvParameters) {
                       0);                               //208
 
         //  底盘相关模块 对底盘进行离线处理
-        chassis_device_offline_handle();
-        chassis_power_stop();
+//          chassis_device_offline_handle();
 
-        Send_referee(Referee.PowerHeatData.chassis_power);
+        gimbal.pitch.absolute_angle_get_down=INS_angle[2]*MOTOR_RAD_TO_ANGLE;
+        Send_referee(Referee.PowerHeatData.chassis_power, gimbal.pitch.absolute_angle_get_down);
+
         vTaskDelay(1);
         Send_id(Referee.GameRobotStat.robot_id);
-        gimbal.pitch.absolute_angle_get_down = INS_angle[2];
-        Send_angle(gimbal.pitch.absolute_angle_get_down);
+
         // 底盘不是失能状态时进行麦轮运动
         if(chassis.mode != CHASSIS_RELAX) {
             chassis_meknum_wheel_cal();     //麦轮解算
-            chassis_power_limit();          //功率限制
+            if(capReceiveData.voltage_out < 3) {
+                 chassis_power_limit();          //功率限制
+            }
             chassis_wheel_loop_cal();       //驱电机闭环
 
 #define CAN_CMD_CHASSIS
@@ -190,163 +193,167 @@ static void chassis_init(chassis_t *chassis) {
   */
 static float chassis_speed_change() {
     float speed_change = 0;
-    switch (Referee.GameRobotStat.chassis_power_limit) {//最大限制功率
-        case 55: {
-            if(abs(chassis.vx) > 2) {
-                speed_change=(float)0;
-                chassis.vx = (float)2;
-            }
-            else speed_change=(float)0.01;
-            if(abs(chassis.vy) > 2) {
-                speed_change=(float)0;
-                chassis.vy = (float)2;
-            }
-        } break;
+    if(abs(chassis.vx) > 3 || abs(chassis.vy) > 3) {
+        speed_change=(float)0;
+    } else speed_change=(float)0.05;
 
-        case 60: {
-            if(abs(chassis.vx) > 2.1) {
-                speed_change=(float)0;
-                chassis.vx = (float)2.1;
-            }
-            else speed_change=(float)0.012;
-            if(abs(chassis.vy) > 2.1) {
-                speed_change=(float)0;
-                chassis.vy = (float)2.1;
-            }
-        } break;
-
-        case 65: {
-            if(abs(chassis.vx) > 2.2) {
-                speed_change=(float)0;
-                chassis.vx = (float)2.2;
-            }
-            else speed_change=(float)0.012;
-            if(abs(chassis.vy) > 2.2) {
-                speed_change=(float)0;
-                chassis.vy = (float)2.2;
-            }
-        } break;
-
-        case 70: {
-            if(abs(chassis.vx) > 2.3) {
-                speed_change=(float)0;
-                chassis.vx = (float)3;
-            }
-            else speed_change=(float)0.013;
-            if(abs(chassis.vy) > 2.3) {
-                speed_change=(float)0;
-                chassis.vy = (float)2.3;
-            }
-        } break;
-
-        case 75: {
-            if(abs(chassis.vx) > 2.4) {
-                speed_change=(float)0;
-                chassis.vx = (float)2.4;
-            }
-            else speed_change=(float)0.013;
-            if(abs(chassis.vy) > 2.4) {
-                speed_change=(float)0;
-                chassis.vy = (float)2.4;
-            }
-        } break;
-
-        case 80: {
-            if(abs(chassis.vx) > 2.5) {
-                speed_change=(float)0;
-                chassis.vx = (float)2.5;
-            }
-            else speed_change=(float)0.014;
-            if(abs(chassis.vy) > 2.5) {
-                speed_change=(float)0;
-                chassis.vy = (float)2.5;
-            }
-        } break;
-
-        case 85: {
-            if(abs(chassis.vx) > 2.6) {
-                speed_change=(float)0;
-                chassis.vx = (float)2.6;
-            }
-            else speed_change=(float)0.014;
-            if(abs(chassis.vy) > 2.6) {
-                speed_change=(float)0;
-                chassis.vy = (float)2.6;
-            }
-        } break;
-
-        case 90: {
-            if(abs(chassis.vx) > 2.7) {
-                speed_change=(float)0;
-                chassis.vx = (float)2.7;
-            }
-            else speed_change=(float)0.015;
-            if(abs(chassis.vy) > 2.8) {
-                speed_change=(float)0;
-                chassis.vy = (float)2.8;
-            }
-        } break;
-
-        case 100: {
-            if(abs(chassis.vx) > 2.8) {
-                speed_change=(float)0;
-                chassis.vx = 2.8;
-            }
-            else speed_change=(float)0.016;
-            if(abs(chassis.vy) > 2.8) {
-                speed_change=(float)0;
-                chassis.vy = 2.8;
-            }
-        } break;
-
-        case 105: {
-            if(abs(chassis.vx) > 2.9) {
-                speed_change=(float)0;
-                chassis.vx = (float)2.9;
-            }
-            else speed_change=(float)0.016;
-            if(abs(chassis.vy) > 2.9) {
-                speed_change=(float)0;
-                chassis.vy = (float)2.9;
-            }
-        } break;
-
-        case 110: {
-            if(abs(chassis.vx) > 3) {
-                speed_change=(float)0;
-                chassis.vx = (float)3;
-            }
-            else speed_change=(float)0.016;
-            if(abs(chassis.vy) > 3) {
-                speed_change=(float)0;
-                chassis.vy = (float)3;
-            }
-        } break;
-
-        case 120: {
-            if(abs(chassis.vx) > 3) {
-                speed_change=(float)0;
-                chassis.vx = 3;
-            }
-            else speed_change=(float)0.02;
-            if(abs(chassis.vy) > 3) {
-                speed_change=(float)0;
-                chassis.vy = 3;
-            }
-        } break;
-
-        default:{
-            if(abs(chassis.vx) > 2) {
-                speed_change=(float)0;
-                chassis.vx = 2;
-            }
-            else speed_change=(float)0.02;
-            if(abs(chassis.vy) > 2) {
-                speed_change=(float)0;
-                chassis.vy = 2;
-            }
-        }break;
-    }
+//    switch (Referee.GameRobotStat.chassis_power_limit) {//最大限制功率
+//        case 55: {
+//            if(abs(chassis.vx) > 2) {
+//                speed_change=(float)0;
+//                chassis.vx = (float)2;
+//            }
+//            else speed_change=(float)0.01;
+//            if(abs(chassis.vy) > 2) {
+//                speed_change=(float)0;
+//                chassis.vy = (float)2;
+//            }
+//        } break;
+//
+//        case 60: {
+//            if(abs(chassis.vx) > 2.1) {
+//                speed_change=(float)0;
+//                chassis.vx = (float)2.1;
+//            }
+//            else speed_change=(float)0.012;
+//            if(abs(chassis.vy) > 2.1) {
+//                speed_change=(float)0;
+//                chassis.vy = (float)2.1;
+//            }
+//        } break;
+//
+//        case 65: {
+//            if(abs(chassis.vx) > 2.2) {
+//                speed_change=(float)0;
+//                chassis.vx = (float)2.2;
+//            }
+//            else speed_change=(float)0.012;
+//            if(abs(chassis.vy) > 2.2) {
+//                speed_change=(float)0;
+//                chassis.vy = (float)2.2;
+//            }
+//        } break;
+//
+//        case 70: {
+//            if(abs(chassis.vx) > 2.3) {
+//                speed_change=(float)0;
+//                chassis.vx = (float)3;
+//            }
+//            else speed_change=(float)0.013;
+//            if(abs(chassis.vy) > 2.3) {
+//                speed_change=(float)0;
+//                chassis.vy = (float)2.3;
+//            }
+//        } break;
+//
+//        case 75: {
+//            if(abs(chassis.vx) > 2.4) {
+//                speed_change=(float)0;
+//                chassis.vx = (float)2.4;
+//            }
+//            else speed_change=(float)0.013;
+//            if(abs(chassis.vy) > 2.4) {
+//                speed_change=(float)0;
+//                chassis.vy = (float)2.4;
+//            }
+//        } break;
+//
+//        case 80: {
+//            if(abs(chassis.vx) > 2.5) {
+//                speed_change=(float)0;
+//                chassis.vx = (float)2.5;
+//            }
+//            else speed_change=(float)0.014;
+//            if(abs(chassis.vy) > 2.5) {
+//                speed_change=(float)0;
+//                chassis.vy = (float)2.5;
+//            }
+//        } break;
+//
+//        case 85: {
+//            if(abs(chassis.vx) > 2.6) {
+//                speed_change=(float)0;
+//                chassis.vx = (float)2.6;
+//            }
+//            else speed_change=(float)0.014;
+//            if(abs(chassis.vy) > 2.6) {
+//                speed_change=(float)0;
+//                chassis.vy = (float)2.6;
+//            }
+//        } break;
+//
+//        case 90: {
+//            if(abs(chassis.vx) > 2.7) {
+//                speed_change=(float)0;
+//                chassis.vx = (float)2.7;
+//            }
+//            else speed_change=(float)0.015;
+//            if(abs(chassis.vy) > 2.8) {
+//                speed_change=(float)0;
+//                chassis.vy = (float)2.8;
+//            }
+//        } break;
+//
+//        case 100: {
+//            if(abs(chassis.vx) > 2.8) {
+//                speed_change=(float)0;
+//                chassis.vx = 2.8;
+//            }
+//            else speed_change=(float)0.016;
+//            if(abs(chassis.vy) > 2.8) {
+//                speed_change=(float)0;
+//                chassis.vy = 2.8;
+//            }
+//        } break;
+//
+//        case 105: {
+//            if(abs(chassis.vx) > 2.9) {
+//                speed_change=(float)0;
+//                chassis.vx = (float)2.9;
+//            }
+//            else speed_change=(float)0.016;
+//            if(abs(chassis.vy) > 2.9) {
+//                speed_change=(float)0;
+//                chassis.vy = (float)2.9;
+//            }
+//        } break;
+//
+//        case 110: {
+//            if(abs(chassis.vx) > 3) {
+//                speed_change=(float)0;
+//                chassis.vx = (float)3;
+//            }
+//            else speed_change=(float)0.016;
+//            if(abs(chassis.vy) > 3) {
+//                speed_change=(float)0;
+//                chassis.vy = (float)3;
+//            }
+//        } break;
+//
+//        case 120: {
+//            if(abs(chassis.vx) > 3) {
+//                speed_change=(float)0;
+//                chassis.vx = 3;
+//            }
+//            else speed_change=(float)0.02;
+//            if(abs(chassis.vy) > 3) {
+//                speed_change=(float)0;
+//                chassis.vy = 3;
+//            }
+//        } break;
+//
+//        default:{
+//            if(abs(chassis.vx) > 2) {
+//                speed_change=(float)0;
+//                chassis.vx = 2;
+//            }
+//            else speed_change=(float)0.02;
+//            if(abs(chassis.vy) > 2) {
+//                speed_change=(float)0;
+//                chassis.vy = 2;
+//            }
+//        }break;
+//    }
     return speed_change;
 }
 
@@ -432,6 +439,9 @@ static void chassis_control() {
             break;
         case CHASSIS_SPIN:  //小陀螺 vw设置常量(150)
             chassis_spin_handle();
+            break;
+        case CHASSIS_SPIN_1:  //小陀螺 vw设置常量(150)
+            chassis_spin_handle_1();
             break;
         case CHASSIS_INDEPENDENT_CONTROL:
             chassis_independent_handle();

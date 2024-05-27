@@ -7,6 +7,11 @@ set(CMAKE_DEPENDS_GENERATOR "MinGW Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
+  "C:/Users/86173/Desktop/2024_Hero_three/CMakeLists.txt"
+  "CMakeFiles/3.26.4/CMakeASMCompiler.cmake"
+  "CMakeFiles/3.26.4/CMakeCCompiler.cmake"
+  "CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.26.4/CMakeSystem.cmake"
   "D:/software/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeASMInformation.cmake"
   "D:/software/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake"
   "D:/software/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake"
@@ -25,11 +30,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "D:/software/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake"
   "D:/software/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Generic.cmake"
   "D:/software/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/ProcessorCount.cmake"
-  "D:/software/CLionProjects/2024_Hero_three/CMakeLists.txt"
-  "CMakeFiles/3.26.4/CMakeASMCompiler.cmake"
-  "CMakeFiles/3.26.4/CMakeCCompiler.cmake"
-  "CMakeFiles/3.26.4/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.26.4/CMakeSystem.cmake"
   )
 
 # The corresponding makefile is:

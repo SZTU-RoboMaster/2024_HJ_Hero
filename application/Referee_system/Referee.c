@@ -340,6 +340,10 @@ bool_t Referee_read_data(uint8_t *ReadFromUsart)
                     case Referee_ID_robot_hurt://0x0206     伤害状态数据  伤害发生后发送
                         memcpy(&Referee.RobotHurt,ReadFromUsart+DATA,Referee_LEN_robot_hurt);
                         Referee.RobotHurt.being_hurt = true;//受击判断
+                        if(Referee.RobotHurt.hurt_type == 0){
+                            Referee_ID = Referee.RobotHurt.armor_id;
+                            Referee_Hit_Flag = 1;
+                        }
                         break;
 
                     case Referee_ID_shoot_data://0x0207     实时射击数据  射击后发送
@@ -1175,6 +1179,186 @@ void cap_percentage_draw()
 void two_layer_draw(){
     cap_percentage_draw();
     static_update_flag = UI_MODIFY;
+}
+
+
+// 击打标志
+static uint8_t hit_flag[4];
+static int32_t Points[3][2];     // A B C
+static int32_t hit_angle[4];
+// 受击指引方向清除
+void dynamic_hit_direction_clean(){
+    ext_graphic_five_data_t ui_hit_direction;
+    //裁判通信帧头
+    ui_hit_direction.txFrameHeader.SOF = REFREE_HEADER_SOF;
+    ui_hit_direction.txFrameHeader.data_length = sizeof (ext_student_interactive_header_data_t) +
+                                                 sizeof (ui_graphic_data_struct_t) * 5;
+    ui_hit_direction.txFrameHeader.seq = 0;//包序号设置为0
+    memcpy(ClientTxBuffer, &ui_hit_direction.txFrameHeader, sizeof (frame_header_struct_t));//把帧头放进去
+    //CRC8校验帧头
+    append_CRC8_check_sum(ClientTxBuffer, sizeof (frame_header_struct_t));
+    ui_hit_direction.CmdID = Referee_ID_robot_interactive_header_data;
+    //数据帧头
+    ui_hit_direction.dataFrameHeader.send_ID = Referee.GameRobotStat.robot_id;
+    ui_hit_direction.dataFrameHeader.receiver_ID = Referee.SelfClient;
+    ui_hit_direction.dataFrameHeader.data_cmd_id = UI_INTERACT_ID_draw_five_graphic;
+
+    // 数据初始化
+    for (int i = 0; i < 5; ++i) {
+        Figure_Graphic(&ui_hit_direction.clientData[i],&"Init"[i],UI_NONE,UI_ARC,UI_FIVE_LAYER,UI_FUCHSIA,
+                       0,0,15,959,539,0,350,350);
+    }
+
+    // 清除受击方向指引
+    for (int i = 0; i < 4; ++i) {
+        if(hit_flag[i] == 1){
+            Figure_Graphic(&ui_hit_direction.clientData[0],&"Armor"[i],UI_DELETE,UI_ARC,UI_FIVE_LAYER,UI_FUCHSIA,
+                           0,0,15,959,539,0,350,350);
+            Figure_Graphic(&ui_hit_direction.clientData[1],&"left"[i],UI_DELETE,UI_ARC,UI_FIVE_LAYER,UI_FUCHSIA,
+                           0,0,15,959,539,0,350,350);
+            Figure_Graphic(&ui_hit_direction.clientData[2],&"right"[i],UI_DELETE,UI_ARC,UI_FIVE_LAYER,UI_FUCHSIA,
+                           0,0,15,959,539,0,350,350);
+            hit_flag[i] = 0;
+        }
+    }
+
+    //把除去帧头的其他部分放进缓存区
+    memcpy(ClientTxBuffer + Referee_LEN_FRAME_HEAD, (uint8_t*)&ui_hit_direction.CmdID, sizeof (ui_hit_direction));
+    //帧尾使用CRC16处理
+    append_CRC16_check_sum(ClientTxBuffer, sizeof (ui_hit_direction));
+    //串口6发送
+    usart6_tx_dma_enable(ClientTxBuffer, sizeof (ui_hit_direction));
+    osDelay(100);
+}
+
+float angle;
+// 直线坐标解算
+void line_point_solve(){
+    // 共需要解算3个点位
+    // 建立圆心方程进行解算 | 两个圆 半径分别为 350 和 360(暂定)
+    // x^2 + y^2 = r^2; => x = sqrt( (1-sina^2) * r^2 ) | y = r*sina;
+    // 假设0装甲板受击打 | 进行坐标系映射,因为要将受击角度映射到圆的坐标系上,需要旋转90度
+    float R1,R2;
+    R1 = 350.0f; R2 = 370.0f;
+    angle = (float)(90 - hit_angle[Referee_ID]);
+    // 进行角度处理 | [0~360] => [-180~180]
+    if(angle < -180) angle += 360;
+
+    // 计算需要的角度偏差 | 三角函数
+    // a/sina = b/sinb = c/sinc 两个圆半径已知,45度角已知,需要求解与hit_angle的夹角
+    // Line_angle为两条直线夹角的一半,也就是说45度表示两条直线垂直
+    // Cir_angle表示三角函数求解出来的对应第二个圆半径的角度,Line_angle对应第一个圆的半径
+    // d_angle为 圆心与C点直线 && 圆心与A|B点直线 的夹角
+    float Line_angle = 20;
+    Line_angle *= (3.14f/180.0f);
+    float temp = R2*sinf(Line_angle) / R1;  // 中间量
+    Line_angle *= 57.4138f;
+    float Cir_angle = (180.0f - asinf(temp)*57.4138f);
+    float d_angle =  180.0f - Cir_angle - Line_angle;
+
+    // 设第一个圆上两点为A,B | 第二个圆上点为C
+    float A_angle,B_angle,C_angle;
+    A_angle = angle + d_angle;
+    B_angle = angle - d_angle;
+    // 角度闭环
+    if(A_angle > 180) A_angle -= 360;
+    if(B_angle < -180) B_angle += 360;
+    C_angle = angle;
+    // 弧度制转换
+    A_angle *= (3.14f/180.0f); B_angle *= (3.14f/180.0f); C_angle *= (3.14f/180.0f);
+    // A点坐标
+    Points[0][0] = (int32_t)sqrtf( ((1.0f - sinf(A_angle)*sinf(A_angle)) * R1*R1) );
+    Points[0][1] = (int32_t)(R1 * sinf(A_angle));
+    // B点坐标
+    Points[1][0] = (int32_t)sqrtf( ((1.0f - sinf(B_angle)*sinf(B_angle)) * R1*R1) );
+    Points[1][1] = (int32_t)(R1 * sinf(B_angle));
+    // C点坐标
+    Points[2][0] = (int32_t)sqrtf( ((1.0f - sinf(C_angle)*sinf(C_angle)) * R2*R2) );
+    Points[2][1] = (int32_t)(R2 * sinf(C_angle));
+
+    // 圆心方程求解的x坐标需要单独判断正负
+    A_angle *= 57.4138f;
+    B_angle *= 57.4138f;
+    C_angle *= 57.4138f;
+    if(A_angle > 90 || A_angle < -90) Points[0][0] *= -1;
+    if(B_angle > 90 || B_angle < -90) Points[1][0] *= -1;
+    if(C_angle > 90 || C_angle < -90) Points[2][0] *= -1;
+
+}
+
+void dynamic_hit_direction_draw(){
+    ext_graphic_five_data_t ui_hit_direction;
+    //裁判通信帧头
+    ui_hit_direction.txFrameHeader.SOF = REFREE_HEADER_SOF;
+    ui_hit_direction.txFrameHeader.data_length = sizeof (ext_student_interactive_header_data_t) +
+                                                 sizeof (ui_graphic_data_struct_t) * 5;
+    ui_hit_direction.txFrameHeader.seq = 0;//包序号设置为0
+    memcpy(ClientTxBuffer, &ui_hit_direction.txFrameHeader, sizeof (frame_header_struct_t));//把帧头放进去
+    //CRC8校验帧头
+    append_CRC8_check_sum(ClientTxBuffer, sizeof (frame_header_struct_t));
+    ui_hit_direction.CmdID = Referee_ID_robot_interactive_header_data;
+    //数据帧头
+    ui_hit_direction.dataFrameHeader.send_ID = Referee.GameRobotStat.robot_id;
+    ui_hit_direction.dataFrameHeader.receiver_ID = Referee.SelfClient;
+    ui_hit_direction.dataFrameHeader.data_cmd_id = UI_INTERACT_ID_draw_five_graphic;
+
+    // 数据初始化
+    for (int i = 0; i < 5; ++i) {
+        Figure_Graphic(&ui_hit_direction.clientData[i],&"Init"[i],UI_NONE,UI_ARC,UI_FIVE_LAYER,UI_FUCHSIA,
+                       0,0,15,959,539,0,350,350);
+    }
+
+    // 装甲板位姿计算 | 4个装甲板的位置(0-360°)以朝上为0°
+    float relative_angle = gimbal.yaw.relative_angle_get;
+    hit_angle[0] = (int32_t)relative_angle;
+    hit_angle[1] = (int32_t)(relative_angle - 90.0f);
+    hit_angle[2] = (int32_t)(relative_angle + 180.0f);
+    hit_angle[3] = (int32_t)(relative_angle + 90.0f);
+    // 角度处理 [-180~180] -> [0~360]
+    for (int i = 0; i < 4; ++i) {
+        if(hit_angle[i] < 0) hit_angle[i] += 360;
+    }
+
+    // 直线坐标点解算
+    line_point_solve();
+
+    // 击打判断 | 受击判断+装甲模块扣血
+    // 目前裁判系统离线,导致受击检测一直触发,判断有点问题
+//    if(Referee.RobotHurt.being_hurt == true && Referee.RobotHurt.hurt_type == 0){
+    int32_t start_angle,end_angle;
+    if(Referee_Hit_Flag == 1){
+        // 修改击打标志
+        hit_flag[Referee_ID] = 1;
+
+        // 判断受击装甲板
+        start_angle = hit_angle[Referee_ID] - 20;
+        end_angle = hit_angle[Referee_ID] + 20;
+        // 角度处理
+        if(start_angle < 0) start_angle += 360;
+        if(end_angle > 360) end_angle -= 360;
+
+        //数据内容填充
+        // 圆弧角度0-360° 圆心坐标(959,539) 半径350
+        Figure_Graphic(&ui_hit_direction.clientData[0], "Center", UI_NONE, UI_CIRCLE, UI_FIVE_LAYER, UI_FUCHSIA,
+                       0, 0, 3, 959, 539, 5, 0, 0);
+        Figure_Graphic(&ui_hit_direction.clientData[1], "Hit", UI_NONE, UI_CIRCLE, UI_FIVE_LAYER, UI_FUCHSIA,
+                       0, 0, 15, 959,539, 350, 0, 0);
+        Figure_Graphic(&ui_hit_direction.clientData[2],&"Armor"[Referee_ID],UI_ADD,UI_ARC,UI_FIVE_LAYER,UI_FUCHSIA,
+                       start_angle,end_angle,10,959,539,0,350,350);
+        Figure_Graphic(&ui_hit_direction.clientData[3], &"left"[Referee_ID], UI_ADD, UI_LINE, UI_FIVE_LAYER, UI_FUCHSIA,
+                       0, 0, 10, 959+Points[0][0],539+Points[0][1], 0, 959+Points[2][0],539+Points[2][1]);
+        Figure_Graphic(&ui_hit_direction.clientData[4], &"right"[Referee_ID], UI_ADD, UI_LINE, UI_FIVE_LAYER, UI_FUCHSIA,
+                       0, 0, 10, 959+Points[1][0],539+Points[1][1], 0, 959+Points[2][0],539+Points[2][1]);
+        Referee_Hit_Flag = 0;
+    }
+
+    //把除去帧头的其他部分放进缓存区
+    memcpy(ClientTxBuffer + Referee_LEN_FRAME_HEAD, (uint8_t*)&ui_hit_direction.CmdID, sizeof (ui_hit_direction));
+    //帧尾使用CRC16处理
+    append_CRC16_check_sum(ClientTxBuffer, sizeof (ui_hit_direction));
+    //串口6发送
+    usart6_tx_dma_enable(ClientTxBuffer, sizeof (ui_hit_direction));
+    osDelay(100);
 }
 
 void UI_Paint_task(void const*argument){

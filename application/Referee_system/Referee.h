@@ -1122,7 +1122,8 @@ extern void referee_task(void const*argument);
 extern void UI_paint_task(void const*argument);
 extern uint8_t usart6_buf[REFEREE_BUFFER_SIZE];
 extern uint8_t usart1_buf[REFEREE_BUFFER_SIZE];
-
+extern uint8_t Referee_ID;
+extern uint8_t Referee_Hit_Flag;
 
 
 #endif //DEMO1_REFEREE_H
