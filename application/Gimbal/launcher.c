@@ -66,34 +66,42 @@ static uint8_t rc_last_sw_L;
 static int32_t total_ecd_ref;      //电机总编码值
 
 static int32_t ref;
+static int32_t t0, t1;  //HAL_GetTick()
 uint8_t thread_lock = 0;    // 线程锁
 static uint8_t lens_flag = 0;
 void images_mode_set(){
     // 图传2006
     if(gimbal.mode != GIMBAL_RELAX) {
-        if (rc_ctrl.rc.ch[AUTO_CHANNEL] > 50 || KeyBoard.Z.click_flag == 1) {
-            launcher.images.speed = pid_calc(&launcher.images.angle_p,
-                                             launcher.images.motor_measure->total_ecd,
-                                             DEGREE_TO_ENCODER);
-            launcher.images.give_current =
-                    (int16_t) pid_calc(&launcher.images.speed_p,
-                                       launcher.images.motor_measure->speed_rpm,
-                                       launcher.images.speed);
-            servo_pwm_set(2400, 2);
+        if (rc_ctrl.rc.ch[AUTO_CHANNEL] < -300 || KeyBoard.Z.click_flag == 1) {
+            servo_pwm_set(2400, 1);
+            t1 = HAL_GetTick();
+            if(t1 - t0 > 500) {
+                launcher.images.speed = pid_calc(&launcher.images.angle_p,
+                                                 launcher.images.motor_measure->total_ecd,
+                                                 DEGREE_TO_ENCODER);
+                launcher.images.give_current =
+                        (int16_t) pid_calc(&launcher.images.speed_p,
+                                           launcher.images.motor_measure->speed_rpm,
+                                           launcher.images.speed);
+            }
         } else {
-            launcher.images.speed = pid_calc(&launcher.images.angle_p,
-                                             launcher.images.motor_measure->total_ecd,
-                                             ref);
-            launcher.images.give_current =
-                    (int16_t) pid_calc(&launcher.images.speed_p,
-                                       launcher.images.motor_measure->speed_rpm,
-                                       launcher.images.speed);
-            servo_pwm_set(1000, 2);
+            servo_pwm_set(1000, 1);
+            t0 = HAL_GetTick();
+            if(t0 - t1 > 500){
+                launcher.images.speed = pid_calc(&launcher.images.angle_p,
+                                                 launcher.images.motor_measure->total_ecd,
+                                                 ref);
+                launcher.images.give_current =
+                        (int16_t) pid_calc(&launcher.images.speed_p,
+                                           launcher.images.motor_measure->speed_rpm,
+                                           launcher.images.speed);
+            }
         }
     }
     else {
         launcher.images.give_current = 0;
         ref = launcher.images.motor_measure->total_ecd;
+        t0 = t1 = HAL_GetTick();
     }
 }
 

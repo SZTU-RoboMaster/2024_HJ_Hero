@@ -59,7 +59,7 @@
 /******************PID******************/
 // pitch轴 PID
 #define GIMBAL_PITCH_ANGLE_PID_KP  50//30.0f
-#define GIMBAL_PITCH_ANGLE_PID_KI  0.f
+#define GIMBAL_PITCH_ANGLE_PID_KI  0.2f
 #define GIMBAL_PITCH_ANGLE_PID_KD  500.f//600.0f
 #define GIMBAL_PITCH_ANGLE_MAX_IOUT 15000.f
 #define GIMBAL_PITCH_ANGLE_MAX_OUT  15000.f

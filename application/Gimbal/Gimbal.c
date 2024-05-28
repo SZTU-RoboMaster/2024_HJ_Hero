@@ -111,7 +111,7 @@ void Gimbal_task(void const*pvParameters) {
 //        Send_command(robot_ctrl.fire_command);
 
         //检测电机、电源是否断线  TODO:取消注释会失能，要装裁判系统
-//        gimbal_device_offline_handle();//TODO:检测离线,装完裁判系统后可以打开
+        gimbal_device_offline_handle();//TODO:检测离线,装完裁判系统后可以打开
 
         gimbal_can_send_back_mapping(); // 接受can信号，传到UI
         vTaskDelay(1);
@@ -305,7 +305,7 @@ static void chassis_mode_set(){
         chassis.last_mode=chassis.mode;
         chassis.mode=CHASSIS_RELAX;
     }
-//    else if(rc_ctrl.rc.ch[AUTO_CHANNEL]> 50) {
+//    else if(rc_ctrl.rc.ch[AUTO_CHANNEL]< 300) {
 //        chassis.last_mode=chassis.mode;
 //        chassis.mode=CHASSIS_SPIN_1;
 //    }
@@ -315,9 +315,13 @@ static void chassis_mode_set(){
         chassis.mode=CHASSIS_ONLY;
     }
         //右上：小陀螺CHASSIS_SPIN
-    else if(switch_is_up(rc_ctrl.rc.s[RC_s_R])) {
+    else if(switch_is_up(rc_ctrl.rc.s[RC_s_R]) && switch_is_mid(rc_ctrl.rc.s[RC_s_L])) {
         chassis.last_mode=chassis.mode;
         chassis.mode=CHASSIS_SPIN;
+    }
+    else if(switch_is_up(rc_ctrl.rc.s[RC_s_R]) && switch_is_down(rc_ctrl.rc.s[RC_s_L])) {
+        chassis.last_mode=chassis.mode;
+        chassis.mode=CHASSIS_SPIN_1;
     }
         //右中：底盘跟随云台CHASSIS_FOLLOW_GIMBAL
     else if(switch_is_mid(rc_ctrl.rc.s[RC_s_R])) {

@@ -54,3 +54,6 @@ G: 底盘独立
 串口1: 上板图传/下板电容
 
 串口3: 遥控器
+
+#define CHASSIS_FOLLOW_GIMBAL_PID_MAX_OUT 5.f
+这个值不能过大，会失控

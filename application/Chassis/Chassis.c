@@ -78,56 +78,60 @@ void Chassis_task(void const *pvParameters) {
         Send_id(Referee.GameRobotStat.robot_id);
 
         // 底盘不是失能状态时进行麦轮运动
-        if(chassis.mode != CHASSIS_RELAX) {
-            chassis_meknum_wheel_cal();     //麦轮解算
-            if(capReceiveData.voltage_out < 3) {
-                 chassis_power_limit();          //功率限制
-            }
-            chassis_wheel_loop_cal();       //驱电机闭环
+        if (Referee.GameRobotStat.power_management_chassis_output == 0){
+            chassis.mode = CHASSIS_RELAX;
+        } else {
+            if (chassis.mode != CHASSIS_RELAX) {
+                chassis_meknum_wheel_cal();     //麦轮解算
+                if (capReceiveData.voltage_out < 15) {
+                    chassis_power_limit();          //功率限制
+                }
+                chassis_wheel_loop_cal();       //驱电机闭环
 
 #define CAN_CMD_CHASSIS
 #ifdef CAN_CMD_CHASSIS
-            CAN_cmd_motor(CAN_1,
-                          CAN_MOTOR_0x200_ID,
-                          chassis.motor_chassis[RF].give_current,   //201
-                          chassis.motor_chassis[LF].give_current,   //202
-                          chassis.motor_chassis[LB].give_current,   //203
-                          chassis.motor_chassis[RB].give_current    //204
-                          );
+                CAN_cmd_motor(CAN_1,
+                              CAN_MOTOR_0x200_ID,
+                              chassis.motor_chassis[RF].give_current,   //201
+                              chassis.motor_chassis[LF].give_current,   //202
+                              chassis.motor_chassis[LB].give_current,   //203
+                              chassis.motor_chassis[RB].give_current    //204
+                );
 #else //CAN_CMD_CHASSIS_0
-            CAN_cmd_motor(CAN_1,
-                          CAN_MOTOR_0x200_ID,
-                          0,//chassis.motor_chassis[RF].give_current,   //201
-                          0,//chassis.motor_chassis[LF].give_current,   //202
-                          0,//chassis.motor_chassis[LB].give_current,   //203
-                          0
-                          );//chassis.motor_chassis[RB].give_current
+                CAN_cmd_motor(CAN_1,
+                              CAN_MOTOR_0x200_ID,
+                              0,//chassis.motor_chassis[RF].give_current,   //201
+                              0,//chassis.motor_chassis[LF].give_current,   //202
+                              0,//chassis.motor_chassis[LB].give_current,   //203
+                              0
+                              );//chassis.motor_chassis[RB].give_current
 #endif
-            //计算底盘在方向上的线速度
-            chassis_vx = ((float)(chassis.motor_chassis[1].motor_measure->speed_rpm
-                                  + chassis.motor_chassis[2].motor_measure->speed_rpm
-                                  - chassis.motor_chassis[0].motor_measure->speed_rpm
-                                  - chassis.motor_chassis[3].motor_measure->speed_rpm
-            )*(M3508_MOTOR_RPM_TO_VECTOR)) / 4;
-            chassis_vy = ((float)(chassis.motor_chassis[2].motor_measure->speed_rpm
-                                  - chassis.motor_chassis[1].motor_measure->speed_rpm
-                                  - chassis.motor_chassis[0].motor_measure->speed_rpm
-                                  + chassis.motor_chassis[3].motor_measure->speed_rpm
-            )*(M3508_MOTOR_RPM_TO_VECTOR)) / 4;
-            chassis_vw = ((float)(-chassis.motor_chassis[2].motor_measure->speed_rpm
-                                  - chassis.motor_chassis[1].motor_measure->speed_rpm
-                                  - chassis.motor_chassis[0].motor_measure->speed_rpm
-                                  - chassis.motor_chassis[3].motor_measure->speed_rpm
-            )*(M3508_MOTOR_RPM_TO_VECTOR)) / 4;
+                //计算底盘在方向上的线速度
+                chassis_vx = ((float) (chassis.motor_chassis[1].motor_measure->speed_rpm
+                                       + chassis.motor_chassis[2].motor_measure->speed_rpm
+                                       - chassis.motor_chassis[0].motor_measure->speed_rpm
+                                       - chassis.motor_chassis[3].motor_measure->speed_rpm
+                ) * (M3508_MOTOR_RPM_TO_VECTOR)) / 4;
+                chassis_vy = ((float) (chassis.motor_chassis[2].motor_measure->speed_rpm
+                                       - chassis.motor_chassis[1].motor_measure->speed_rpm
+                                       - chassis.motor_chassis[0].motor_measure->speed_rpm
+                                       + chassis.motor_chassis[3].motor_measure->speed_rpm
+                ) * (M3508_MOTOR_RPM_TO_VECTOR)) / 4;
+                chassis_vw = ((float) (-chassis.motor_chassis[2].motor_measure->speed_rpm
+                                       - chassis.motor_chassis[1].motor_measure->speed_rpm
+                                       - chassis.motor_chassis[0].motor_measure->speed_rpm
+                                       - chassis.motor_chassis[3].motor_measure->speed_rpm
+                ) * (M3508_MOTOR_RPM_TO_VECTOR)) / 4;
 
-            time=HAL_GetTick();             //获取当前系统时间
-            test_om=time-time_last_time;    //计算时间间隔
+                time = HAL_GetTick();             //获取当前系统时间
+                test_om = time - time_last_time;    //计算时间间隔
 
-            //计算在各个方向上的位移
-            test_x=test_x + ((double)test_om * chassis_vx*0.001);
-            test_y=test_y + ((double)test_om * chassis_vy*0.001);
-            test_w=test_w + ((double)test_om * chassis_vw*0.001);
-            time_last_time = time;
+                //计算在各个方向上的位移
+                test_x = test_x + ((double) test_om * chassis_vx * 0.001);
+                test_y = test_y + ((double) test_om * chassis_vy * 0.001);
+                test_w = test_w + ((double) test_om * chassis_vw * 0.001);
+                time_last_time = time;
+            }
         }
         vTaskDelay(CHASSIS_PERIOD);
     }
@@ -191,9 +195,9 @@ static void chassis_init(chassis_t *chassis) {
   */
 static float chassis_speed_change() {
     float speed_change = 0;
-    if(abs(chassis.vx) > 3 || abs(chassis.vy) > 3) {
+    if(abs(chassis.vx) > 2.6 || abs(chassis.vy) > 2.6) {
         speed_change=(float)0;
-    } else speed_change=(float)0.05;
+    } else speed_change=(float)0.02;
 
 //    switch (Referee.GameRobotStat.chassis_power_limit) {//最大限制功率
 //        case 55: {

@@ -31,6 +31,7 @@ void chassis_relax_handle() {
   * 控制底盘的角速度，使其与云台的偏航角保持稳定，使用PID控制器计算底盘的角速度
   * @retval         none
   */
+  static float test;
 void chassis_follow_gimbal_handle(){
     //获取云台偏航角的相对角度，并转换为弧度
     fp32 yaw_relative_radian = gimbal.yaw.relative_angle_get * ANGLE_TO_RAD;
@@ -50,7 +51,6 @@ void chassis_follow_gimbal_handle(){
 
     //控制底盘的角速度，使其与云台的偏航角保持稳定，使用PID控制器计算底盘的角速度
     chassis.vw = pid_calc(&chassis.chassis_vw_pid, gimbal.yaw.relative_angle_get, 0);
-
     if(abs(chassis.vw)<0.1){
         chassis.vw=0;
     }
@@ -145,7 +145,7 @@ void chassis_spin_handle(){
     chassis.vx = (cos_yaw * vx_temp + sin_yaw * vy_temp);
     chassis.vy = -(sin_yaw * vx_temp - cos_yaw * vy_temp);
     // 给定vw转速
-    chassis.vw = 220;//
+    chassis.vw = 120;//
 }
 
 void chassis_spin_handle_1(){
@@ -163,12 +163,15 @@ void chassis_spin_handle_1(){
     chassis.vx = (cos_yaw * vx_temp + sin_yaw * vy_temp);
     chassis.vy = -(sin_yaw * vx_temp - cos_yaw * vy_temp);
     // 给定vw转速
-    chassis.vw = -220;//
+    chassis.vw = -120;//
 }
 
 void chassis_power_stop(){
-    if (Referee.GameRobotStat.power_management_chassis_output == 0) {
-        chassis.mode = CHASSIS_RELAX;
+    test = Referee.GameRobotStat.power_management_chassis_output;
+    if(detect_list[DETECT_REFEREE].status==ONLINE) {
+        if (Referee.GameRobotStat.power_management_chassis_output == 0) {
+            chassis.mode = CHASSIS_RELAX;
+        }
     }
 }
 

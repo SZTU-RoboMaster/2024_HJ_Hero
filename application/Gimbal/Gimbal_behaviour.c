@@ -258,10 +258,10 @@ void gimbal_device_offline_handle() {
     if(detect_list[DETECT_REMOTE].status == OFFLINE  && detect_list[DETECT_VIDEO_TRANSIMITTER].status == OFFLINE){
         gimbal.pitch.give_current = 0;
         gimbal.yaw.give_current = 0;
-        launcher.trigger.give_current = 0;
     }
     if (detect_list[DETECT_GIMBAL_6020_PITCH].status == OFFLINE) {
         gimbal.pitch.give_current = 0;
+        gimbal.pitch.relative_up_down_set = gimbal.pitch.relative_up_down_get;
     }
     if (detect_list[DETECT_GIMBAL_6020_YAW].status == OFFLINE) {
         gimbal.yaw.give_current = 0;
