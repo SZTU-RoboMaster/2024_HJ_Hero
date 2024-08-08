@@ -374,12 +374,12 @@ void CAN1_RX1_IRQHandler(){
                 ch0.data[1] = rx_data[3];
                 ch2.data[0] = rx_data[4];
                 ch2.data[1] = rx_data[5];
+                rc_ctrl.rc.s[1] = rx_data[6];
+                fire_lock = rx_data[7];
             }
             rc_ctrl.rc.ch[1] = ch1.value;
             rc_ctrl.rc.ch[0] = ch0.value;
             rc_ctrl.rc.ch[2] = ch2.value;
-            rc_ctrl.rc.s[1] = rx_data[6];
-            KeyBoard.Mouse_l.status = rx_data[7];
         } break;
 
         case 0x111:{    //TODO: 没用完
@@ -389,8 +389,6 @@ void CAN1_RX1_IRQHandler(){
                 angle1.data[1] = rx_data[1];
                 angle1.data[2] = rx_data[2];
                 angle1.data[3] = rx_data[3];
-                fire_lock = rx_data[4];
-                KeyBoard.V.click_flag = rx_data[5];
             }
             gimbal.yaw.relative_angle_get = angle1.value;
         } break;
@@ -417,19 +415,14 @@ void CAN1_RX1_IRQHandler(){
         } break;
 
         case 0x113:{    //TODO:没用完
-            union mode trigger_motion;
             {
                 KeyBoard.W.status = rx_data[0];
                 KeyBoard.A.status = rx_data[1];
                 KeyBoard.S.status = rx_data[2];
                 KeyBoard.D.status = rx_data[3];
-                trigger_motion.data[0] = rx_data[4];
-                trigger_motion.data[1] = rx_data[5];
-//                command.data[0] = rx_data[6];
-//                command.data[1] = rx_data[7];
+                KeyBoard.V.click_flag = rx_data[4];
+                KeyBoard.Mouse_l.status = rx_data[5];
             }
-            trigger.state = trigger_motion.mode;
-//            robot_ctrl.fire_command = command.value;
         } break;
 
         case 0x114:{    //TODO: 没用完

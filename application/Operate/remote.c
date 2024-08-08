@@ -199,6 +199,7 @@ static void sbus_to_rc(volatile const uint8_t *sbus_buf, RC_ctrl_t *rc_ctrl)
 {
     static char rc_temp_L_s[2] = {'0','0'};  //遥控器拨杆数值缓冲区，用于防止C板接收发癫,'0'为空
     static char rc_temp_R_s[2] = {'0','0'};
+    detect_handle(DETECT_REMOTE);
 
     if (sbus_buf == NULL || rc_ctrl == NULL)
     {
@@ -257,7 +258,6 @@ static void sbus_to_rc(volatile const uint8_t *sbus_buf, RC_ctrl_t *rc_ctrl)
         else
             rc_ctrl->rc.last_ch[i] = rc_ctrl->rc.ch[i];
     }
-    detect_handle(DETECT_REMOTE);
 //    SEGGER_RTT_printf(0,"%d ,",rc_ctrl->rc.s[0]);
 }
 

@@ -32,13 +32,13 @@
 #define CONTINUES_SHOOT_TIMING_COMPLETE() HAL_GetTick()-continue_shoot_time>1500
 #define CONTINUES_BLOCKED_JUDGE() (HAL_GetTick()-blocked_start_time>900)
 #define TRIGGER_REVERSE_TIME_JUDGE() (HAL_GetTick()-reverse_start_time<900)
-#define FIRE_SPEED_L 5600  //TODO: 摩擦轮转速
-#define FIRE_SPEED_R 5600  //TODO: 摩擦轮转速
-#define FIRE_SPEED_ON 5600  //TODO: 摩擦轮转速
+#define FIRE_SPEED_L 4900  //TODO: 摩擦轮转速
+#define FIRE_SPEED_R 4900  //TODO: 摩擦轮转速
+#define FIRE_SPEED_ON 4900  //TODO: 摩擦轮转速
 
 //// 2006编码器转一圈编码值加8192  减速比1:36  编码器转36圈输出轴才转一圈  36×8192
 #define DEGREE_TO_ENCODER 15000.0000f    //2006单发 120：98304    95:77824    90:73728  100:81920
-
+#define DEGREE_TO_ENCODER_TO 4000.0000f
 //#define FIRE_ON() KeyBoard.Q.click_flag==1
 //#define FIRE_OFF() KeyBoard.Q.click_flag==0
 
@@ -67,7 +67,7 @@
 //图传PID
 #define IMAGE_ANGLE_PID_KP 0.7f
 #define IMAGE_ANGLE_PID_KI 0.01f
-#define IMAGE_ANGLE_PID_KD 1.6f
+#define IMAGE_ANGLE_PID_KD 1.3f
 #define IMAGE_ANGLE_PID_MAX_OUT 10000
 #define IMAGE_ANGLE_PID_MAX_IOUT 10000
 

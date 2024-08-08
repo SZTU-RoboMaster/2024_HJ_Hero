@@ -35,7 +35,7 @@ typedef enum {
     DETECT_LAUNCHER_3508_FIRE_ON,  //上摩擦轮
     DETECT_LAUNCHER_3508_TRIGGER,     //拨盘电机
     DETECT_IMAGE_2006_TRANSMISSION,        //图传机
-    DETECT_REMOTE,      //移动
+    DETECT_REMOTE,      //遥控器
     DETECT_AUTO_AIM,    //自动瞄准
     DETECT_REFEREE,     //裁判
     DETECT_CAP,

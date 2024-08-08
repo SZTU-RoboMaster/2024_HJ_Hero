@@ -75,25 +75,33 @@ void Gimbal_task(void const*pvParameters) {
     while(1) {
         //更新PC的控制信息
         update_pc_info();
-        Send_Keyboard(KeyBoard.W.status, KeyBoard.A.status, KeyBoard.S.status, KeyBoard.D.status, trigger.state);
 
+        if(detect_list[DETECT_REMOTE].status == OFFLINE && detect_list[DETECT_VIDEO_TRANSIMITTER].status == OFFLINE) {
+            gimbal.pitch.relative_up_down_set = gimbal.pitch.relative_up_down_get;
+        }
+
+        // 自瞄火控
         if(robot_ctrl.fire_command == 1) {
             fire_lock = 1;
         }
         if(fire_lock > 0){
             // 进入开火模式,发送10次can信号
             fire_lock ++;
-            if(fire_lock > 5) fire_lock = 0;
+            if(fire_lock > 10) fire_lock = 0;
         }
-        Send_Chassis_Speed(rc_ctrl.rc.ch[1], rc_ctrl.rc.ch[0], rc_ctrl.rc.ch[2], rc_ctrl.rc.s[1], KeyBoard.Mouse_l.status);
+
+        Send_Keyboard(KeyBoard.W.status, KeyBoard.A.status, KeyBoard.S.status, KeyBoard.D.status, KeyBoard.V.click_flag, KeyBoard.Mouse_l.status);
+        Send_Chassis_Speed(rc_ctrl.rc.ch[1], rc_ctrl.rc.ch[0], rc_ctrl.rc.ch[2], rc_ctrl.rc.s[1], fire_lock);
         vTaskDelay(1);
 
         gimbal_angle_update();  //更新绝对、相对角度接收值
+
+
         if(detect_list[DETECT_GIMBAL_6020_YAW].status == OFFLINE) {
             gimbal.yaw.relative_angle_get = 0;
-            Send_Yaw_Angle(gimbal.yaw.relative_angle_get, fire_lock, KeyBoard.V.click_flag);
+            Send_Yaw_Angle(gimbal.yaw.relative_angle_get);
         } else {
-            Send_Yaw_Angle(gimbal.yaw.relative_angle_get, fire_lock, KeyBoard.V.click_flag);
+            Send_Yaw_Angle(gimbal.yaw.relative_angle_get);
         }
 
         ////注意：校准时采用，校准完毕一定注释掉
@@ -107,13 +115,17 @@ void Gimbal_task(void const*pvParameters) {
         gimbal_control();  //云台模式设置实现
         launcher_control();//发射机构控制
 
-        Send_Mode(chassis.mode, gimbal.mode, launcher.fire_mode, launcher.single_shoot_cmd);
-//        Send_command(robot_ctrl.fire_command);
+        if(detect_list[DETECT_REMOTE].status == OFFLINE && detect_list[DETECT_VIDEO_TRANSIMITTER].status == OFFLINE) {
+            chassis.mode = CHASSIS_RELAX;
+            gimbal.mode = GIMBAL_RELAX;
+            launcher.fire_mode = Fire_OFF;
+            Send_Mode(chassis.mode, gimbal.mode, launcher.fire_mode, launcher.single_shoot_cmd);
+        } else {
+            Send_Mode(chassis.mode, gimbal.mode, launcher.fire_mode, launcher.single_shoot_cmd);
+        }
 
         //检测电机、电源是否断线  TODO:取消注释会失能，要装裁判系统
         gimbal_device_offline_handle();//TODO:检测离线,装完裁判系统后可以打开
-
-        gimbal_can_send_back_mapping(); // 接受can信号，传到UI
         vTaskDelay(1);
 
         //接收CAN信号
@@ -130,19 +142,16 @@ void Gimbal_task(void const*pvParameters) {
                       0,                                //201
                       0,                                //202
                       0,                                //203
-                      0//launcher.fire_on.give_current     //204
+                      launcher.fire_on.give_current     //204
         );
-
+//        vTaskDelay(1);
         CAN_cmd_motor(CAN_2,
                       CAN_MOTOR_0x1FF_ID,
                       gimbal.yaw.give_current,           //205
                       gimbal.pitch.give_current,         //206
-                      0,//launcher.fire_r.give_current,      //207
-                      0//launcher.fire_l.give_current       //208
+                      launcher.fire_r.give_current,      //207
+                      launcher.fire_l.give_current       //208
         );
-
-        gimbal_uiInfo_packet();     //更新UI云台状态
-
         vTaskDelay(2);
     }
 }
@@ -208,7 +217,7 @@ static void gimbal_init(){
     gimbal.pitch.give_current=0;
 
     //pitch轴和yaw轴电机的校准编码值
-    gimbal.pitch.motor_measure->offset_ecd=3220;//2370;
+    //gimbal.pitch.motor_measure->offset_ecd=3220;//2370;
     gimbal.yaw.motor_measure->offset_ecd = 6470;//6470;//7400
 
     //低通滤波初始化
@@ -338,15 +347,15 @@ static void chassis_mode_set(){
 //            chassis.mode=CHASSIS_ONLY;
 //        }
         ///底盘刹车，英雄在打基地时实现，使用键盘实现，目前未实现
-        else if(KeyBoard.C.click_flag==KEY_DOWN) {
-            chassis.last_mode=chassis.mode;
-            chassis.mode=CHASSIS_BLOCK;
-        }
-        //反着站打
-        if(KeyBoard.F.click_flag==KEY_DOWN) {
-            chassis.last_mode=chassis.mode;
-            chassis.mode=CHASSIS_INDEPENDENT_CONTROL;
-        }
+//        else if(KeyBoard.C.click_flag==KEY_DOWN) {
+//            chassis.last_mode=chassis.mode;
+//            chassis.mode=CHASSIS_BLOCK;
+//        }
+//        //反着站打
+//        if(KeyBoard.F.click_flag==KEY_DOWN) {
+//            chassis.last_mode=chassis.mode;
+//            chassis.mode=CHASSIS_INDEPENDENT_CONTROL;
+//        }
     }
     //UI更新---底盘模式
     ui_robot_status.chassis_mode=chassis.mode;
@@ -438,7 +447,7 @@ static void gimbal_control(){
 
         case GIMBAL_AUTO://云台自瞄模式
             gimbal_auto_handle();
-            gimbal_auto_ctrl_loop_cal();  //云台电机闭环控制函数
+             gimbal_auto_ctrl_loop_cal();  //云台电机闭环控制函数
             break;
         default:
             break;

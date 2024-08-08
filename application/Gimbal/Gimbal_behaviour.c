@@ -33,6 +33,7 @@ void gimbal_relax_handle(){
     launcher.fire_r.give_current = 0;
     launcher.fire_l.give_current = 0;
     launcher.fire_on.give_current = 0;
+    gimbal.pitch.relative_up_down_set = gimbal.pitch.relative_up_down_get;
 }
 
 //一键掉头
@@ -158,6 +159,7 @@ void gimbal_auto_handle() {
     gimbal.pitch.absolute_angle_set = fp32_constrain(gimbal.pitch.absolute_angle_set,
                                                      MIN_ABS_ANGLE,
                                                      MAX_ABS_ANGLE);
+    gimbal.pitch.relative_up_down_set = gimbal.pitch.relative_up_down_get;
 //    gimbal.pitch.absolute_angle_set = fp32_constrain(gimbal.pitch.absolute_angle_set,
 //                                                     MIN_ABS_ANGLE +
 //                                                     gimbal.pitch.absolute_angle_get - gimbal.pitch.relative_angle_get,
@@ -224,23 +226,18 @@ void gimbal_auto_ctrl_loop_cal(){
 
     first_order_filter_cali(&filter_yaw_gyro_in, gyro_yaw);
 
-    gimbal.yaw.give_current = (int16_t)-pid_calc(&gimbal.yaw.speed_p,
+    gimbal.yaw.give_current = (int16_t)pid_calc(&gimbal.yaw.speed_p,
                                                  gyro_yaw,//gimbal.yaw.motor_measure->speed_rpm,
                                                  gimbal.yaw.gyro_set);
 
-//    gimbal.pitch.give_current= (int16_t)pid_calc(&gimbal.pitch.speed_p,
-//                                                 filter_pitch_gyro_in.out,
-////                                                 gimbal.pitch.motor_measure->speed_rpm,
-//                                                 gimbal.pitch.gyro_set);//加负号为了电机反转
     //计算pitch轴的控制输出
     gimbal.pitch.gyro_set= pid_calc(&gimbal.pitch.auto_angle_p,
                                     gimbal.pitch.absolute_angle_get,
                                     gimbal.pitch.absolute_angle_set);
 
-
     first_order_filter_cali(&filter_pitch_gyro_in,gyro_pitch);
 ///// 读取陀螺仪的角速度加在内环的期望上面
-    gimbal.pitch.give_current= (int16_t)pid_calc(&gimbal.pitch.auto_speed_p,
+    gimbal.pitch.give_current= (int16_t)-pid_calc(&gimbal.pitch.auto_speed_p,
                                                  filter_pitch_gyro_in.out,
                                                  gimbal.pitch.gyro_set);
 }

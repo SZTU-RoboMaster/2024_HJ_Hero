@@ -72,16 +72,16 @@
 
 // 自瞄pitch轴 PID
 #define GIMBAL_PITCH_AUTO_ANGLE_PID_KP     25.0f
-#define GIMBAL_PITCH_AUTO_ANGLE_PID_KI     0.08f
-#define GIMBAL_PITCH_AUTO_ANGLE_PID_KD     950.0f
-#define GIMBAL_PITCH_AUTO_ANGLE_MAX_IOUT   30.f
+#define GIMBAL_PITCH_AUTO_ANGLE_PID_KI     0.2f
+#define GIMBAL_PITCH_AUTO_ANGLE_PID_KD     500.0f
+#define GIMBAL_PITCH_AUTO_ANGLE_MAX_IOUT   5000.f
 #define GIMBAL_PITCH_AUTO_ANGLE_MAX_OUT    15000.f
 
 #define GIMBAL_PITCH_AUTO_SPEED_PID_KP     50.0f
-#define GIMBAL_PITCH_AUTO_SPEED_PID_KI     1.5f
+#define GIMBAL_PITCH_AUTO_SPEED_PID_KI     0.f
 #define GIMBAL_PITCH_AUTO_SPEED_PID_KD     10.0f
-#define GIMBAL_PITCH_AUTO_SPEED_MAX_IOUT   1000.f
-#define GIMBAL_PITCH_AUTO_SPEED_MAX_OUT    25000.f
+#define GIMBAL_PITCH_AUTO_SPEED_MAX_IOUT   0.f
+#define GIMBAL_PITCH_AUTO_SPEED_MAX_OUT    20000.f
 
 // yaw轴角度环PID
 #define GIMBAL_YAW_ANGLE_PID_KP     30.f//15.f//100.0f//20
@@ -98,28 +98,26 @@
 #define GIMBAL_YAW_SPEED_MAX_OUT    20000.f//15000.f
 
 // 自瞄yaw轴角度环PID
-#define GIMBAL_YAW_AUTO_ANGLE_PID_KP     7.f//7
+#define GIMBAL_YAW_AUTO_ANGLE_PID_KP     30.f//7
 #define GIMBAL_YAW_AUTO_ANGLE_PID_KI     0.f//0
-#define GIMBAL_YAW_AUTO_ANGLE_PID_KD     200.0f//20
-#define GIMBAL_YAW_AUTO_ANGLE_MAX_IOUT   1000.f//1000
-#define GIMBAL_YAW_AUTO_ANGLE_MAX_OUT    8.f//8
+#define GIMBAL_YAW_AUTO_ANGLE_PID_KD     750.0f//20
+#define GIMBAL_YAW_AUTO_ANGLE_MAX_IOUT   80.f//1000
+#define GIMBAL_YAW_AUTO_ANGLE_MAX_OUT    3000.f//8
 
 // 自瞄yaw轴速度环PID
-#define GIMBAL_YAW_AUTO_SPEED_PID_KP     8.f//8
+#define GIMBAL_YAW_AUTO_SPEED_PID_KP     100.f//8
 #define GIMBAL_YAW_AUTO_SPEED_PID_KI     0.f//0
 #define GIMBAL_YAW_AUTO_SPEED_PID_KD     5.f//5
-#define GIMBAL_YAW_AUTO_SPEED_MAX_IOUT   2000.f//2000
-#define GIMBAL_YAW_AUTO_SPEED_MAX_OUT    3.f//3
+#define GIMBAL_YAW_AUTO_SPEED_MAX_IOUT   3000.f//2000
+#define GIMBAL_YAW_AUTO_SPEED_MAX_OUT    20000.f//3
 
 
 /******************函数声明******************/
 /******************上下板传输******************/
-extern void Send_Chassis_Speed(int16_t ch1, int16_t ch0, int16_t ch2,uint8_t s_l,int32_t Mouse_l);
-extern void Send_Keyboard(int32_t W, int32_t A, int32_t S, int32_t D, int16_t trigger_mode);
-extern void Send_Yaw_Angle(fp32 relative_angle, uint8_t fire_lock, int32_t V);
+extern void Send_Keyboard(int32_t W, int32_t A, int32_t S, int32_t D, int32_t V, int32_t Mouse_l);
+extern void Send_Chassis_Speed(int16_t ch1, int16_t ch0, int16_t ch2, uint8_t s_l, uint8_t fire_lock);
+extern void Send_Yaw_Angle(fp32 relative_angle);
 extern void Send_Mode(int16_t mode1, int16_t mode2, int16_t mode3, int16_t mode4);
-extern void Send_command(int8_t command);
-//extern void Send_command(int8_t command, int32_t Mouse_r);
 /******************云台功能实现******************/
 extern void gimbal_relax_handle();
 extern void gimbal_active_handle();

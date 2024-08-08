@@ -36,21 +36,63 @@ void Trigger_init(){
     first_order_filter_init(&filter_trigger_rpm_in,1,1);
 }
 
-void Trigger_control() {
-
-    switch (trigger.state) {
-        case KEEP_ROTATING:
-            Keep_rotating();
-            break;
-        case ROTATION_ANGLE:
-            Rotation_angle();
-            break;
-        default:
-            break;
-    }
-}
 
 static uint8_t rc_last_sw_L;
+static int32_t total_ecd_ref_tri=0;
+static uint32_t trigger_time=0;
+static uint32_t unfinshed_time=0;
+static uint8_t trigger_block_flag=0;
+static int32_t key_last_mouse_l=0;
+void Trigger_control() {
+    if(gimbal.mode==GIMBAL_RELAX) {
+        Trigger_relax_handle();
+    }
+    else if(gimbal.mode != GIMBAL_RELAX) {
+        if (launcher.fire_mode == Fire_ON) {
+            if (launcher.single_shoot_cmd == SHOOT_ING &&
+                (  (!switch_is_down(rc_last_sw_L) && switch_is_down(rc_ctrl.rc.s[RC_s_L]))
+                   || (key_last_mouse_l != KEY_PRESS && KeyBoard.Mouse_l.status == KEY_PRESS)
+                   || (fire_lock > 0))) { //单发状态
+
+                trigger_time=HAL_GetTick(); //这时候开始计时，开始转的时候计时
+                total_ecd_ref_tri = launcher.trigger.motor_measure->total_ecd - DEGREE_60_TO_ENCODER;
+                trigger_block_flag = 0;
+            }
+            else if(launcher.single_shoot_cmd == SHOOT_ING && //已经堵转了，把期望设置成上一次的期望加反转一圈，需要再拨一次杆才能回去之前的角度
+                    trigger.trigger_flag == trigger_block) {
+
+                trigger_time=HAL_GetTick(); //这时候开始计时，开始转的时候计时(反转也需要重新计时)
+                total_ecd_ref_tri = total_ecd_ref_tri + DEGREE_120_TO_ENCODER;
+                trigger_block_flag = 1;
+            }
+            launcher.trigger.speed = pid_calc(&launcher.trigger.angle_p,
+                                              launcher.trigger.motor_measure->total_ecd,
+                                              total_ecd_ref_tri);
+            launcher.trigger.give_current =
+                    (int16_t)pid_calc(&launcher.trigger.speed_p,
+                                      launcher.trigger.motor_measure->speed_rpm,
+                                      launcher.trigger.speed);
+        }
+        else {
+            launcher.trigger.give_current=0;
+            total_ecd_ref_tri=launcher.trigger.motor_measure->total_ecd;
+        }
+    }
+    trigger_finish_judge(); //拨盘有无转到理想角度  判断有无卡
+    rc_last_sw_L=rc_ctrl.rc.s[RC_s_L];
+    key_last_mouse_l = KeyBoard.Mouse_l.status;
+//    switch (trigger.state) {
+//        case KEEP_ROTATING:
+//            Keep_rotating();
+//            break;
+//        case ROTATION_ANGLE:
+//            Rotation_angle();
+//            break;
+//        default:
+//            break;
+//    }
+}
+
 // 拨盘控制(一直转)
 void Keep_rotating() {
     if(gimbal.mode == GIMBAL_RELAX) {
@@ -83,36 +125,26 @@ void Keep_rotating() {
 
 #include "tim.h"
 // 拨盘控制(转角度)
-
-static int32_t total_ecd_ref_tri=0;
-static uint32_t trigger_time=0;
-static uint32_t unfinshed_time=0;
-static uint8_t trigger_block_flag=0;
-static int32_t key_last_mouse_l=0;
 void Rotation_angle() {
     if(gimbal.mode==GIMBAL_RELAX) {
         Trigger_relax_handle();
     }
     else if(gimbal.mode != GIMBAL_RELAX) {
         if (launcher.fire_mode == Fire_ON) {
-            if (launcher.single_shoot_cmd == SHOOT_ING && (!switch_is_down(rc_last_sw_L) && switch_is_down(rc_ctrl.rc.s[RC_s_L]))) { //单发状态
+            if (launcher.single_shoot_cmd == SHOOT_ING &&
+               (  (!switch_is_down(rc_last_sw_L) && switch_is_down(rc_ctrl.rc.s[RC_s_L]))
+               || (key_last_mouse_l != KEY_PRESS && KeyBoard.Mouse_l.status == KEY_PRESS)
+               || (fire_lock > 0))) { //单发状态
+
                 trigger_time=HAL_GetTick(); //这时候开始计时，开始转的时候计时
                 total_ecd_ref_tri = launcher.trigger.motor_measure->total_ecd - DEGREE_60_TO_ENCODER;
                 trigger_block_flag = 0;
             }
-            else if(launcher.single_shoot_cmd == SHOOT_ING && (key_last_mouse_l != KEY_PRESS && KeyBoard.Mouse_l.status == KEY_PRESS)){
-                trigger_time=HAL_GetTick(); //这时候开始计时，开始转的时候计时
-                total_ecd_ref_tri = launcher.trigger.motor_measure->total_ecd - DEGREE_60_TO_ENCODER;
-                trigger_block_flag = 0;
-            }
-            else if(launcher.single_shoot_cmd == SHOOT_ING && fire_lock > 0){
-                trigger_time=HAL_GetTick(); //这时候开始计时，开始转的时候计时
-                total_ecd_ref_tri = launcher.trigger.motor_measure->total_ecd - DEGREE_60_TO_ENCODER;
-                trigger_block_flag = 0;
-            }
-            else if(launcher.single_shoot_cmd == SHOOT_ING && trigger.trigger_flag == trigger_block) {    //已经堵转了，把期望设置成上一次的期望，需要再拨一次杆才能回去之前的角度
+            else if(launcher.single_shoot_cmd == SHOOT_ING && //已经堵转了，把期望设置成上一次的期望加反转一圈，需要再拨一次杆才能回去之前的角度
+                    trigger.trigger_flag == trigger_block) {
+
                 trigger_time=HAL_GetTick(); //这时候开始计时，开始转的时候计时(反转也需要重新计时)
-                total_ecd_ref_tri = total_ecd_ref_tri + DEGREE_60_TO_ENCODER;
+                total_ecd_ref_tri = total_ecd_ref_tri + DEGREE_120_TO_ENCODER;
                 trigger_block_flag = 1;
             }
             launcher.trigger.speed = pid_calc(&launcher.trigger.angle_p,
@@ -147,7 +179,8 @@ void trigger_finish_judge() {
     else {
         trigger.trigger_flag = trigger_finished;
     }
-    if(trigger.trigger_flag == trigger_unfinished && (HAL_GetTick() - trigger_time) > 500) {  //期望角度没转到并且卡了0.5s就认为是卡弹了
+//    if(trigger.trigger_flag == trigger_unfinished && (HAL_GetTick() - trigger_time) > 500) {  //期望角度没转到并且卡了0.5s就认为是卡弹了
+    if(trigger.trigger_flag == trigger_unfinished && (HAL_GetTick() - trigger_time) > 1000) {  //期望角度没转到并且卡了0.5s就认为是卡弹了
         trigger.trigger_flag = trigger_block;
     }
 }

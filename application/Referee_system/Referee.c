@@ -64,6 +64,7 @@ extern launcher_t launcher;
 extern chassis_t chassis;//获取底盘模式
 extern gimbal_t gimbal;//获取云台模式
 extern int32_t cap_percentage;//电容百分比，在can_receive.c文件中可见
+extern cap_receive_data_t capReceiveData;  //接收溪地电容反馈数据
 
 ext_ui_color uiColor;//判断ui颜色
 
@@ -122,7 +123,7 @@ void USART6_IRQHandler(void)
 
     }
 }
-////图传串口中断函数
+////上板图传下板电容串口中断函数
 void USART1_IRQHandler(void)
 {
     static volatile uint8_t res;
@@ -853,14 +854,14 @@ void dynamic_cap_percentage_draw()
     if(ant >= 216) {
         ant = 0;
     }
-    float real_cap = cap_percentage * 216;
+    float real_cap = capReceiveData.voltage_out / 24 * 216;
     //等待修改
     //能量边框,黄色边框代表动态模式启动了,白色代表进入加载模式，不会更新图像
     Figure_Graphic(&ui_cap_percentage.clientData[0],"CFL",UI_MODIFY,UI_RECTANGLE,
                    UI_FOUR_LAYER,uiColor.change_color,0,0,10,834,109,0, 1059, 143);//放在第四图层
     //能量条,初始状态是满的
     Figure_Graphic(&ui_cap_percentage.clientData[1],"CAC",UI_MODIFY,UI_LINE,
-                   UI_FOUR_LAYER,UI_GREEN,0,0, 20,839,125,0,839 + ant, 125);
+                   UI_FOUR_LAYER,UI_GREEN,0,0, 20,839,125,0,839 + real_cap, 125);
     //CRC18校验
     memcpy(ClientTxCapBuffer+Referee_LEN_FRAME_HEAD,(uint8_t *)&ui_cap_percentage.CmdID,sizeof(ui_cap_percentage));
     append_CRC16_check_sum(ClientTxCapBuffer,sizeof(ui_cap_percentage));
@@ -900,12 +901,12 @@ void ui_aim_draw()//辅助瞄准绘画
                    0, 0, 3, 945, 353, 0, 976, 353);
     //改成方框
     Figure_Graphic(&ui_aim.clientData[4], "LI5", UI_ADD,  UI_RECTANGLE, UI_ZERO_LAYER, UI_GREEN,
-                   0, 0, 5, 920, 436, 0, 996, 486);
+                   0, 0, 1, 953, 407, 0, 1047, 458);
     //十字准心
     Figure_Graphic(&ui_aim.clientData[5], "LI6", UI_ADD, UI_LINE, UI_ZERO_LAYER, UI_GREEN,
-                   0, 0, 2, 949, 458, 0, 973, 458);
+                   0, 0, 2, 989, 433, 0, 1015, 433);
     Figure_Graphic(&ui_aim.clientData[6], "LI7", UI_ADD, UI_LINE, UI_ZERO_LAYER, UI_GREEN,
-                   0, 0, 2, 961, 445, 0, 961, 471);
+                   0, 0, 2, 1000, 418, 0, 1000, 450);
 
     //把除去帧头的其他部分放进缓存区
     memcpy(ClientTxBuffer + Referee_LEN_FRAME_HEAD, (uint8_t*)&ui_aim.CmdID, sizeof (ui_aim));
@@ -1383,6 +1384,8 @@ void UI_Paint_task(void const*argument){
             dynamic_color_change();//动态元素变化获取
 
             dynamic_cap_percentage_draw();//电容元素更新
+
+            //dynamic_hit_direction_draw();//TODO: 修改——击打检测
         }
         else
         {

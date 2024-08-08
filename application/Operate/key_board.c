@@ -106,12 +106,12 @@ void update_pc_info() {
 
     if(control_flag == VT_ONLINE) //图传链路模拟遥控器拨杆
     {
-        if(KeyBoard.Z.status==KEY_PRESS)//按Z键失能
+        if(KeyBoard.B.status==KEY_PRESS)//按G键失能
         {
             rc_ctrl.rc.s[RC_s_L] = RC_SW_DOWN;
             rc_ctrl.rc.s[RC_s_R] = RC_SW_DOWN;
         }
-        if(KeyBoard.B.status==KEY_PRESS)//按B键使能
+        if(KeyBoard.G.status==KEY_PRESS)//按B键使能
         {
             rc_ctrl.rc.s[RC_s_L] = RC_SW_MID;
             rc_ctrl.rc.s[RC_s_R] = RC_SW_MID;

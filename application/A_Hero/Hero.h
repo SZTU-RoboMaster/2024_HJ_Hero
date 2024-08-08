@@ -6,7 +6,7 @@
 
 #ifndef INC_2024_HERO_HERO_H
 #define INC_2024_HERO_HERO_H
-#define GIMBAL
+//#define GIMBAL
 
 /**** 电机数组配合枚举使用 ****/
 typedef enum {

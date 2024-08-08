@@ -174,7 +174,7 @@ void control_judge(void){
 }
 
 uint8_t same_level_count[6]={0};
-
+static int stime;
 void Detect_task(void const*pvParameters){
     vTaskDelay(DETECT_TASK_INIT_TIME);
 
@@ -197,6 +197,7 @@ void Detect_task(void const*pvParameters){
     detect_init(DETECT_GIMBAL_6020_YAW,200,4);
 
     detect_init(DETECT_REMOTE,100,5);
+    detect_init(DETECT_VIDEO_TRANSIMITTER,100,5);
 
     uint8_t offline_num=0;//离线设备数量
     uint32_t max_level=0;//0表示最低警告等级 也就是不警告

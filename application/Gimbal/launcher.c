@@ -60,48 +60,77 @@ extern launcher_t launcher;
 extern trigger_t trigger;
 extern robot_ctrl_info_t robot_ctrl;
 
-
-
 static uint8_t rc_last_sw_L;
 static int32_t total_ecd_ref;      //电机总编码值
 
 static int32_t ref;
-static int32_t t0, t1;  //HAL_GetTick()
+static uint32_t t0, t1;  //HAL_GetTick()
+static int32_t im, mi;
 uint8_t thread_lock = 0;    // 线程锁
 static uint8_t lens_flag = 0;
 void images_mode_set(){
     // 图传2006
-    if(gimbal.mode != GIMBAL_RELAX) {
-        if (rc_ctrl.rc.ch[AUTO_CHANNEL] < -300 || KeyBoard.Z.click_flag == 1) {
-            servo_pwm_set(2400, 1);
-            t1 = HAL_GetTick();
-            if(t1 - t0 > 500) {
-                launcher.images.speed = pid_calc(&launcher.images.angle_p,
-                                                 launcher.images.motor_measure->total_ecd,
-                                                 DEGREE_TO_ENCODER);
-                launcher.images.give_current =
-                        (int16_t) pid_calc(&launcher.images.speed_p,
-                                           launcher.images.motor_measure->speed_rpm,
-                                           launcher.images.speed);
-            }
-        } else {
-            servo_pwm_set(1000, 1);
-            t0 = HAL_GetTick();
-            if(t0 - t1 > 500){
-                launcher.images.speed = pid_calc(&launcher.images.angle_p,
-                                                 launcher.images.motor_measure->total_ecd,
-                                                 ref);
-                launcher.images.give_current =
-                        (int16_t) pid_calc(&launcher.images.speed_p,
-                                           launcher.images.motor_measure->speed_rpm,
-                                           launcher.images.speed);
-            }
-        }
-    }
-    else {
+    if(gimbal.mode == GIMBAL_RELAX || chassis.mode == CHASSIS_RELAX){
         launcher.images.give_current = 0;
         ref = launcher.images.motor_measure->total_ecd;
         t0 = t1 = HAL_GetTick();
+        im = mi = 0;
+    }
+    else if(gimbal.mode != GIMBAL_RELAX || chassis.mode != CHASSIS_RELAX) {
+        if (rc_ctrl.rc.ch[AUTO_CHANNEL] < -300 || KeyBoard.Z.click_flag == 1) {
+            servo_pwm_set(2400, 1);
+            t1 = HAL_GetTick();
+            if(t1 - t0 > 700) {
+                if(KeyBoard.CTRL.status == KEY_CLICK){
+                    im += 1000;
+                }
+                if(KeyBoard.SHIFT.status == KEY_CLICK) {
+                    im -= 1000;
+                }
+                launcher.images.speed = pid_calc(&launcher.images.angle_p,
+                                                 (float)launcher.images.motor_measure->total_ecd,
+                                                 (float)ref+DEGREE_TO_ENCODER+(float)im);
+                launcher.images.give_current =
+                        (int16_t) pid_calc(&launcher.images.speed_p,
+                                           launcher.images.motor_measure->speed_rpm,
+                                           launcher.images.speed);
+            }
+            mi = 0;
+        }
+        else {
+            if(KeyBoard.X.click_flag == 1) {
+                if(KeyBoard.CTRL.status == KEY_CLICK){
+                    mi += 1000;
+                }
+                if(KeyBoard.SHIFT.status == KEY_CLICK) {
+                    mi -= 1000;
+                }
+                launcher.images.speed = pid_calc(&launcher.images.angle_p,
+                                                 (float)launcher.images.motor_measure->total_ecd,
+                                                 (float)ref+DEGREE_TO_ENCODER_TO+(float)mi);
+                launcher.images.give_current =
+                        (int16_t) pid_calc(&launcher.images.speed_p,
+                                           launcher.images.motor_measure->speed_rpm,
+                                           launcher.images.speed);
+                t0 = HAL_GetTick();
+                servo_pwm_set(2400, 1);
+            }
+            else {
+                launcher.images.speed = pid_calc(&launcher.images.angle_p,
+                                                 (float)launcher.images.motor_measure->total_ecd,
+                                                 (float)ref);
+                launcher.images.give_current =
+                        (int16_t) pid_calc(&launcher.images.speed_p,
+                                           launcher.images.motor_measure->speed_rpm,
+                                           launcher.images.speed);
+                t0 = HAL_GetTick();
+                if(t0 - t1 > 500){
+                    servo_pwm_set(1000, 1);
+                }
+                mi = 0;
+            }
+            im = 0;
+        }
     }
 }
 
@@ -109,7 +138,7 @@ void launcher_mode_set(){
     //摩擦轮关闭时,做拨杆向上拨一下开启摩擦轮
     //遥控器和键盘可以同步修改摩擦轮状态
     // 键盘直接修改相关按键click_flag的状态 通过click状态直接判断摩擦轮模式 避免遥控打开的摩擦轮被键盘关闭
-    if((!switch_is_up(rc_last_sw_L)&&switch_is_up(rc_ctrl.rc.s[RC_s_L]))){
+    if((!switch_is_up(rc_last_sw_L) && switch_is_up(rc_ctrl.rc.s[RC_s_L]))){
         if(KeyBoard.Q.click_flag==1 && (chassis.mode==CHASSIS_FOLLOW_GIMBAL || chassis.mode==CHASSIS_SPIN || chassis.mode==CHASSIS_BLOCK || chassis.mode==CHASSIS_INDEPENDENT_CONTROL)) {
             KeyBoard.Q.click_flag=0;
         }
@@ -132,15 +161,11 @@ void launcher_mode_set(){
     //要么遥控器拨杆向下播一下
     //要么鼠标左键点一下
     if(launcher.fire_mode == Fire_ON
-       &&((switch_is_down(rc_ctrl.rc.s[RC_s_L]) || KeyBoard.Mouse_l.status==KEY_CLICK)
-          ||KeyBoard.Mouse_l.status == KEY_PRESS
-          ||launcher.single_shoot_cmd == SHOOT_ING
-          ||robot_ctrl.fire_command!=0))
+       &&((switch_is_down(rc_ctrl.rc.s[RC_s_L])) || (KeyBoard.Mouse_l.status==KEY_CLICK) || (launcher.single_shoot_cmd == SHOOT_ING) || (robot_ctrl.fire_command != 0) ))
     {
         if((!switch_is_down(rc_last_sw_L) && switch_is_down(rc_ctrl.rc.s[RC_s_L]))
-//           || (KeyBoard.Mouse_l.status == KEY_CLICK) && (launcher.single_shoot_cmd!=SHOOT_ING))
-            || (KeyBoard.Mouse_l.status == KEY_CLICK
-                ||robot_ctrl.fire_command!=0))
+        || (KeyBoard.Mouse_l.status == KEY_CLICK)
+        || (robot_ctrl.fire_command != 0))
         {
             launcher.single_shoot_cmd = SHOOT_SINGLE;
         }

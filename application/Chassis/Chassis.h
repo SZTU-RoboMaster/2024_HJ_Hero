@@ -37,7 +37,7 @@
 /******************Chassis******************/
 //任务开始空闲一段时间
 #define CHASSIS_TASK_INIT_TIME 357
-#define CHASSIS_PERIOD 5//10 // 单位为ms 底盘任务运行周期
+#define CHASSIS_PERIOD 10 // 单位为ms 底盘任务运行周期
 
 #define CHASSIS_Y_CHANNEL 0
 #define CHASSIS_X_CHANNEL 1
@@ -109,10 +109,10 @@
 
 //底盘独立PID
 #define CHASSIS_3508_PID_KP     7.0f
-#define CHASSIS_3508_PID_KI     0.0f
+#define CHASSIS_3508_PID_KI     0.f
 #define CHASSIS_3508_PID_KD     0.0f
 #define CHASSIS_3508_PID_MAX_OUT 20000.0f
-#define CHASSIS_3508_PID_MAX_IOUT 0
+#define CHASSIS_3508_PID_MAX_IOUT 5000
 
 /******************函数声明******************/
 /******************下板传上板******************/
