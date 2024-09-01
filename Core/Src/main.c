@@ -137,8 +137,8 @@ int main(void)
     usart6_init(&usart6_buf[0], REFEREE_BUFFER_SIZE);
     usart1_init(&usart1_buf[0], REFEREE_BUFFER_SIZE);
 
-    CAN_Chass_init();
-    CAN_Gimbal_init();
+    CAN_init();
+    CAN_Board_init();
 
     cali_param_init();
     remote_control_init();

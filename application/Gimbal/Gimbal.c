@@ -144,7 +144,7 @@ void Gimbal_task(void const*pvParameters) {
                       0,                                //203
                       launcher.fire_on.give_current     //204
         );
-//        vTaskDelay(1);
+
         CAN_cmd_motor(CAN_2,
                       CAN_MOTOR_0x1FF_ID,
                       gimbal.yaw.give_current,           //205
@@ -152,7 +152,7 @@ void Gimbal_task(void const*pvParameters) {
                       launcher.fire_r.give_current,      //207
                       launcher.fire_l.give_current       //208
         );
-        vTaskDelay(2);
+        vTaskDelay(1);
     }
 }
 

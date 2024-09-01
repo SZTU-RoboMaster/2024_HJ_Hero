@@ -95,7 +95,7 @@ extern fp32 motor_ecd_to_angle_change(uint16_t ecd,uint16_t offset_ecd);
 extern void CAN_cmd_communication(CAN_TYPE can_type,can_msg_id_e CMD_ID,fp32 vx,fp32 vy);
 extern void CAN_cap(CAN_TYPE can_type,can_msg_id_e CMD_ID,uint16_t power_limit);
 extern void CAN_cmd_cap2(cap2_info_t*cap);
-extern void CAN_Chass_init();
-extern void CAN_Gimbal_init();
+extern void CAN_init();
+extern void CAN_Board_init();
 
 #endif //AVG_INFANTRY_CAN_RECEIVE_H

@@ -48,13 +48,13 @@ static void chassis_ctrl_info_get();
 static void chassis_control();
 
 /******************函数实现******************/
+//TODO:非必要不要调换延迟和通讯顺序
 void Chassis_task(void const *pvParameters) {
     vTaskDelay(CHASSIS_TASK_INIT_TIME);
     chassis_init(&chassis); //底盘初始化
     Trigger_init();         //拨盘初始化
     //TODO:判断底盘电机是否都在线
 
-    htim5.Instance->CCR1 = 1000;
     while (1){
         chassis_ctrl_info_get();        //遥控器获取底盘方向矢量
         // volatile_judge = get_battery_voltage();//电压测试
@@ -62,45 +62,42 @@ void Chassis_task(void const *pvParameters) {
         chassis_control();              //底盘控制
         Trigger_control();              //拨盘控制
 
-        CAN_cmd_motor(CAN_1,
+        CAN_cmd_motor(CAN_2,
                       CAN_MOTOR_0x1FF_ID,
                       0,                                //205
                       0,                                //206
                       launcher.trigger.give_current,    //207
                       0);                               //208
-        vTaskDelay(1);
 
         // 底盘相关模块 对底盘进行离线处理
         // chassis_device_offline_handle();
 
         gimbal.pitch.absolute_angle_get_down=INS_angle[2]*MOTOR_RAD_TO_ANGLE;
         Send_referee(Referee.PowerHeatData.chassis_power, gimbal.pitch.absolute_angle_get_down);
-        Send_id(Referee.GameRobotStat.robot_id);
         vTaskDelay(1);
+
+        Send_id(Referee.GameRobotStat.robot_id);
 
         // 底盘不是失能状态时进行麦轮运动
         if (Referee.GameRobotStat.power_management_chassis_output == 0){
-            CAN_cmd_motor(CAN_1, CAN_MOTOR_0x200_ID, 0, 0, 0, 0);
+            CAN_cmd_motor(CAN_2, CAN_MOTOR_0x200_ID, 0, 0, 0, 0);
             chassis.mode = CHASSIS_RELAX;
         }
 
-//        vTaskDelay(1);  //没加底盘不能动
-
         if (chassis.mode != CHASSIS_RELAX) {
             chassis_meknum_wheel_cal();     //麦轮解算
-            if (capReceiveData.voltage_out < 15) {
-                chassis_power_limit();          //功率限制
-            }
+//            if (capReceiveData.voltage_out < 15) {
+//                chassis_power_limit();          //功率限制
+//            }
             chassis_wheel_loop_cal();       //驱电机闭环
 
-            CAN_cmd_motor(CAN_1,
+            CAN_cmd_motor(CAN_2,
                           CAN_MOTOR_0x200_ID,
                           chassis.motor_chassis[RF].give_current,   //201
                           chassis.motor_chassis[LF].give_current,   //202
                           chassis.motor_chassis[LB].give_current,   //203
                           chassis.motor_chassis[RB].give_current    //204
             );
-//            vTaskDelay(1);  //没加底盘不能动
 
             //计算底盘在方向上的线速度
             chassis_vx = ((float) (chassis.motor_chassis[1].motor_measure->speed_rpm

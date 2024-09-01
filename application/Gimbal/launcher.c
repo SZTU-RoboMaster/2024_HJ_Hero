@@ -67,7 +67,7 @@ static int32_t ref;
 static uint32_t t0, t1;  //HAL_GetTick()
 static int32_t im, mi;
 uint8_t thread_lock = 0;    // 线程锁
-static uint8_t lens_flag = 0;
+static uint8_t flag = 0;
 void images_mode_set(){
     // 图传2006
     if(gimbal.mode == GIMBAL_RELAX || chassis.mode == CHASSIS_RELAX){
